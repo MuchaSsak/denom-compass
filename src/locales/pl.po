@@ -1,0 +1,825 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-11-17 02:02+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: pl\n"
+
+#. js-lingui-explicit-id
+#: src/i18n/extractor.ts
+msgid "…"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/i18n/extractor.ts
+msgid "{n} of {total}"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "{n} of 21"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "A near-perfect match"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "A perfect match"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "A short theology quiz that maps your beliefs onto the major Christian traditions."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "accepted"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "Accepted by"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Accepted:"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Add a note"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Adherents"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Afterwards"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "AI can be wrong."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "AI is not set up on this server yet."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "AI reading"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "All councils"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/[id].astro
+msgid "All creeds"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Answer some questions or write a few words first."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Applied ✓"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Are sacraments signs or channels of grace? Does salvation rest on God’s choice or your free response?"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Began"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Best fits"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Called by"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Catholic"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Church of the East"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Closest relatives"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Compare all"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Comparing with {n} traditions"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/[id].astro
+msgid "Confessed by"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Council #{n}"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Council of"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+#: src/pages/[lang]/councils/index.astro
+msgid "Councils"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Councils accepted"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+#: src/pages/[lang]/creeds/index.astro
+msgid "Creeds"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/index.astro
+msgid "Creeds & confessions"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Decided"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Denomination Compass"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Denomination Compass: which Christian tradition shares your beliefs?"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Describe your faith in your own words…"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "Details"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/doctrines.astro
+msgid "divided"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Divided"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+#: src/pages/[lang]/doctrines.astro
+msgid "Doctrines"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/doctrines.astro
+msgid "Doctrines compared"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "Ecumenical councils"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Every tradition"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Explore"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/doctrines.astro
+msgid "Faded = divided."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Firm"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/CompassChart.svelte
+msgid "Free will"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Get my AI reading"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Governance"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "How the branches formed"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "How you compare"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "I matched {percent}% with {name}"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/[id].astro
+msgid "In short"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "In your own words"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "In your own words…"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Is this your tradition?"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Key doctrines"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Key figures"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Key texts"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Language"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/index.astro
+msgid "Later confessions"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/doctrines.astro
+msgid "Legend"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Link copied ✓"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Main bodies"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Match #{n}"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Menu"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Minority"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "More info"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Mostly"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "My Denomination Compass result"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Neck and neck with"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Next question"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "No results yet"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "None of the traditions here."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Nontrinitarian"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "not accepted"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Not received"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Not sure"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/[id].astro
+msgid "Not used by"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Optional"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/[id].astro
+msgid "Origin"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Origins"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Orthodox"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Out of date - update to include your latest answers and notes."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Positions at a glance"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Present"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Presided"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Previous question"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Privacy"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Protestant"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Question notes"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+#: src/pages/[lang]/quiz.astro
+msgid "Quiz"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/index.astro
+msgid "Read"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Read more"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Reading…"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "Received as ecumenical by the Catholic Church only"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Received by"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Restorationist"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Results"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Retake"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Run again"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/CompassChart.svelte
+msgid "Sacramental"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Sacraments"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Save"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/doctrines.astro
+msgid "Scroll left"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/doctrines.astro
+msgid "Scroll right"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Share result"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Shared result"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "Shared, in part, by nearly every tradition"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Show all {n}"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Show fewer"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Something went wrong."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/CompassChart.svelte
+msgid "Sovereign grace"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Start over"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Start the quiz"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/CompassChart.svelte
+msgid "Symbolic"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Take it yourself"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Take the quiz"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Take the quiz first"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Tensions"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Terms"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "The 21 councils"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "The 21 ecumenical councils: what each decided and which traditions accept it."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "The AI service is unavailable right now. Try again later."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "The compass"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "The free AI quota is used up for now. Try again later."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/index.astro
+msgid "The great creeds of Christianity, phrase by phrase, and who confesses them."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "The great divisions, in order"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "The issue"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "The model returned an unreadable answer. Try again."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "The model took too long. Try again."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "The undivided Church"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "The Western councils"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "To reflect on"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Toggle dark mode"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/index.astro
+msgid "Tradition"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Update AI reading"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Use “{label}”"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Weighing your answers…"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/index.astro
+msgid "What Christians confess together"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "What do you believe?"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "What does this mean?"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "What sets it apart"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "What you believe"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "What your words add"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "When"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Where"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Where you stand"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+#: src/pages/[lang]/doctrines.astro
+msgid "Who believes what"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/doctrines.astro
+msgid "Who believes what: the big doctrinal questions, tradition by tradition."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Why it matters today"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+msgid "Worship"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "You"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/CompassChart.svelte
+msgid "YOU"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Your closest match"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Your closest match — loosely"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Your note"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Your notes, answered"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/denominations/[id].astro
+#: src/pages/[lang]/results.astro
+msgid "Your results"
+msgstr ""

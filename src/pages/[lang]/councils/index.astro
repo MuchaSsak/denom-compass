@@ -1,20 +1,24 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Badge from '../../components/Badge.astro';
-import { councils, schisms, councilSlug } from '../../data/councils';
-import { denominations, denominationById } from '../../data/denominations';
+import Base from '../../../layouts/Base.astro';
+import Badge from '../../../components/Badge.astro';
+import { councilSlug } from '../../../data/councils';
+import { dataFor } from '../../../data/localized';
+import { langPaths, useT, href, type Lang } from '../../../i18n';
 
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+const { councils, schisms, denominations, denominationById } = dataFor(lang);
 const acceptedBy = (n: number) => denominations.filter((d) => d.councils.includes(n));
 const eras = [
-  { title: 'The undivided Church', sub: 'Shared, in part, by nearly every tradition', range: [1, 7] },
-  { title: 'The Western councils', sub: 'Received as ecumenical by the Catholic Church only', range: [8, 21] },
+  { title: t('The undivided Church'), sub: t('Shared, in part, by nearly every tradition'), range: [1, 7] },
+  { title: t('The Western councils'), sub: t('Received as ecumenical by the Catholic Church only'), range: [8, 21] },
 ];
 ---
-<Base title="Councils" wide>
+<Base title={t('Councils')} description={t('The 21 ecumenical councils: what each decided and which traditions accept it.')} wide>
   <header class="pt-12 pb-2 sm:pt-16">
-    <p class="eyebrow">Ecumenical councils</p>
-    <h1 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">The 21 councils</h1>
-    
+    <p class="eyebrow">{t('Ecumenical councils')}</p>
+    <h1 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">{t('The 21 councils')}</h1>
   </header>
 
   <!-- overview strip -->
@@ -22,8 +26,8 @@ const eras = [
     <table class="w-full min-w-[720px] border-separate border-spacing-y-1 text-sm">
       <thead>
         <tr>
-          <th class="w-44 text-left text-[11px] font-bold tracking-widest text-muted uppercase">Tradition</th>
-          {councils.map((c) => <th class="text-[11px] font-semibold text-muted tabular-nums" title={`${c.name} (${c.year})`}><a href={`/councils/${councilSlug(c)}`} class="hover:text-ink">{c.n}</a></th>)}
+          <th class="w-44 text-left text-[11px] font-bold tracking-widest text-muted uppercase">{t('Tradition')}</th>
+          {councils.map((c) => <th class="text-[11px] font-semibold text-muted tabular-nums" title={`${c.name} (${c.year})`}><a href={href(lang, `/councils/${councilSlug(c)}`)} class="hover:text-ink">{c.n}</a></th>)}
         </tr>
       </thead>
       <tbody>
@@ -31,7 +35,7 @@ const eras = [
           const d = denominationById[id];
           return (
             <tr>
-              <td class="pr-3"><a href={`/denominations/${id}`} class="flex items-center gap-2 font-medium hover:underline"><Badge id={id} color={d.color} size={22} />{d.short}</a></td>
+              <td class="pr-3"><a href={href(lang, `/denominations/${id}`)} class="flex items-center gap-2 font-medium hover:underline"><Badge id={id} color={d.color} size={22} />{d.short}</a></td>
               {councils.map((c) => (
                 <td class="px-[2px]">
                   <span class="block h-5 rounded" style={d.councils.includes(c.n) ? `background:${d.color}` : 'background:var(--surface-2)'}></span>
@@ -59,17 +63,17 @@ const eras = [
               <article class="card p-5 sm:p-6">
                 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <span class="font-display text-sm font-semibold text-gold tabular-nums">#{c.n}</span>
-                  <h3 class="font-display text-xl font-semibold"><a href={`/councils/${councilSlug(c)}`} class="hover:underline">{c.name}</a></h3>
+                  <h3 class="font-display text-xl font-semibold"><a href={href(lang, `/councils/${councilSlug(c)}`)} class="hover:underline">{c.name}</a></h3>
                   <span class="text-sm text-muted">{c.year} · {c.place}</span>
                 </div>
                 <p class="mt-2 leading-relaxed">{c.summary}</p>
                 <ul class="mt-3 flex flex-wrap gap-1.5">{c.decisions.map((x) => <li class="chip">{x}</li>)}</ul>
                 <div class="mt-4 flex flex-wrap items-center gap-2 border-t border-line pt-3">
-                  <span class="text-[11px] font-bold tracking-widest text-muted uppercase">Accepted by</span>
+                  <span class="text-[11px] font-bold tracking-widest text-muted uppercase">{t('Accepted by')}</span>
                   {acc.map((d) => (
-                    <a href={`/denominations/${d.id}`} title={d.name} class="transition hover:scale-110"><Badge id={d.id} color={d.color} size={26} /></a>
+                    <a href={href(lang, `/denominations/${d.id}`)} title={d.name} class="transition hover:scale-110"><Badge id={d.id} color={d.color} size={26} /></a>
                   ))}
-                  <a href={`/councils/${councilSlug(c)}`} class="ml-auto text-sm font-semibold hover:underline">Details →</a>
+                  <a href={href(lang, `/councils/${councilSlug(c)}`)} class="ml-auto text-sm font-semibold hover:underline">{t('Details')} →</a>
                 </div>
               </article>
             </li>
@@ -82,8 +86,8 @@ const eras = [
   <!-- schisms -->
   <section class="mt-16">
     <div class="mb-5 flex flex-wrap items-baseline gap-x-3 border-b border-line pb-2">
-      <h2 class="font-display text-2xl font-semibold">How the branches formed</h2>
-      <p class="text-sm text-muted">The great divisions, in order</p>
+      <h2 class="font-display text-2xl font-semibold">{t('How the branches formed')}</h2>
+      <p class="text-sm text-muted">{t('The great divisions, in order')}</p>
     </div>
     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {schisms.map((s) => (

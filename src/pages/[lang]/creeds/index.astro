@@ -1,18 +1,23 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Badge from '../../components/Badge.astro';
-import { creeds, confessions } from '../../data/creeds';
-import { denominationById } from '../../data/denominations';
+import Base from '../../../layouts/Base.astro';
+import Badge from '../../../components/Badge.astro';
+import { dataFor } from '../../../data/localized';
+import { langPaths, useT, href, type Lang } from '../../../i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+const { creeds, confessions, denominationById } = dataFor(lang);
 ---
-<Base title="Creeds" wide>
+<Base title={t('Creeds')} description={t('The great creeds of Christianity, phrase by phrase, and who confesses them.')} wide>
   <header class="pt-12 pb-2 sm:pt-16">
-    <p class="eyebrow">Creeds & confessions</p>
-    <h1 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">What Christians confess together</h1>
+    <p class="eyebrow">{t('Creeds & confessions')}</p>
+    <h1 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">{t('What Christians confess together')}</h1>
   </header>
 
   <section class="mt-8 grid gap-4 md:grid-cols-2">
     {creeds.map((c) => (
-      <a href={`/creeds/${c.id}`} class="card group flex flex-col p-6 transition hover:-translate-y-0.5">
+      <a href={href(lang, `/creeds/${c.id}`)} class="card group flex flex-col p-6 transition hover:-translate-y-0.5">
         <div class="flex items-baseline justify-between gap-3">
           <h2 class="font-display text-2xl font-semibold">{c.name}</h2>
           <span class="chip flex-none">{c.date}</span>
@@ -25,7 +30,7 @@ import { denominationById } from '../../data/denominations';
           <span class="flex -space-x-1.5">
             {c.usedBy.slice(0, 8).map((u) => <Badge id={u.id} color={denominationById[u.id].color} size={26} class="ring-2 ring-[var(--surface)]" />)}
           </span>
-          <span class="text-sm font-semibold">Read →</span>
+          <span class="text-sm font-semibold">{t('Read')} →</span>
         </div>
       </a>
     ))}
@@ -33,13 +38,13 @@ import { denominationById } from '../../data/denominations';
 
   <section class="mt-16">
     <div class="mb-5 flex flex-wrap items-baseline gap-x-3 border-b border-line pb-2">
-      <h2 class="font-display text-2xl font-semibold">Later confessions</h2>
+      <h2 class="font-display text-2xl font-semibold">{t('Later confessions')}</h2>
     </div>
     <ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {confessions.map((c) => (
         <li class="card flex gap-4 p-5">
           <span class="flex flex-none flex-col items-center gap-2">
-            {c.ids.map((id) => <a href={`/denominations/${id}`} title={denominationById[id].name}><Badge id={id} color={denominationById[id].color} size={34} /></a>)}
+            {c.ids.map((id) => <a href={href(lang, `/denominations/${id}`)} title={denominationById[id].name}><Badge id={id} color={denominationById[id].color} size={34} /></a>)}
           </span>
           <span class="min-w-0">
             <span class="block font-semibold leading-tight">{c.name}</span>

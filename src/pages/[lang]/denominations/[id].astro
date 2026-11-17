@@ -1,18 +1,21 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Badge from '../../components/Badge.astro';
-import { denominations } from '../../data/denominations';
-import { questions } from '../../data/questions';
-import { councils, councilSlug } from '../../data/councils';
-import { topicTitles } from '../../data/topics';
-import { rankAll, idealAnswers, dominantStance } from '../../lib/scoring';
-import type { Denomination } from '../../data/types';
+import Base from '../../../layouts/Base.astro';
+import Badge from '../../../components/Badge.astro';
+import { councilSlug } from '../../../data/councils';
+import { dataFor } from '../../../data/localized';
+import { rankAll, idealAnswers, dominantStance } from '../../../lib/scoring';
+import { LANGS, useT, href, type Lang } from '../../../i18n';
+import { familyName } from '../../../i18n/labels';
+import { profiles } from '../../../data/profiles';
 
 export function getStaticPaths() {
-  return denominations.map((d) => ({ params: { id: d.id }, props: { d } }));
+  return LANGS.flatMap((lang) => profiles.map((p) => ({ params: { lang, id: p.id } })));
 }
 
-const { d } = Astro.props as { d: Denomination };
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+const { denominations, denominationById, questions, councils, topicTitles } = dataFor(lang);
+const d = denominationById[Astro.params.id!];
 const idx = denominations.findIndex((x) => x.id === d.id);
 const prev = denominations[(idx - 1 + denominations.length) % denominations.length];
 const next = denominations[(idx + 1) % denominations.length];
@@ -30,10 +33,10 @@ for (const q of questions) {
   if (!byTopic.has(q.topic)) byTopic.set(q.topic, []);
   byTopic.get(q.topic)!.push(q);
 }
-const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0.5 ? 'Divided' : 'Minority');
+const firmness = (s: number) => (s >= 1 ? t('Firm') : s >= 0.75 ? t('Mostly') : s >= 0.5 ? t('Divided') : t('Minority'));
 ---
 <Base title={d.name} description={d.summary} wide>
-  <a href="/denominations" class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-muted hover:text-ink">← All traditions</a>
+  <a href={href(lang, '/results')} class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-muted hover:text-ink">← {t('Your results')}</a>
 
   <!-- HERO -->
   <section
@@ -43,7 +46,7 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
     <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
       <Badge id={d.id} color={d.color} size={96} />
       <div class="min-w-0">
-        <p class="eyebrow" style={`color:${d.color}`}>{d.family}</p>
+        <p class="eyebrow" style={`color:${d.color}`}>{familyName(t, d.family)}</p>
         <h1 class="mt-1 font-display text-4xl leading-tight font-semibold text-balance sm:text-5xl">{d.name}</h1>
         <p class="mt-2 text-lg text-muted">{d.tagline}</p>
       </div>
@@ -52,10 +55,10 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
 
     <dl class="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line lg:grid-cols-4">
       {[
-        ['Began', d.origin.year],
-        ['Adherents', d.adherents],
-        ['Sacraments', d.sacraments],
-        ['Governance', d.governance],
+        [t('Began'), d.origin.year],
+        [t('Adherents'), d.adherents],
+        [t('Sacraments'), d.sacraments],
+        [t('Governance'), d.governance],
       ].map(([k, v]) => (
         <div class="bg-surface p-4">
           <dt class="text-[11px] font-bold tracking-widest text-muted uppercase">{k}</dt>
@@ -77,8 +80,8 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
       <!-- COUNCILS -->
       <section class="card p-6">
         <div class="flex items-baseline justify-between gap-4">
-          <h2 class="font-display text-2xl font-semibold">Councils accepted</h2>
-          <span class="chip" style={`color:${d.color}`}>{d.councils.length} of 21</span>
+          <h2 class="font-display text-2xl font-semibold">{t('Councils accepted')}</h2>
+          <span class="chip" style={`color:${d.color}`}>{t('{n} of 21', { n: d.councils.length })}</span>
         </div>
         <ol class="mt-5 flex flex-wrap gap-1.5">
           {councils.map((c) => {
@@ -86,10 +89,10 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
             return (
               <li class:list={['group relative', c.n === 8 && 'sm:ml-2 sm:border-l sm:border-line sm:pl-3.5']}>
                 <a
-                  href={`/councils/${councilSlug(c)}`}
+                  href={href(lang, `/councils/${councilSlug(c)}`)}
                   class="grid size-8 place-items-center rounded-lg text-xs font-bold tabular-nums transition hover:scale-110"
                   style={on ? `background:${d.color};color:#fff` : 'background:var(--surface-2);color:var(--muted);opacity:.55'}
-                  aria-label={`${c.name} (${c.year}) — ${on ? 'accepted' : 'not accepted'}`}
+                  aria-label={`${c.name} (${c.year}) — ${on ? t('accepted') : t('not accepted')}`}
                 >{c.n}</a>
                 <span class="pointer-events-none absolute bottom-full left-1/2 z-10 mb-1.5 hidden -translate-x-1/2 rounded-md bg-ink px-2 py-1 text-[11px] font-semibold whitespace-nowrap text-bg group-hover:block">{c.name} · {c.year}</span>
               </li>
@@ -97,14 +100,14 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
           })}
         </ol>
         {d.councils.length > 0 && d.councils.length < 21 && (
-          <p class="mt-4 text-sm"><span class="font-semibold">Accepted:</span> {d.councils.map((n) => councils[n - 1].name).join(', ')}</p>
+          <p class="mt-4 text-sm"><span class="font-semibold">{t('Accepted:')}</span> {d.councils.map((n) => councils[n - 1].name).join(', ')}</p>
         )}
         <p class="mt-2 text-sm text-muted">{d.councilsNote}</p>
       </section>
 
       <!-- DOCTRINES -->
       <section class="card p-6">
-        <h2 class="font-display text-2xl font-semibold">Key doctrines</h2>
+        <h2 class="font-display text-2xl font-semibold">{t('Key doctrines')}</h2>
         <ul class="mt-4 grid gap-2">
           {d.doctrines.map((t) => (
             <li class="flex gap-3 text-[0.97rem] leading-snug">
@@ -112,7 +115,7 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
             </li>
           ))}
         </ul>
-        <h3 class="mt-6 text-[11px] font-bold tracking-widest text-muted uppercase">What sets it apart</h3>
+        <h3 class="mt-6 text-[11px] font-bold tracking-widest text-muted uppercase">{t('What sets it apart')}</h3>
         <div class="mt-2 flex flex-wrap gap-2">
           {d.distinctives.map((t) => <span class="chip text-ink">{t}</span>)}
         </div>
@@ -121,8 +124,8 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
       <!-- POSITIONS -->
       <section class="card p-6">
         <div class="flex items-baseline justify-between gap-4">
-          <h2 class="font-display text-2xl font-semibold">Positions at a glance</h2>
-          <a href="/doctrines" class="text-sm font-semibold text-muted hover:text-ink">Compare all →</a>
+          <h2 class="font-display text-2xl font-semibold">{t('Positions at a glance')}</h2>
+          <a href={href(lang, '/doctrines')} class="text-sm font-semibold text-muted hover:text-ink">{t('Compare all')} →</a>
         </div>
         <div class="mt-4 divide-y divide-line">
           {[...byTopic.entries()].map(([topic, qs]) => (
@@ -153,24 +156,24 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
 
     <aside class="flex flex-col gap-6">
       <section class="card p-6">
-        <h2 class="text-[11px] font-bold tracking-widest text-muted uppercase">Origins</h2>
+        <h2 class="text-[11px] font-bold tracking-widest text-muted uppercase">{t('Origins')}</h2>
         <p class="mt-2 text-[0.95rem] leading-relaxed">{d.origin.event}</p>
-        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">Key figures</h3>
+        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">{t('Key figures')}</h3>
         <p class="mt-1.5 text-[0.95rem]">{d.origin.figures.join(' · ')}</p>
-        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">Key texts</h3>
+        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">{t('Key texts')}</h3>
         <ul class="mt-1.5 grid gap-1 text-[0.95rem]">{d.documents.map((t) => <li>{t}</li>)}</ul>
-        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">Worship</h3>
+        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">{t('Worship')}</h3>
         <p class="mt-1.5 text-[0.95rem]">{d.worship}</p>
-        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">Main bodies</h3>
+        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">{t('Main bodies')}</h3>
         <div class="mt-2 flex flex-wrap gap-1.5">{d.branches.map((b) => <span class="chip">{b}</span>)}</div>
       </section>
 
       <section class="card p-6">
-        <h2 class="font-display text-xl font-semibold">Closest relatives</h2>
+        <h2 class="font-display text-xl font-semibold">{t('Closest relatives')}</h2>
         <ul class="mt-4 grid gap-3">
           {relatives.map((r) => (
             <li>
-              <a href={`/denominations/${r.d.id}`} class="flex items-center gap-3 rounded-xl p-1.5 transition hover:bg-surface-2">
+              <a href={href(lang, `/denominations/${r.d.id}`)} class="flex items-center gap-3 rounded-xl p-1.5 transition hover:bg-surface-2">
                 <Badge id={r.d.id} color={r.d.color} size={38} />
                 <span class="min-w-0 flex-1">
                   <span class="block truncate font-semibold">{r.d.short}</span>
@@ -183,21 +186,20 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
         </ul>
       </section>
 
-      <a href="/quiz" class="card flex items-center justify-between gap-4 p-6 transition hover:-translate-y-0.5" style={`background: color-mix(in oklab, ${d.color} 12%, var(--surface))`}>
+      <a href={href(lang, '/quiz')} class="card flex items-center justify-between gap-4 p-6 transition hover:-translate-y-0.5" style={`background: color-mix(in oklab, ${d.color} 12%, var(--surface))`}>
         <span>
-          <span class="block font-semibold">Are you {d.short}?</span>
-          
+          <span class="block font-semibold">{t('Is this your tradition?')}</span>
         </span>
-        <span class="btn btn-primary h-10 px-4 text-sm">Start</span>
+        <span class="btn btn-primary h-10 px-4 text-sm">{t('Take the quiz')}</span>
       </a>
     </aside>
   </div>
 
   <nav class="mt-10 grid grid-cols-2 gap-3">
-    <a href={`/denominations/${prev.id}`} class="card flex items-center gap-3 p-4 transition hover:-translate-y-0.5">
+    <a href={href(lang, `/denominations/${prev.id}`)} class="card flex items-center gap-3 p-4 transition hover:-translate-y-0.5">
       <span class="text-muted">←</span><Badge id={prev.id} color={prev.color} size={32} /><span class="truncate text-sm font-semibold">{prev.short}</span>
     </a>
-    <a href={`/denominations/${next.id}`} class="card flex items-center justify-end gap-3 p-4 text-right transition hover:-translate-y-0.5">
+    <a href={href(lang, `/denominations/${next.id}`)} class="card flex items-center justify-end gap-3 p-4 text-right transition hover:-translate-y-0.5">
       <span class="truncate text-sm font-semibold">{next.short}</span><Badge id={next.id} color={next.color} size={32} /><span class="text-muted">→</span>
     </a>
   </nav>

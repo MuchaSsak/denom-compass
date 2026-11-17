@@ -5,12 +5,15 @@
   import type { Answers, Denomination, Question } from '../data/types';
   import { rankAll, compassFromAnswers, compassForDenomination, type MatchResult } from '../lib/scoring';
   import { latestResult, decodeAnswers, encodeAnswers, pushHistory, updateLatest } from '../lib/storage';
-import AiReading from './AiReading.svelte';
+  import AiReading from './AiReading.svelte';
+  import { useT, href, type Lang } from '../i18n';
+  import { familyName } from '../i18n/labels';
   import Badge from './Badge.svelte';
   import Donut from './Donut.svelte';
   import CompassChart from './CompassChart.svelte';
 
-  let { questions, denominations }: { questions: Question[]; denominations: Denomination[] } = $props();
+  let { questions, denominations, lang }: { questions: Question[]; denominations: Denomination[]; lang: Lang } = $props();
+  const t = useT(lang);
 
   const byId = Object.fromEntries(denominations.map((d) => [d.id, d]));
   const qById = Object.fromEntries(questions.map((q) => [q.id, q]));
@@ -50,10 +53,10 @@ import AiReading from './AiReading.svelte';
   const visible = $derived(showAll ? ranked : ranked.slice(0, 8));
 
   function headline(p: number) {
-    if (p === 100) return 'A perfect match';
-    if (p >= 90) return 'A near-perfect match';
-    if (p >= 75) return 'Your closest match';
-    return 'Your closest match — loosely';
+    if (p === 100) return t('A perfect match');
+    if (p >= 90) return t('A near-perfect match');
+    if (p >= 75) return t('Your closest match');
+    return t('Your closest match — loosely');
   }
 
   function stanceLabel(d: Denomination, qid: string) {
@@ -71,10 +74,10 @@ import AiReading from './AiReading.svelte';
 
   async function share() {
     if (!answers) return;
-    const url = `${location.origin}/results#a=${encodeAnswers(answers, questions)}`;
+    const url = `${location.origin}${href(lang, '/results')}#a=${encodeAnswers(answers, questions)}`;
     try {
       if (navigator.share && matchMedia('(pointer:coarse)').matches) {
-        await navigator.share({ title: 'My Denomination Compass result', text: `I matched ${top.percent}% with ${topD?.name}`, url });
+        await navigator.share({ title: t('My Denomination Compass result'), text: t('I matched {percent}% with {name}', { percent: top.percent, name: topD?.name }), url });
       } else {
         await navigator.clipboard.writeText(url);
         copied = true;
@@ -87,7 +90,7 @@ import AiReading from './AiReading.svelte';
     if (!answers) return;
     pushHistory({ answers: $state.snapshot(answers) as Answers, topId: top.id, topPercent: top.percent, finishedAt: Date.now() });
     shared = false;
-    history.replaceState(null, '', '/results');
+    history.replaceState(null, '', href(lang, '/results'));
   }
 
   function applySuggestion(qid: string, oid: string) {
@@ -105,20 +108,19 @@ import AiReading from './AiReading.svelte';
   <div class="min-h-[60vh]"></div>
 {:else if !answers || !top || !topD}
   <section class="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center text-center">
-    <p class="eyebrow">No results yet</p>
-    <h1 class="mt-3 font-display text-3xl">Take the quiz first</h1>
-    
-    <a href="/quiz" class="btn btn-primary mt-8">Start the quiz</a>
+    <p class="eyebrow">{t('No results yet')}</p>
+    <h1 class="mt-3 font-display text-3xl">{t('Take the quiz first')}</h1>
+    <a href={href(lang, '/quiz')} class="btn btn-primary mt-8">{t('Start the quiz')}</a>
   </section>
 {:else}
   <div class="pt-8 sm:pt-12">
     {#if shared}
       <div class="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-surface-2 px-4 py-3 text-sm">
-        <span>Shared result</span>
+        <span>{t('Shared result')}</span>
         <span class="flex gap-2">
-          <button class="font-semibold underline-offset-4 hover:underline" onclick={saveShared}>Save</button>
+          <button class="font-semibold underline-offset-4 hover:underline" onclick={saveShared}>{t('Save')}</button>
           <span class="text-muted">·</span>
-          <a href="/quiz" class="font-semibold underline-offset-4 hover:underline">Take it yourself</a>
+          <a href={href(lang, '/quiz')} class="font-semibold underline-offset-4 hover:underline">{t('Take it yourself')}</a>
         </span>
       </div>
     {/if}
@@ -153,14 +155,14 @@ import AiReading from './AiReading.svelte';
 
       {#if close.length}
         <p class="mt-4 text-sm text-muted">
-          Neck and neck with {#each close as c, i}<a class="font-semibold text-ink underline-offset-4 hover:underline" href="/denominations/{c.id}">{byId[c.id].short} ({c.percent}%)</a>{i < close.length - 1 ? ', ' : ''}{/each}
+          {t('Neck and neck with')} {#each close as c, i}<a class="font-semibold text-ink underline-offset-4 hover:underline" href={href(lang, `/denominations/${c.id}`)}>{byId[c.id].short} ({c.percent}%)</a>{i < close.length - 1 ? ', ' : ''}{/each}
         </p>
       {/if}
 
       <div class="mt-7 flex flex-wrap gap-2.5">
-        <a href="/denominations/{topD.id}" class="btn btn-primary">Explore {topD.short}</a>
-        <button class="btn btn-ghost" onclick={share}>{copied ? 'Link copied ✓' : 'Share result'}</button>
-        <a href="/quiz" class="btn btn-ghost">Retake</a>
+        <a href={href(lang, `/denominations/${topD.id}`)} class="btn btn-primary">{t('Explore')}: {topD.short}</a>
+        <button class="btn btn-ghost" onclick={share}>{copied ? t('Link copied ✓') : t('Share result')}</button>
+        <a href={href(lang, '/quiz')} class="btn btn-ghost">{t('Retake')}</a>
       </div>
     </section>
 
@@ -169,15 +171,15 @@ import AiReading from './AiReading.svelte';
       {#each ranked.slice(1, 3) as r, i (r.id)}
         {@const d = byId[r.id]}
         <a
-          href="/denominations/{d.id}"
+          href={href(lang, `/denominations/${d.id}`)}
           class="card group flex items-center gap-4 p-5 transition hover:-translate-y-0.5"
           in:fly={{ y: 16, duration: 500, delay: 120 + i * 80, easing: cubicOut }}
         >
           <Badge id={d.id} color={d.color} size={52} />
           <div class="min-w-0 flex-1">
-            <p class="text-xs font-semibold tracking-wider text-muted uppercase">#{i + 2} match</p>
+            <p class="text-xs font-semibold tracking-wider text-muted uppercase">{t('Match #{n}', { n: i + 2 })}</p>
             <p class="truncate font-display text-xl font-semibold">{d.name}</p>
-            <p class="truncate text-sm text-muted">{d.family}</p>
+            <p class="truncate text-sm text-muted">{familyName(t, d.family)}</p>
           </div>
           <Donut percent={r.percent} color={d.color} size={64} stroke={6} />
         </a>
@@ -188,8 +190,8 @@ import AiReading from './AiReading.svelte';
     <section class="mt-14">
       <div class="flex items-end justify-between gap-4">
         <div>
-          <p class="eyebrow">Every tradition</p>
-          <h2 class="mt-1 font-display text-3xl font-semibold">How you compare</h2>
+          <p class="eyebrow">{t('Every tradition')}</p>
+          <h2 class="mt-1 font-display text-3xl font-semibold">{t('How you compare')}</h2>
         </div>
       </div>
 
@@ -206,7 +208,7 @@ import AiReading from './AiReading.svelte';
               <Badge id={d.id} color={d.color} size={36} />
               <span class="w-32 min-w-0 flex-none sm:w-52">
                 <span class="block truncate font-semibold">{d.short}</span>
-                <span class="block truncate text-xs text-muted">{d.family}</span>
+                <span class="block truncate text-xs text-muted">{familyName(t, d.family)}</span>
               </span>
               <span class="relative h-2.5 flex-1 overflow-hidden rounded-full bg-surface-2">
                 <span class="absolute inset-y-0 left-0 rounded-full transition-[width] duration-1000 ease-out" style="width:{r.percent}%;background:{d.color}"></span>
@@ -225,12 +227,12 @@ import AiReading from './AiReading.svelte';
                         {m === 'agree' ? 'bg-emerald-600' : m === 'partial' ? 'bg-amber-500' : 'bg-rose-600'}">{m === 'agree' ? '✓' : m === 'partial' ? '~' : '✕'}</span>
                       <span class="min-w-0">
                         <span class="block font-medium">{qById[b.questionId].text}</span>
-                        <span class="block text-xs text-muted">You: {answerLabel(b.questionId, b.answer)} · {d.short}: {stanceLabel(d, b.questionId)}</span>
+                        <span class="block text-xs text-muted">{t('You')}: {answerLabel(b.questionId, b.answer)} · {d.short}: {stanceLabel(d, b.questionId)}</span>
                       </span>
                     </li>
                   {/each}
                 </ul>
-                <a href="/denominations/{d.id}" class="mt-4 inline-block text-sm font-semibold underline-offset-4 hover:underline">Read about {d.short} →</a>
+                <a href={href(lang, `/denominations/${d.id}`)} class="mt-4 inline-block text-sm font-semibold underline-offset-4 hover:underline">{t('Read more')}: {d.short} →</a>
               </div>
             {/if}
           </div>
@@ -239,7 +241,7 @@ import AiReading from './AiReading.svelte';
       {#if ranked.length > 8}
         <div class="mt-3 text-center">
           <button class="text-sm font-semibold text-muted hover:text-ink" onclick={() => (showAll = !showAll)}>
-            {showAll ? 'Show fewer' : `Show all ${ranked.length}`}
+            {showAll ? t('Show fewer') : t('Show all {n}', { n: ranked.length })}
           </button>
         </div>
       {/if}
@@ -247,17 +249,17 @@ import AiReading from './AiReading.svelte';
 
     <!-- AI -->
     {#if !shared}
-      <div class="mt-14"><AiReading {answers} {questions} {denominations} onApply={applySuggestion} /></div>
+      <div class="mt-14"><AiReading {answers} {questions} {denominations} {lang} onApply={applySuggestion} /></div>
     {/if}
 
     <!-- COMPASS -->
     <section class="mt-14 grid items-center gap-8 lg:grid-cols-[1fr_1.1fr]">
       <div>
-        <p class="eyebrow">The compass</p>
-        <h2 class="mt-1 font-display text-3xl font-semibold">Where you stand</h2>
-        <p class="mt-3 leading-relaxed text-muted">Are sacraments signs or channels of grace? Does salvation rest on God’s choice or your free response?</p>
+        <p class="eyebrow">{t('The compass')}</p>
+        <h2 class="mt-1 font-display text-3xl font-semibold">{t('Where you stand')}</h2>
+        <p class="mt-3 leading-relaxed text-muted">{t('Are sacraments signs or channels of grace? Does salvation rest on God’s choice or your free response?')}</p>
       </div>
-      <CompassChart {points} {you} highlight={ranked.slice(0, 3).map((r) => r.id)} />
+      <CompassChart {points} {you} {lang} highlight={ranked.slice(0, 3).map((r) => r.id)} />
     </section>
   </div>
 {/if}

@@ -7,6 +7,8 @@ export interface QuestionOption {
   short?: string;
   /** One-line clarification shown in the option's tooltip */
   detail?: string;
+  /** Established technical name, shown at the end of the tooltip, e.g. "soul sleep" (src/data/optionTerms.ts) */
+  term?: string;
   /** Compass contribution: x = symbolic(-1) ↔ sacramental(+1), y = sovereign grace(-1) ↔ cooperative grace(+1) */
   axes?: { x?: number; y?: number };
 }

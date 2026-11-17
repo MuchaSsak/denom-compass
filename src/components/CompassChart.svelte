@@ -1,8 +1,10 @@
 <script lang="ts">
   import Badge from './Badge.svelte';
+  import { useT, href, type Lang } from '../i18n';
 
   interface Point { id: string; name: string; color: string; x: number; y: number }
-  let { points, you, highlight = [] }: { points: Point[]; you: { x: number; y: number } | null; highlight?: string[] } = $props();
+  let { points, you, highlight = [], lang }: { points: Point[]; you: { x: number; y: number } | null; highlight?: string[]; lang: Lang } = $props();
+  const t = useT(lang);
 
   let hover = $state<string | null>(null);
   // x: -1 symbolic → +1 sacramental ; y: -1 sovereign grace (top) → +1 free will (bottom)
@@ -50,18 +52,18 @@
     <div class="absolute top-1/2 right-4 left-4 h-px bg-line"></div>
     <div class="absolute top-4 bottom-4 left-1/2 w-px bg-line"></div>
 
-    <span class="absolute top-2 left-1/2 -translate-x-1/2 rounded-full bg-surface px-2 py-0.5 text-[10px] font-bold tracking-widest text-muted uppercase">Sovereign grace</span>
-    <span class="absolute bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-surface px-2 py-0.5 text-[10px] font-bold tracking-widest text-muted uppercase">Free will</span>
-    <span class="absolute top-1/2 left-1.5 -translate-y-1/2 rotate-180 rounded-full bg-surface px-0.5 py-2 text-[10px] font-bold tracking-widest text-muted uppercase [writing-mode:vertical-rl]">Symbolic</span>
-    <span class="absolute top-1/2 right-1.5 -translate-y-1/2 rounded-full bg-surface px-0.5 py-2 text-[10px] font-bold tracking-widest text-muted uppercase [writing-mode:vertical-rl]">Sacramental</span>
+    <span class="absolute top-2 left-1/2 -translate-x-1/2 rounded-full bg-surface px-2 py-0.5 text-[10px] font-bold tracking-widest text-muted uppercase">{t('Sovereign grace')}</span>
+    <span class="absolute bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-surface px-2 py-0.5 text-[10px] font-bold tracking-widest text-muted uppercase">{t('Free will')}</span>
+    <span class="absolute top-1/2 left-1.5 -translate-y-1/2 rotate-180 rounded-full bg-surface px-0.5 py-2 text-[10px] font-bold tracking-widest text-muted uppercase [writing-mode:vertical-rl]">{t('Symbolic')}</span>
+    <span class="absolute top-1/2 right-1.5 -translate-y-1/2 rounded-full bg-surface px-0.5 py-2 text-[10px] font-bold tracking-widest text-muted uppercase [writing-mode:vertical-rl]">{t('Sacramental')}</span>
 
     {#each placed as p (p.id)}
       {@const at = p}
       {@const hl = highlight.includes(p.id) || hover === p.id}
       <a
-        href="/denominations/{p.id}"
-        class="absolute -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 hover:z-20 hover:scale-125"
-        style="left:{at.left}%;top:{at.top}%;z-index:{hl ? 15 : 5}"
+        href={href(lang, `/denominations/${p.id}`)}
+        class="absolute -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 hover:scale-125"
+        style="left:{at.left}%;top:{at.top}%;z-index:{hover === p.id ? 40 : hl ? 15 : 5}"
         onmouseenter={() => (hover = p.id)}
         onmouseleave={() => (hover = null)}
         onfocus={() => (hover = p.id)}
@@ -79,9 +81,10 @@
 
     {#if you}
       {@const at = pos(you)}
-      <div class="absolute z-30 -translate-x-1/2 -translate-y-1/2" style="left:{at.left}%;top:{at.top}%">
+      <!-- Never blocks the badges underneath; a hovered badge rises above it. -->
+      <div class="pointer-events-none absolute z-30 -translate-x-1/2 -translate-y-1/2" style="left:{at.left}%;top:{at.top}%">
         <span class="absolute inset-0 -m-3 animate-ping rounded-full bg-gold/30"></span>
-        <span class="relative grid size-9 place-items-center rounded-full border-[3px] border-surface bg-gold text-[10px] font-extrabold text-white shadow-lg">YOU</span>
+        <span class="relative grid size-9 place-items-center rounded-full border-[3px] border-surface bg-gold text-[10px] font-extrabold text-white shadow-lg">{t('YOU')}</span>
       </div>
     {/if}
   </div>

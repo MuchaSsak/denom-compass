@@ -1,0 +1,40 @@
+---
+/**
+ * Unknown path. Old or un-prefixed links (/results#a=…, /councils/trent) are sent to
+ * the same page under the preferred language; anything else shows a small 404.
+ */
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 · Denomination Compass</title>
+    <meta name="robots" content="noindex" />
+    <script is:inline>
+      (function () {
+        var p = location.pathname;
+        if (/^\/(en|pl)(\/|$)/.test(p)) return; // real 404 inside a locale
+        var lang;
+        try { lang = localStorage.getItem('dc:lang'); } catch (e) {}
+        if (lang !== 'en' && lang !== 'pl') {
+          var prefs = navigator.languages || [navigator.language || ''];
+          lang = prefs.some(function (l) { return /^pl\b/i.test(l); }) ? 'pl' : 'en';
+        }
+        location.replace('/' + lang + (p === '/' ? '' : p.replace(/\/$/, '')) + location.search + location.hash);
+      })();
+      try {
+        var t = localStorage.getItem('dc:theme');
+        if (t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="grid min-h-dvh place-items-center p-6 text-center">
+    <main>
+      <p class="eyebrow">404</p>
+      <h1 class="mt-2 font-display text-3xl">Page not found · Nie znaleziono strony</h1>
+      <p class="mt-6 flex justify-center gap-3"><a class="btn btn-primary" href="/en">English</a><a class="btn btn-ghost" href="/pl">Polski</a></p>
+    </main>
+  </body>
+</html>

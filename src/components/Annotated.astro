@@ -1,0 +1,10 @@
+---
+import type { Part } from '../data/creeds';
+interface Props { parts: Part[] }
+const { parts } = Astro.props;
+---
+{parts.map((p) =>
+  typeof p === 'string' ? p : (
+    <span class="annot cursor-help rounded-sm underline decoration-gold decoration-dotted decoration-2 underline-offset-[5px] outline-none hover:bg-gold/15 focus:bg-gold/15" tabindex="0" data-note={p.note}>{p.t}</span>
+  ),
+)}

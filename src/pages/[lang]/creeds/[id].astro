@@ -1,18 +1,22 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Badge from '../../components/Badge.astro';
-import CreedText from '../../components/CreedText.astro';
-import { creeds, type Creed } from '../../data/creeds';
-import { denominationById } from '../../data/denominations';
+import Base from '../../../layouts/Base.astro';
+import Badge from '../../../components/Badge.astro';
+import CreedText from '../../../components/CreedText.astro';
+import { creeds as baseCreeds } from '../../../data/creeds';
+import { dataFor } from '../../../data/localized';
+import { LANGS, useT, href, type Lang } from '../../../i18n';
 
 export function getStaticPaths() {
-  return creeds.map((c) => ({ params: { id: c.id }, props: { c } }));
+  return LANGS.flatMap((lang) => baseCreeds.map((c) => ({ params: { lang, id: c.id } })));
 }
-const { c } = Astro.props as { c: Creed };
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+const { creeds, denominationById } = dataFor(lang);
+const c = creeds.find((x) => x.id === Astro.params.id)!;
 const others = creeds.filter((x) => x.id !== c.id);
 ---
 <Base title={c.name} description={c.tagline} wide>
-  <a href="/creeds" class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-muted hover:text-ink">← All creeds</a>
+  <a href={href(lang, '/creeds')} class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-muted hover:text-ink">← {t('All creeds')}</a>
 
   <div class="mt-4 grid gap-6 lg:grid-cols-[1.5fr_1fr]">
     <article class="card p-6 sm:p-10">
@@ -27,21 +31,21 @@ const others = creeds.filter((x) => x.id !== c.id);
 
     <aside class="flex flex-col gap-6">
       <section class="card p-6">
-        <h2 class="text-[11px] font-bold tracking-widest text-muted uppercase">Origin</h2>
+        <h2 class="text-[11px] font-bold tracking-widest text-muted uppercase">{t('Origin')}</h2>
         <p class="mt-2 leading-relaxed">{c.origin}</p>
-        <h2 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">In short</h2>
+        <h2 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">{t('In short')}</h2>
         <ul class="mt-2 grid gap-1.5">
           {c.keyPoints.map((k) => <li class="flex gap-2"><span class="mt-[8px] size-1.5 flex-none rounded-full bg-gold"></span>{k}</li>)}
         </ul>
       </section>
 
       <section class="card p-6">
-        <h2 class="font-display text-xl font-semibold">Confessed by</h2>
+        <h2 class="font-display text-xl font-semibold">{t('Confessed by')}</h2>
         <ul class="mt-3 grid gap-2">
           {c.usedBy.map((u) => {
             const d = denominationById[u.id];
             return (
-              <li><a href={`/denominations/${d.id}`} class="flex items-center gap-3 rounded-xl p-1 transition hover:bg-surface-2">
+              <li><a href={href(lang, `/denominations/${d.id}`)} class="flex items-center gap-3 rounded-xl p-1 transition hover:bg-surface-2">
                 <Badge id={d.id} color={d.color} size={30} />
                 <span class="min-w-0"><span class="block text-sm font-semibold">{d.short}</span>{u.note && <span class="block text-xs text-muted">{u.note}</span>}</span>
               </a></li>
@@ -50,12 +54,12 @@ const others = creeds.filter((x) => x.id !== c.id);
         </ul>
         {c.rejectedBy && c.rejectedBy.length > 0 && (
           <>
-            <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">Not used by</h3>
+            <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">{t('Not used by')}</h3>
             <ul class="mt-2 grid gap-2">
               {c.rejectedBy.map((u) => {
                 const d = denominationById[u.id];
                 return (
-                  <li><a href={`/denominations/${d.id}`} class="flex items-center gap-3 rounded-xl p-1 opacity-80 transition hover:bg-surface-2 hover:opacity-100">
+                  <li><a href={href(lang, `/denominations/${d.id}`)} class="flex items-center gap-3 rounded-xl p-1 opacity-80 transition hover:bg-surface-2 hover:opacity-100">
                     <Badge id={d.id} color={d.color} size={26} />
                     <span class="min-w-0"><span class="block text-sm font-semibold">{d.short}</span>{u.note && <span class="block text-xs text-muted">{u.note}</span>}</span>
                   </a></li>
@@ -68,7 +72,7 @@ const others = creeds.filter((x) => x.id !== c.id);
 
       <nav class="grid gap-2">
         {others.map((o) => (
-          <a href={`/creeds/${o.id}`} class="card flex items-center justify-between gap-3 px-5 py-3.5 text-sm font-semibold transition hover:-translate-y-0.5">
+          <a href={href(lang, `/creeds/${o.id}`)} class="card flex items-center justify-between gap-3 px-5 py-3.5 text-sm font-semibold transition hover:-translate-y-0.5">
             {o.name}<span class="text-muted">{o.date} →</span>
           </a>
         ))}

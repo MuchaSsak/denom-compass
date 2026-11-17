@@ -17,9 +17,9 @@ export interface AiResponse {
   model: string;
 }
 
+/** Tried in order until one returns parseable JSON. `openrouter/free` routes to any available free model. */
 export const DEFAULT_MODELS = [
   'nvidia/nemotron-3-ultra-550b-a55b:free',
-  'google/gemma-4-31b-it:free',
   'openrouter/free',
 ];
 
@@ -29,6 +29,7 @@ export function buildPrompt(
   answers: Answers,
   notes: Notes,
   ranking: { id: string; percent: number }[],
+  lang: 'en' | 'pl' = 'en',
 ) {
   const traditions = denoms
     .map((d) => {
@@ -76,19 +77,55 @@ ${user}
 ${general ? `THE PERSON'S OWN DESCRIPTION OF THEIR FAITH:\n"""${general}"""\n` : ''}
 ALGORITHMIC RANKING (weighted agreement on the clicked answers only): ${ranking.slice(0, 6).map((r) => `${r.id} ${r.percent}%`).join(', ')}
 
-Weigh their own words most heavily where given (their notes may also contain questions or uncertainty — answer those in "replies"); they may reveal nuance a click cannot. You may disagree with the algorithmic ranking if their words justify it. Return the JSON object now.`;
+${lang === 'pl' ? 'LANGUAGE: Write every string value in Polish (pl-PL), addressing the person informally ("ty"), using standard Polish theological terms (e.g. Trójca Święta, usprawiedliwienie, przeistoczenie, sukcesja apostolska). Keep JSON keys and ids in English.\n\n' : ''}Weigh their own words most heavily where given (their notes may also contain questions or uncertainty — answer those in "replies"); they may reveal nuance a click cannot. You may disagree with the algorithmic ranking if their words justify it. Return the JSON object now.`;
 
   return { system, prompt };
 }
 
-/** Pull the first JSON object out of a model reply (handles ```json fences and stray prose). */
+/**
+ * Pull the first JSON object out of a model reply. Handles ```json fences, stray prose,
+ * <think> blocks, trailing commas and replies cut off mid-object (closes open brackets).
+ */
 export function extractJson(text: string): unknown {
-  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/);
-  const body = fenced ? fenced[1] : text;
+  const clean = text.replace(/<think>[\s\S]*?<\/think>/g, '');
+  const fenced = clean.match(/```(?:json)?\s*([\s\S]*?)(?:```|$)/);
+  const body = fenced && fenced[1].includes('{') ? fenced[1] : clean;
   const start = body.indexOf('{');
+  if (start < 0) throw new Error('No JSON object in model reply');
   const end = body.lastIndexOf('}');
-  if (start < 0 || end <= start) throw new Error('No JSON object in model reply');
-  return JSON.parse(body.slice(start, end + 1));
+  const candidate = end > start ? body.slice(start, end + 1) : body.slice(start);
+  try {
+    return JSON.parse(candidate);
+  } catch {
+    return JSON.parse(repairJson(body.slice(start)));
+  }
+}
+
+/** Best-effort fix for truncated / sloppy JSON: drop a dangling partial value, close strings and brackets. */
+export function repairJson(src: string): string {
+  let out = '';
+  const stack: string[] = [];
+  let inStr = false, esc = false;
+  for (const ch of src) {
+    out += ch;
+    if (inStr) {
+      if (esc) esc = false;
+      else if (ch === '\\') esc = true;
+      else if (ch === '"') inStr = false;
+      continue;
+    }
+    if (ch === '"') inStr = true;
+    else if (ch === '{' || ch === '[') stack.push(ch === '{' ? '}' : ']');
+    else if (ch === '}' || ch === ']') {
+      stack.pop();
+      if (!stack.length) break;
+    }
+  }
+  if (inStr) out += '"';
+  // remove a trailing key without value / dangling comma or colon
+  out = out.replace(/,\s*"[^"]*"\s*:?\s*"?$/, '').replace(/[,:]\s*$/, '');
+  out += stack.reverse().join('');
+  return out.replace(/,(\s*[}\]])/g, '$1');
 }
 
 /** Validate & sanitise model output against known ids. */

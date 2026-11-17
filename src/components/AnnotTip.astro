@@ -1,0 +1,30 @@
+---
+/** One per page: the floating tooltip for every `.annot` span (creed phrases, glossary terms). */
+---
+<div id="annot-tip" role="tooltip" class="pointer-events-none fixed z-50 hidden w-72 max-w-[calc(100vw-24px)] rounded-xl bg-ink px-3.5 py-2.5 text-[0.82rem] leading-snug font-medium text-bg shadow-xl"></div>
+
+<script>
+  // Position the tooltip above the exact line being hovered (phrases can wrap).
+  const tip = document.getElementById('annot-tip')!;
+  function show(el: HTMLElement, x?: number, y?: number) {
+    const rects = [...el.getClientRects()];
+    const r = (x !== undefined && y !== undefined && rects.find((q) => x >= q.left && x <= q.right && y >= q.top && y <= q.bottom)) || rects[0];
+    if (!r) return;
+    tip.textContent = el.dataset.note ?? '';
+    tip.classList.remove('hidden');
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    const left = Math.min(Math.max(12, r.left + r.width / 2 - w / 2), innerWidth - w - 12);
+    const above = r.top - h - 8;
+    tip.style.left = `${left}px`;
+    tip.style.top = `${above > 8 ? above : r.bottom + 8}px`;
+  }
+  const hide = () => tip.classList.add('hidden');
+  document.querySelectorAll<HTMLElement>('.annot').forEach((el) => {
+    el.addEventListener('mousemove', (e) => show(el, e.clientX, e.clientY));
+    el.addEventListener('mouseleave', hide);
+    el.addEventListener('focus', () => show(el));
+    el.addEventListener('blur', hide);
+    el.addEventListener('click', () => show(el)); // touch
+  });
+  addEventListener('scroll', hide, { passive: true });
+</script>

@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import Quiz from '../../components/Quiz.svelte';
+import { dataFor } from '../../data/localized';
+import { langPaths, href, type Lang } from '../../i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const { questions, denominations, topicTitles } = dataFor(lang);
+const resultsUrl = href(lang, '/results');
+---
+<Base>
+  <!-- Already finished (and not mid-retake)? Go straight to results. -->
+  <script is:inline slot="head" define:vars={{ resultsUrl }}>
+    try {
+      if (localStorage.getItem('dc:history:v1') && !localStorage.getItem('dc:progress:v1')) location.replace(resultsUrl);
+    } catch {}
+  </script>
+  <Quiz client:load {questions} {denominations} topics={topicTitles} {lang} />
+</Base>

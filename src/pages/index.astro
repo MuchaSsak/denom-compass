@@ -1,16 +1,28 @@
 ---
-import Base from '../layouts/Base.astro';
-import Quiz from '../components/Quiz.svelte';
-import { questions } from '../data/questions';
-import { denominations } from '../data/denominations';
-import { topicTitles } from '../data/topics';
+/** "/" → "/en" or "/pl": last language used, else the browser's preference. */
 ---
-<Base>
-  <!-- Already finished (and not mid-retake)? Go straight to results. -->
-  <script is:inline slot="head">
-    try {
-      if (localStorage.getItem('dc:history:v1') && !localStorage.getItem('dc:progress:v1')) location.replace('/results');
-    } catch {}
-  </script>
-  <Quiz client:load {questions} {denominations} topics={topicTitles} />
-</Base>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Denomination Compass</title>
+    <meta name="robots" content="noindex" />
+    <link rel="alternate" hreflang="en" href="/en" />
+    <link rel="alternate" hreflang="pl" href="/pl" />
+    <link rel="alternate" hreflang="x-default" href="/en" />
+    <script is:inline>
+      (function () {
+        var lang;
+        try { lang = localStorage.getItem('dc:lang'); } catch (e) {}
+        if (lang !== 'en' && lang !== 'pl') {
+          var prefs = navigator.languages || [navigator.language || ''];
+          lang = prefs.some(function (l) { return /^pl\b/i.test(l); }) ? 'pl' : 'en';
+        }
+        location.replace('/' + lang + location.search + location.hash);
+      })();
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=/en" /></noscript>
+  </head>
+  <body></body>
+</html>
