@@ -1,0 +1,48 @@
+---
+import type { Part } from '../data/creeds';
+interface Props { text: Part[][] }
+const { text } = Astro.props;
+---
+<div class="creed font-display text-[1.2rem] leading-[1.75] sm:text-[1.35rem]">
+  {text.map((para) => (
+    <p>
+      {para.map((p) =>
+        typeof p === 'string' ? (
+          p
+        ) : (
+          <span class="annot cursor-help rounded-sm underline decoration-gold decoration-dotted decoration-2 underline-offset-[5px] outline-none hover:bg-gold/15 focus:bg-gold/15" tabindex="0" data-note={p.note}>{p.t}</span>
+        ),
+      )}
+    </p>
+  ))}
+</div>
+<div id="creed-tip" role="tooltip" class="pointer-events-none fixed z-50 hidden w-72 max-w-[calc(100vw-24px)] rounded-xl bg-ink px-3.5 py-2.5 text-[0.82rem] leading-snug font-medium text-bg shadow-xl"></div>
+
+<style>
+  .creed p + p { margin-top: 1rem; }
+</style>
+
+<script>
+  // Position the tooltip above the exact line being hovered (phrases can wrap).
+  const tip = document.getElementById('creed-tip')!;
+  function show(el: HTMLElement, x?: number, y?: number) {
+    const rects = [...el.getClientRects()];
+    const r = (x !== undefined && y !== undefined && rects.find((q) => x >= q.left && x <= q.right && y >= q.top && y <= q.bottom)) || rects[0];
+    if (!r) return;
+    tip.textContent = el.dataset.note ?? '';
+    tip.classList.remove('hidden');
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    const left = Math.min(Math.max(12, r.left + r.width / 2 - w / 2), innerWidth - w - 12);
+    const above = r.top - h - 8;
+    tip.style.left = `${left}px`;
+    tip.style.top = `${above > 8 ? above : r.bottom + 8}px`;
+  }
+  const hide = () => tip.classList.add('hidden');
+  document.querySelectorAll<HTMLElement>('.annot').forEach((el) => {
+    el.addEventListener('mousemove', (e) => show(el, e.clientX, e.clientY));
+    el.addEventListener('mouseleave', hide);
+    el.addEventListener('focus', () => show(el));
+    el.addEventListener('blur', hide);
+  });
+  addEventListener('scroll', hide, { passive: true });
+</script>

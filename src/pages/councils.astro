@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import Badge from '../components/Badge.astro';
+import { councils, schisms } from '../data/councils';
+import { denominations, denominationById } from '../data/denominations';
+
+const acceptedBy = (n: number) => denominations.filter((d) => d.councils.includes(n));
+const eras = [
+  { title: 'The undivided Church', sub: 'Shared, in part, by nearly every tradition', range: [1, 7] },
+  { title: 'The Western councils', sub: 'Received as ecumenical by the Catholic Church only', range: [8, 21] },
+];
+---
+<Base title="Councils" wide>
+  <header class="pt-12 pb-2 sm:pt-16">
+    <p class="eyebrow">Ecumenical councils</p>
+    <h1 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">Twenty-one councils, many churches</h1>
+    <p class="mt-3 max-w-2xl text-muted">
+      How many councils a church receives is one of the clearest ways to tell traditions apart:
+      <strong class="text-ink">two</strong> for the Church of the East, <strong class="text-ink">three</strong> for the Oriental Orthodox,
+      <strong class="text-ink">seven</strong> for the Eastern Orthodox, <strong class="text-ink">twenty-one</strong> for Catholics.
+      Classical Protestants receive the early councils’ teaching as faithful to Scripture, not as infallible.
+    </p>
+  </header>
+
+  <!-- overview strip -->
+  <section class="card mt-8 overflow-x-auto p-5">
+    <table class="w-full min-w-[720px] border-separate border-spacing-y-1 text-sm">
+      <thead>
+        <tr>
+          <th class="w-44 text-left text-[11px] font-bold tracking-widest text-muted uppercase">Tradition</th>
+          {councils.map((c) => <th class="text-[11px] font-semibold text-muted tabular-nums" title={`${c.name} (${c.year})`}><a href={`#c${c.n}`}>{c.n}</a></th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {['catholic', 'orthodox', 'oriental', 'assyrian', 'anglican', 'lutheran', 'reformed', 'methodist', 'baptist'].map((id) => {
+          const d = denominationById[id];
+          return (
+            <tr>
+              <td class="pr-3"><a href={`/denominations/${id}`} class="flex items-center gap-2 font-medium hover:underline"><Badge id={id} color={d.color} size={22} />{d.short}</a></td>
+              {councils.map((c) => (
+                <td class="px-[2px]">
+                  <span class="block h-5 rounded" style={d.councils.includes(c.n) ? `background:${d.color}` : 'background:var(--surface-2)'}></span>
+                </td>
+              ))}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+    <p class="mt-3 text-xs text-muted">Protestant rows show the councils whose doctrinal definitions they affirm — under the authority of Scripture. Traditions not shown accept none as authoritative.</p>
+  </section>
+
+  {eras.map((era) => (
+    <section class="mt-14">
+      <div class="mb-5 flex flex-wrap items-baseline gap-x-3 border-b border-line pb-2">
+        <h2 class="font-display text-2xl font-semibold">{era.title}</h2>
+        <p class="text-sm text-muted">{era.sub}</p>
+      </div>
+      <ol class="relative grid gap-4 border-l border-line pl-6 sm:pl-8">
+        {councils.filter((c) => c.n >= era.range[0] && c.n <= era.range[1]).map((c) => {
+          const acc = acceptedBy(c.n);
+          return (
+            <li id={`c${c.n}`} class="relative scroll-mt-24">
+              <span class="absolute top-6 -left-[33px] grid size-[18px] place-items-center rounded-full border-2 border-bg bg-gold sm:-left-[41px]"></span>
+              <article class="card p-5 sm:p-6">
+                <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <span class="font-display text-sm font-semibold text-gold tabular-nums">#{c.n}</span>
+                  <h3 class="font-display text-xl font-semibold">{c.name}</h3>
+                  <span class="text-sm text-muted">{c.year} · {c.place}</span>
+                </div>
+                <p class="mt-2 leading-relaxed">{c.summary}</p>
+                <ul class="mt-3 flex flex-wrap gap-1.5">{c.decisions.map((x) => <li class="chip">{x}</li>)}</ul>
+                <div class="mt-4 flex flex-wrap items-center gap-2 border-t border-line pt-3">
+                  <span class="text-[11px] font-bold tracking-widest text-muted uppercase">Accepted by</span>
+                  {acc.map((d) => (
+                    <a href={`/denominations/${d.id}`} title={d.name} class="transition hover:scale-110"><Badge id={d.id} color={d.color} size={26} /></a>
+                  ))}
+                </div>
+              </article>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  ))}
+
+  <!-- schisms -->
+  <section class="mt-16">
+    <div class="mb-5 flex flex-wrap items-baseline gap-x-3 border-b border-line pb-2">
+      <h2 class="font-display text-2xl font-semibold">How the branches formed</h2>
+      <p class="text-sm text-muted">The great divisions, in order</p>
+    </div>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {schisms.map((s) => (
+        <div class="card p-5">
+          <div class="flex items-center justify-between gap-3">
+            <span class="font-display text-2xl font-semibold text-gold">{s.year}</span>
+            <span class="flex -space-x-1.5">{s.ids.map((id) => <Badge id={id} color={denominationById[id].color} size={28} class="ring-2 ring-[var(--surface)]" />)}</span>
+          </div>
+          <p class="mt-2 font-semibold">{s.title}</p>
+          <p class="mt-1 text-sm leading-relaxed text-muted">{s.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

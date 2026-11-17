@@ -1,0 +1,205 @@
+---
+import Base from '../../layouts/Base.astro';
+import Badge from '../../components/Badge.astro';
+import { denominations } from '../../data/denominations';
+import { questions } from '../../data/questions';
+import { councils } from '../../data/councils';
+import { topicTitles } from '../../data/topics';
+import { rankAll, idealAnswers, dominantStance } from '../../lib/scoring';
+import type { Denomination } from '../../data/types';
+
+export function getStaticPaths() {
+  return denominations.map((d) => ({ params: { id: d.id }, props: { d } }));
+}
+
+const { d } = Astro.props as { d: Denomination };
+const idx = denominations.findIndex((x) => x.id === d.id);
+const prev = denominations[(idx - 1 + denominations.length) % denominations.length];
+const next = denominations[(idx + 1) % denominations.length];
+
+const relatives = rankAll(denominations, questions, idealAnswers(d, questions))
+  .filter((r) => r.id !== d.id)
+  .slice(0, 3)
+  .map((r) => ({ ...r, d: denominations.find((x) => x.id === r.id)! }));
+
+const accepted = new Set(d.councils);
+
+// group positions by topic
+const byTopic = new Map<string, typeof questions>();
+for (const q of questions) {
+  if (!byTopic.has(q.topic)) byTopic.set(q.topic, []);
+  byTopic.get(q.topic)!.push(q);
+}
+const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0.5 ? 'Divided' : 'Minority');
+---
+<Base title={d.name} description={d.summary} wide>
+  <a href="/denominations" class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-muted hover:text-ink">← All traditions</a>
+
+  <!-- HERO -->
+  <section
+    class="card relative mt-4 overflow-hidden p-6 sm:p-10"
+    style={`background: radial-gradient(110% 100% at 100% 0%, color-mix(in oklab, ${d.color} 20%, transparent), transparent 60%), var(--surface);`}
+  >
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
+      <Badge id={d.id} color={d.color} size={96} />
+      <div class="min-w-0">
+        <p class="eyebrow" style={`color:${d.color}`}>{d.family}</p>
+        <h1 class="mt-1 font-display text-4xl leading-tight font-semibold text-balance sm:text-5xl">{d.name}</h1>
+        <p class="mt-2 text-lg text-muted">{d.tagline}</p>
+      </div>
+    </div>
+    <p class="mt-6 max-w-3xl text-[1.05rem] leading-relaxed">{d.summary}</p>
+
+    <dl class="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line lg:grid-cols-4">
+      {[
+        ['Began', d.origin.year],
+        ['Adherents', d.adherents],
+        ['Sacraments', d.sacraments],
+        ['Governance', d.governance],
+      ].map(([k, v]) => (
+        <div class="bg-surface p-4">
+          <dt class="text-[11px] font-bold tracking-widest text-muted uppercase">{k}</dt>
+          <dd class="mt-1 text-sm leading-snug font-medium">{v}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  {d.notice && (
+    <aside class:list={['mt-4 flex gap-3 rounded-2xl border px-5 py-4', d.notice.tone === 'caution' ? 'border-amber-500/40 bg-amber-500/10' : 'border-line bg-surface-2/70']}>
+      <svg viewBox="0 0 20 20" class="mt-0.5 size-5 flex-none text-amber-600" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="7.6" /><path d="M10 6v5" stroke-linecap="round" /><circle cx="10" cy="13.6" r=".9" fill="currentColor" stroke="none" /></svg>
+      <div><p class="font-semibold">{d.notice.title}</p><p class="mt-0.5 text-sm leading-relaxed text-muted">{d.notice.text}</p></div>
+    </aside>
+  )}
+
+  <div class="mt-6 grid gap-6 lg:grid-cols-[1.25fr_1fr]">
+    <div class="flex flex-col gap-6">
+      <!-- COUNCILS -->
+      <section class="card p-6">
+        <div class="flex items-baseline justify-between gap-4">
+          <h2 class="font-display text-2xl font-semibold">Councils accepted</h2>
+          <span class="chip" style={`color:${d.color}`}>{d.councils.length} of 21</span>
+        </div>
+        <ol class="mt-5 flex flex-wrap gap-1.5">
+          {councils.map((c) => {
+            const on = accepted.has(c.n);
+            return (
+              <li class:list={['group relative', c.n === 8 && 'sm:ml-2 sm:border-l sm:border-line sm:pl-3.5']}>
+                <a
+                  href={`/councils#c${c.n}`}
+                  class="grid size-8 place-items-center rounded-lg text-xs font-bold tabular-nums transition hover:scale-110"
+                  style={on ? `background:${d.color};color:#fff` : 'background:var(--surface-2);color:var(--muted);opacity:.55'}
+                  aria-label={`${c.name} (${c.year}) — ${on ? 'accepted' : 'not accepted'}`}
+                >{c.n}</a>
+                <span class="pointer-events-none absolute bottom-full left-1/2 z-10 mb-1.5 hidden -translate-x-1/2 rounded-md bg-ink px-2 py-1 text-[11px] font-semibold whitespace-nowrap text-bg group-hover:block">{c.name} · {c.year}</span>
+              </li>
+            );
+          })}
+        </ol>
+        {d.councils.length > 0 && d.councils.length < 21 && (
+          <p class="mt-4 text-sm"><span class="font-semibold">Accepted:</span> {d.councils.map((n) => councils[n - 1].name).join(', ')}</p>
+        )}
+        <p class="mt-2 text-sm text-muted">{d.councilsNote}</p>
+      </section>
+
+      <!-- DOCTRINES -->
+      <section class="card p-6">
+        <h2 class="font-display text-2xl font-semibold">Key doctrines</h2>
+        <ul class="mt-4 grid gap-2">
+          {d.doctrines.map((t) => (
+            <li class="flex gap-3 text-[0.97rem] leading-snug">
+              <span class="mt-[7px] size-2 flex-none rounded-full" style={`background:${d.color}`}></span>{t}
+            </li>
+          ))}
+        </ul>
+        <h3 class="mt-6 text-[11px] font-bold tracking-widest text-muted uppercase">What sets it apart</h3>
+        <div class="mt-2 flex flex-wrap gap-2">
+          {d.distinctives.map((t) => <span class="chip text-ink">{t}</span>)}
+        </div>
+      </section>
+
+      <!-- POSITIONS -->
+      <section class="card p-6">
+        <div class="flex items-baseline justify-between gap-4">
+          <h2 class="font-display text-2xl font-semibold">Positions at a glance</h2>
+          <a href="/doctrines" class="text-sm font-semibold text-muted hover:text-ink">Compare all →</a>
+        </div>
+        <div class="mt-4 divide-y divide-line">
+          {[...byTopic.entries()].map(([topic, qs]) => (
+            <details class="group py-1" open={topic === 'trinity' || topic === 'authority'}>
+              <summary class="flex cursor-pointer list-none items-center justify-between py-2.5 font-semibold">
+                {topicTitles[topic]}
+                <svg viewBox="0 0 24 24" class="size-4 text-muted transition-transform group-open:rotate-180"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+              </summary>
+              <ul class="grid gap-2.5 pb-3">
+                {qs.map((q) => {
+                  const s = dominantStance(d, q);
+                  return (
+                    <li class="grid grid-cols-[1fr_auto] items-start gap-3 text-sm">
+                      <span class="text-muted">{q.text}</span>
+                      <span class="text-right">
+                        <span class="block font-semibold">{s.label}</span>
+                        <span class="text-[11px] text-muted">{firmness(s.strength)}</span>
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </details>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <aside class="flex flex-col gap-6">
+      <section class="card p-6">
+        <h2 class="text-[11px] font-bold tracking-widest text-muted uppercase">Origins</h2>
+        <p class="mt-2 text-[0.95rem] leading-relaxed">{d.origin.event}</p>
+        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">Key figures</h3>
+        <p class="mt-1.5 text-[0.95rem]">{d.origin.figures.join(' · ')}</p>
+        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">Key texts</h3>
+        <ul class="mt-1.5 grid gap-1 text-[0.95rem]">{d.documents.map((t) => <li>{t}</li>)}</ul>
+        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">Worship</h3>
+        <p class="mt-1.5 text-[0.95rem]">{d.worship}</p>
+        <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">Main bodies</h3>
+        <div class="mt-2 flex flex-wrap gap-1.5">{d.branches.map((b) => <span class="chip">{b}</span>)}</div>
+      </section>
+
+      <section class="card p-6">
+        <h2 class="font-display text-xl font-semibold">Closest relatives</h2>
+        <p class="mt-1 text-sm text-muted">Traditions that would score highest on this one’s own answers.</p>
+        <ul class="mt-4 grid gap-3">
+          {relatives.map((r) => (
+            <li>
+              <a href={`/denominations/${r.d.id}`} class="flex items-center gap-3 rounded-xl p-1.5 transition hover:bg-surface-2">
+                <Badge id={r.d.id} color={r.d.color} size={38} />
+                <span class="min-w-0 flex-1">
+                  <span class="block truncate font-semibold">{r.d.short}</span>
+                  <span class="mt-1 block h-1.5 overflow-hidden rounded-full bg-surface-2"><span class="block h-full rounded-full" style={`width:${r.percent}%;background:${r.d.color}`}></span></span>
+                </span>
+                <span class="text-sm font-semibold tabular-nums">{r.percent}%</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <a href="/quiz" class="card flex items-center justify-between gap-4 p-6 transition hover:-translate-y-0.5" style={`background: color-mix(in oklab, ${d.color} 12%, var(--surface))`}>
+        <span>
+          <span class="block font-semibold">Are you {d.short}?</span>
+          <span class="block text-sm text-muted">Take the {questions.length}-question quiz</span>
+        </span>
+        <span class="btn btn-primary h-10 px-4 text-sm">Start</span>
+      </a>
+    </aside>
+  </div>
+
+  <nav class="mt-10 grid grid-cols-2 gap-3">
+    <a href={`/denominations/${prev.id}`} class="card flex items-center gap-3 p-4 transition hover:-translate-y-0.5">
+      <span class="text-muted">←</span><Badge id={prev.id} color={prev.color} size={32} /><span class="truncate text-sm font-semibold">{prev.short}</span>
+    </a>
+    <a href={`/denominations/${next.id}`} class="card flex items-center justify-end gap-3 p-4 text-right transition hover:-translate-y-0.5">
+      <span class="truncate text-sm font-semibold">{next.short}</span><Badge id={next.id} color={next.color} size={32} /><span class="text-muted">→</span>
+    </a>
+  </nav>
+</Base>

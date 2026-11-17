@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import Badge from '../../components/Badge.astro';
+import { creeds, confessions } from '../../data/creeds';
+import { denominationById } from '../../data/denominations';
+---
+<Base title="Creeds" wide>
+  <header class="pt-12 pb-2 sm:pt-16">
+    <p class="eyebrow">Creeds & confessions</p>
+    <h1 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">What Christians confess together</h1>
+    <p class="mt-3 max-w-2xl text-muted">Four ancient creeds summarise the faith most churches share. Hover the underlined phrases on each creed’s page to see what they mean and why they mattered.</p>
+  </header>
+
+  <section class="mt-8 grid gap-4 md:grid-cols-2">
+    {creeds.map((c) => (
+      <a href={`/creeds/${c.id}`} class="card group flex flex-col p-6 transition hover:-translate-y-0.5">
+        <div class="flex items-baseline justify-between gap-3">
+          <h2 class="font-display text-2xl font-semibold">{c.name}</h2>
+          <span class="chip flex-none">{c.date}</span>
+        </div>
+        <p class="mt-2 text-muted">{c.tagline}</p>
+        <ul class="mt-4 grid gap-1.5 text-sm">
+          {c.keyPoints.map((k) => <li class="flex gap-2"><span class="mt-[7px] size-1.5 flex-none rounded-full bg-gold"></span>{k}</li>)}
+        </ul>
+        <div class="mt-5 flex items-center justify-between gap-3 border-t border-line pt-4">
+          <span class="flex -space-x-1.5">
+            {c.usedBy.slice(0, 8).map((u) => <Badge id={u.id} color={denominationById[u.id].color} size={26} class="ring-2 ring-[var(--surface)]" />)}
+          </span>
+          <span class="text-sm font-semibold">Read →</span>
+        </div>
+      </a>
+    ))}
+  </section>
+
+  <section class="mt-16">
+    <div class="mb-5 flex flex-wrap items-baseline gap-x-3 border-b border-line pb-2">
+      <h2 class="font-display text-2xl font-semibold">Later confessions</h2>
+      <p class="text-sm text-muted">The documents that define each tradition’s particular teaching</p>
+    </div>
+    <ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {confessions.map((c) => (
+        <li class="card flex gap-4 p-5">
+          <span class="flex flex-none flex-col items-center gap-2">
+            {c.ids.map((id) => <a href={`/denominations/${id}`} title={denominationById[id].name}><Badge id={id} color={denominationById[id].color} size={34} /></a>)}
+          </span>
+          <span class="min-w-0">
+            <span class="block font-semibold leading-tight">{c.name}</span>
+            <span class="text-xs font-semibold text-gold">{c.year}</span>
+            <span class="mt-1 block text-sm leading-snug text-muted">{c.text}</span>
+          </span>
+        </li>
+      ))}
+    </ol>
+  </section>
+</Base>

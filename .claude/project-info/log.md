@@ -1,0 +1,15 @@
+# Log
+
+Append-only. Newest at the bottom. Format: `## YYYY-MM-DD — title` then bullets.
+
+## 2026-11-17 — Initial build
+- Scaffolded Astro 7 (minimal) + Svelte 5 + Tailwind 4. `preview` script = `astro build && astro preview`.
+- Research agent compiled sourced matrix (18 traditions × 24 questions), adherents, councils → `raw/research-matrix.md`.
+- Generated `src/data/stances.ts` from the matrix JSON (snake_case ids mapped to app ids — see [[doctrine-matrix]]).
+- Scoring: weighted agreement, per-question normalised by `max(top, 0.75)` — see [[scoring]] / [[decisions]].
+- `npm run validate`: all 18 traditions rank themselves #1 (closest pair: Baptist ↔ Non-denominational, 97/95).
+- Pages: `/`, `/quiz`, `/results`, `/denominations`, `/denominations/[id]`, `/doctrines`, `/councils`.
+- Hand-drawn SVG symbol per tradition in `src/data/icons.ts`.
+- Visual QA with headless Chrome (desktop 1280 + mobile 390 dark). Fixed: unlayered `.btn` overriding Tailwind `hidden`; donut `%` wrap; compass badge overlap (repulsion); mobile nav overflow.
+- Astro 7 tracks preview servers; a stale one blocks a new `astro preview`. `preview` script now uses `astro preview --force`.
+- Wiki set up: `CLAUDE.md` (schema + routing table), `index.md`, `log.md`, `raw/` (research matrix, Mobbin refs), `wiki/` (overview, architecture, scoring, design, decisions, playbooks, research/*).
