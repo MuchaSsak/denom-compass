@@ -31,3 +31,7 @@ Declared in `astro.config.mjs › env.schema` (server secrets). Local: `.env` (t
 
 ## Not done
 - No live call verified yet (no key in this environment) — first real run may need prompt tuning. See [[decisions]] D9.
+
+## Note replies
+
+The reading also returns `replies: [{ about: "general" | questionId, reply }]`: a 1–3 sentence answer to each note the user wrote (explains terms, answers questions in the note). Shown as "Your notes, answered" at the bottom of the AI card. `sanitize` keeps only replies for notes actually sent, one per note. Readings cached before this field existed get `replies: []` and are marked stale when notes exist, so returning users see "Update AI reading" after a refresh.

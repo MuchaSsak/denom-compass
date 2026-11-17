@@ -46,8 +46,15 @@ for (const d of denominations) {
     ],
     tensions: ['t1', 2],
     followups: ['f1', 'f2', 'f3'],
+    replies: [
+      { about: 'general', reply: 'g' },
+      { about: 'eucharist', reply: 'e' },
+      { about: 'eucharist', reply: 'dup' },
+      { about: 'trinity', reply: 'no note there' },
+      { about: 'zzz', reply: 'bad' },
+    ],
   })}\n${fence}`;
-  const r = sanitize(extractJson(reply), questions, new Set(denominations.map((d) => d.id)));
+  const r = sanitize(extractJson(reply), questions, new Set(denominations.map((d) => d.id)), new Set(['_general', 'eucharist']));
   let threw = false;
   try { sanitize(extractJson('no json here'), questions, new Set()); } catch { threw = true; }
 
@@ -58,6 +65,7 @@ for (const d of denominations) {
     ['invalid option → null', r.nuances[0].suggested === 'union' && r.nuances[1].suggested === null],
     ['unknown question dropped', r.nuances.length === 2],
     ['non-strings dropped, lists capped', r.tensions.length === 1 && r.followups.length === 2],
+    ['replies: only notes written, no dupes', r.replies.length === 2 && r.replies[0].about === 'general' && r.replies[1].reply === 'e'],
     ['garbage reply throws', threw],
   ];
   for (const [name, ok] of checks) {

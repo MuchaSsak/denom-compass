@@ -8,6 +8,8 @@ export interface AiReading {
   nuances: { questionId: string; suggested: string | null; reading: string }[];
   tensions: string[];
   followups: string[];
+  /** Short reply to each note the person wrote ("general" = their own description). */
+  replies: { about: string; reply: string }[];
 }
 
 export interface AiResponse {
@@ -59,7 +61,10 @@ Respond with ONLY a JSON object (no markdown, no prose outside JSON) of this exa
     { "questionId": string, "suggested": string | null /* an option id from that question if their words fit a different option better, else null */, "reading": string /* 1 sentence */ }
   ],
   "tensions": [string],         // 0-3 short notes on answers that pull in different directions (be gentle)
-  "followups": [string]         // 0-2 questions they could reflect on to clarify their position
+  "followups": [string],        // 0-2 questions they could reflect on to clarify their position
+  "replies": [                  // one per piece of "their words" (general description + each question note), in the order given; [] if they wrote nothing
+    { "about": string /* "general" or the question id */, "reply": string /* 1-3 short sentences replying to what they wrote: answer any question they ask, briefly explain any term, idea or history they seem unsure or mistaken about, otherwise note how their view fits the traditions. Plain words, friendly, no lecturing */ }
+  ]
 }`;
 
   const prompt = `TRADITIONS (id | name; their key doctrines; their dominant position per question id):
@@ -71,7 +76,7 @@ ${user}
 ${general ? `THE PERSON'S OWN DESCRIPTION OF THEIR FAITH:\n"""${general}"""\n` : ''}
 ALGORITHMIC RANKING (weighted agreement on the clicked answers only): ${ranking.slice(0, 6).map((r) => `${r.id} ${r.percent}%`).join(', ')}
 
-Weigh their own words most heavily where given; they may reveal nuance a click cannot. You may disagree with the algorithmic ranking if their words justify it. Return the JSON object now.`;
+Weigh their own words most heavily where given (their notes may also contain questions or uncertainty — answer those in "replies"); they may reveal nuance a click cannot. You may disagree with the algorithmic ranking if their words justify it. Return the JSON object now.`;
 
   return { system, prompt };
 }
@@ -87,7 +92,7 @@ export function extractJson(text: string): unknown {
 }
 
 /** Validate & sanitise model output against known ids. */
-export function sanitize(raw: unknown, questions: Question[], denomIds: Set<string>): AiReading {
+export function sanitize(raw: unknown, questions: Question[], denomIds: Set<string>, noteIds?: Set<string>): AiReading {
   const o = (raw ?? {}) as Record<string, unknown>;
   const str = (v: unknown, max = 600) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
   const arr = (v: unknown) => (Array.isArray(v) ? v : []);
@@ -117,5 +122,11 @@ export function sanitize(raw: unknown, questions: Question[], denomIds: Set<stri
     nuances,
     tensions: arr(o.tensions).map((t) => str(t, 300)).filter(Boolean).slice(0, 3),
     followups: arr(o.followups).map((t) => str(t, 300)).filter(Boolean).slice(0, 2),
+    replies: arr(o.replies)
+      .map((r) => r as Record<string, unknown>)
+      .map((r) => ({ about: r.about === '_general' ? 'general' : str(r.about, 40), reply: str(r.reply, 700) }))
+      .filter((r) => r.reply && (r.about === 'general' ? !noteIds || noteIds.has('_general') : qById.has(r.about) && (!noteIds || noteIds.has(r.about))))
+      .filter((r, i, all) => all.findIndex((x) => x.about === r.about) === i)
+      .slice(0, questions.length + 1),
   };
 }

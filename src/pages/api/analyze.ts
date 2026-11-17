@@ -91,7 +91,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       return json({ error: 'upstream', message: msg }, res.status === 429 ? 429 : 502);
     }
     const text: string = data?.choices?.[0]?.message?.content ?? '';
-    const reading = sanitize(extractJson(text), questions, new Set(denominations.map((d) => d.id)));
+    const reading = sanitize(extractJson(text), questions, new Set(denominations.map((d) => d.id)), new Set(Object.keys(notes)));
     return json({ reading, model: data?.model ?? chain[0] } satisfies AiResponse);
   } catch (e) {
     const aborted = (e as Error).name === 'AbortError';

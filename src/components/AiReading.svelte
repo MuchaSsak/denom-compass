@@ -30,11 +30,27 @@
   onMount(() => {
     notes = loadNotes();
     const c = loadAi<AiReading>();
-    if (c) { reading = c.result; model = c.model; at = c.at; cachedKey = c.key; }
+    if (c) {
+      // Readings cached before replies existed: show them, but offer an update when there are notes to reply to.
+      const legacy = !Array.isArray(c.result.replies);
+      reading = { ...c.result, replies: c.result.replies ?? [] };
+      model = c.model; at = c.at;
+      cachedKey = legacy && Object.values(notes).some((v) => v?.trim()) ? '' : c.key;
+    }
   });
 
   const currentKey = $derived(inputKey(answers, notes));
   const stale = $derived(!!reading && cachedKey !== currentKey);
+  const replies = $derived(
+    reading
+      ? [...reading.replies]
+          .filter((r) => (r.about === 'general' ? notes._general : notes[r.about])?.trim())
+          .sort((a, b) => order(a.about) - order(b.about))
+      : [],
+  );
+  function order(about: string) {
+    return about === 'general' ? -1 : questions.findIndex((q) => q.id === about);
+  }
   const noteCount = $derived(Object.keys(notes).filter((k) => k !== '_general' && notes[k]?.trim()).length);
 
   function edit(id: string, text: string) {
@@ -144,7 +160,7 @@
   {:else if reading}
     <div class="grid gap-8 p-6 sm:p-8 {status === 'loading' ? 'opacity-50' : ''}" in:fade>
       {#if stale}
-        <p class="rounded-xl bg-gold/10 px-4 py-2.5 text-sm">Your answers changed — update to include them.</p>
+        <p class="rounded-xl bg-gold/10 px-4 py-2.5 text-sm">Out of date — update to include your latest answers and notes.</p>
       {/if}
       <p class="font-display text-xl leading-relaxed">{reading.summary}</p>
 
@@ -206,6 +222,22 @@
               <ul class="mt-2 grid gap-2 text-[0.95rem]">{#each reading.followups as t}<li class="flex gap-2"><span class="mt-0.5 text-gold">?</span>{t}</li>{/each}</ul>
             </div>
           {/if}
+        </div>
+      {/if}
+
+      {#if replies.length}
+        <div>
+          <h3 class="text-[11px] font-bold tracking-widest text-muted uppercase">Your notes, answered</h3>
+          <ul class="mt-3 grid gap-2.5">
+            {#each replies as r (r.about)}
+              {@const note = r.about === 'general' ? notes._general : notes[r.about]}
+              <li class="rounded-xl bg-surface-2/60 p-4">
+                <span class="block text-xs font-semibold text-muted">{r.about === 'general' ? 'What you believe' : qById[r.about].text}</span>
+                <span class="mt-1 line-clamp-2 border-l-2 border-line pl-2.5 text-sm text-muted italic">{note}</span>
+                <span class="mt-2 block text-[0.95rem] leading-relaxed">{r.reply}</span>
+              </li>
+            {/each}
+          </ul>
         </div>
       {/if}
 

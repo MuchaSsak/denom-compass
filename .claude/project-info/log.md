@@ -15,3 +15,4 @@ Append-only. Newest at the bottom. Format: `## YYYY-MM-DD — title` then bullet
 - Wiki set up: `CLAUDE.md` (schema + routing table), `index.md`, `log.md`, `raw/` (research matrix, Mobbin refs), `wiki/` (overview, architecture, scoring, design, decisions, playbooks, research/*).
 
 ## [2026-11-17] ui | Less text: quiz info icon top-right (popover), no hints/shortcut/skip captions, "Not sure" + "Add a note", next/restart icons in top bar; footer removed; mobile nav -> menu; page intros trimmed; README in Learning Gems style
+## [2026-11-17] ai | Note replies: AI answers each note ("Your notes, answered"); legacy cached readings auto-marked stale; validate checks replies sanitising
