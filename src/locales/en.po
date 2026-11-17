@@ -179,6 +179,11 @@ msgstr "Confessed by"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
+msgid "Context, key figures, decisions and which churches accept it."
+msgstr "Context, key figures, decisions and which churches accept it."
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
 msgid "Council #{n}"
 msgstr "Council #{n}"
 
@@ -289,6 +294,11 @@ msgstr "Firm"
 #: src/components/CompassChart.svelte
 msgid "Free will"
 msgstr "Free will"
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/[id].astro
+msgid "Full text, origin and which churches use it."
+msgstr "Full text, origin and which churches use it."
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
@@ -542,6 +552,11 @@ msgstr "Privacy"
 #: src/pages/[lang]/terms.astro
 msgid "Privacy policy"
 msgstr "Privacy policy"
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Progress"
+msgstr "Progress"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte

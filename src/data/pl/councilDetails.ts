@@ -5,7 +5,7 @@ const data: CouncilDetailsOverlay = {
     "convokedBy": "Cesarz Konstantyn Wielki",
     "presided": "Niepewne; prawdopodobnie Hozjusz z Kordoby, a obrady otworzył Konstantyn",
     "attendance": "ok. 250–300 biskupów (tradycja: 318)",
-    "context": "Ariusz, prezbiter z Aleksandrii, nauczał, że Syn został stworzony, co podzieliło Kościoły Wschodu. Konstantyn chciał jednej wiary w świeżo tolerowanym Kościele.",
+    "context": "Ariusz, prezbiter z Aleksandrii, nauczał, że Syn został stworzony, co podzieliło Kościoły wschodnie. Konstantyn chciał jednej wiary w świeżo tolerowanym Kościele.",
     "issue": {
       "name": "Arianizm",
       "view": "Syn jest stworzeniem; „był czas, kiedy Go nie było”."
@@ -20,7 +20,7 @@ const data: CouncilDetailsOverlay = {
       "word": "homoousios",
       "gloss": "współistotny (Ojcu)"
     },
-    "outcome": "Ogłosił Credo nicejskie i ustalił wspólną datę Wielkanocy. Spór ariański trwał jednak przez dziesięciolecia i rozstrzygnął się dopiero w 381 r.",
+    "outcome": "Ogłosił Symbol nicejski i ustalił wspólną datę Wielkanocy. Spór ariański trwał jednak przez dziesięciolecia i rozstrzygnął się dopiero w 381 r.",
     "dissent": [
       {
         "who": "Grupy nietrynitarne (np. unitarianie, Świadkowie Jehowy)",
@@ -45,9 +45,9 @@ const data: CouncilDetailsOverlay = {
     ],
     "term": {
       "word": "ekporeuomenon",
-      "gloss": "Duch „pochodzi od Ojca”"
+      "gloss": "Duch »pochodzi od Ojca«"
     },
-    "outcome": "Rozszerzył Credo nicejskie do postaci używanej do dziś i zakończył arianizm w cesarstwie. Kanon 3 uznał Konstantynopol za drugi po Rzymie, czemu Rzym sprzeciwiał się przez wieki.",
+    "outcome": "Rozszerzył Symbol nicejski do postaci używanej do dziś i zakończył arianizm w cesarstwie. Kanon 3 uznał Konstantynopol za drugi po Rzymie, czemu Rzym sprzeciwiał się przez wieki.",
     "dissent": [
       {
         "who": "Grupy nietrynitarne",
@@ -58,8 +58,8 @@ const data: CouncilDetailsOverlay = {
   "3": {
     "convokedBy": "Cesarz Teodozjusz II (wraz z Walentynianem III; za zgodą papieża Celestyna I)",
     "presided": "Cyryl Aleksandryjski, działający też w imieniu papieża Celestyna I",
-    "attendance": "ok. 200 biskupów (197 podpisało złożenie Nestoriusza); konkurencyjny synod ok. 43",
-    "context": "Nestoriusz, arcybiskup Konstantynopola, sprzeciwiał się nazywaniu Maryi „Theotokos”. Cyryl Aleksandryjski zarzucił mu rozdzielanie Chrystusa na dwóch.",
+    "attendance": "ok. 200 biskupów (197 podpisało złożenie Nestoriusza); konkurencyjny synod: ok. 43",
+    "context": "Nestoriusz, arcybiskup Konstantynopola, sprzeciwiał się nazywaniu Maryi „Theotokos”. Cyryl Aleksandryjski zarzucił mu rozdzielanie Chrystusa na dwie osoby.",
     "issue": {
       "name": "Nestorianizm",
       "view": "Maryja zrodziła Chrystusa, nie Boga; boskie Słowo i człowiek pozostają odrębni."
@@ -99,7 +99,7 @@ const data: CouncilDetailsOverlay = {
     ],
     "term": {
       "word": "w dwóch naturach",
-      "gloss": "jedna Osoba, prawdziwy Bóg i prawdziwy człowiek: „bez zmieszania, bez zmiany, bez podziału i bez rozłączenia”"
+      "gloss": "jedna Osoba, prawdziwy Bóg i prawdziwy człowiek: »bez zmieszania, bez zmiany, bez podziału i bez rozłączenia«"
     },
     "outcome": "Znaczna część Egiptu, Syrii i Armenii go nie przyjęła - obok Kościoła Wschodu (431) był to jeden z pierwszych trwałych rozłamów Kościoła. Rzym przyjął naukę soboru, ale odrzucił kanon 28, który podnosił rangę Konstantynopola.",
     "dissent": [
@@ -130,7 +130,7 @@ const data: CouncilDetailsOverlay = {
     ],
     "term": {
       "word": "formuła teopaschicka",
-      "gloss": "„Jeden z Trójcy cierpiał w ciele”"
+      "gloss": "»Jeden z Trójcy cierpiał w ciele«"
     },
     "outcome": "Nie pojednał miafizytów i wywołał w północnej Italii schizmę (Akwileja), trwającą do ok. 700 r. Mniej więcej w tym samym czasie potępiono poglądy orygenistyczne.",
     "dissent": [
@@ -160,7 +160,7 @@ const data: CouncilDetailsOverlay = {
       "Honoriusz I - wcześniejszy papież, potępiony pośmiertnie"
     ],
     "term": {
-      "word": "diteletyzm",
+      "word": "dioteletyzm",
       "gloss": "dwie wole w Chrystusie, ludzka i boska, zgodne ze sobą"
     },
     "outcome": "Zakończył monoteletyzm w cesarstwie. Potępienie papieża Honoriusza przywoływano później na Soborze Watykańskim I przeciw nieomylności papieża.",
@@ -175,7 +175,7 @@ const data: CouncilDetailsOverlay = {
     "convokedBy": "Cesarzowa Irena (regentka Konstantyna VI)",
     "presided": "Patriarcha Tarazjusz (legaci papiescy podpisali pierwsi)",
     "attendance": "ok. 300–350 uczestników; co najmniej 308 biskupów lub pełnomocników podpisało",
-    "context": "Cesarze zakazywali ikon od lat 730., a ikonoklastyczny sobór w Hierii (754) je potępił. Irena przystąpiła do ich przywrócenia.",
+    "context": "Cesarze zakazywali ikon od lat 30. VIII w., a ikonoklastyczny sobór w Hierii (754) je potępił. Irena przystąpiła do ich przywrócenia.",
     "issue": {
       "name": "Ikonoklazm",
       "view": "Wizerunki Chrystusa i świętych są bożkami; oddawanie im czci łamie przykazanie."
@@ -190,7 +190,7 @@ const data: CouncilDetailsOverlay = {
       "word": "proskynesis a latreia",
       "gloss": "cześć oddawana ikonom a uwielbienie należne tylko Bogu"
     },
-    "outcome": "Ikonoklazm powrócił w 815 r. i skończył się ostatecznie w 843 r. („Triumf Ortodoksji”). Frankowie odrzucili sobór we Frankfurcie (794), opierając się na błędnym przekładzie.",
+    "outcome": "Ikonoklazm powrócił w 815 r. i skończył się ostatecznie w 843 r. („Triumf Prawosławia”). Frankowie odrzucili sobór we Frankfurcie (794), opierając się na błędnym przekładzie.",
     "dissent": [
       {
         "who": "Większość protestantów (zwłaszcza reformowani)",
@@ -217,7 +217,7 @@ const data: CouncilDetailsOverlay = {
       "Bazyli I - cesarz, który poparł sobór",
       "Hadrian II - papież, którego legaci przewodniczyli"
     ],
-    "outcome": "Większy sobór z lat 879–880, z udziałem legatów papieża Jana VIII, przywrócił Focjusza i unieważnił sobór z lat 869–870. Zachód uznał go za powszechny dopiero w XI–XII w., po części ze względu na kanon przeciw świeckiej kontroli nad biskupami.",
+    "outcome": "Większy sobór z lat 879–880, z udziałem legatów papieża Jana VIII, przywrócił Focjusza i unieważnił sobór z lat 869–870. Zachód uznał ten sobór (869–870) za powszechny dopiero w XI–XII w., po części ze względu na kanon przeciw świeckiej kontroli nad biskupami.",
     "dissent": [
       {
         "who": "Prawosławni",
@@ -232,7 +232,7 @@ const data: CouncilDetailsOverlay = {
     "context": "Papież i cesarz przez 50 lat spierali się o to, kto mianuje biskupów. Konkordat wormacki (1122) rozstrzygnął spór, a sobór zwołano, by go zatwierdzić.",
     "issue": {
       "name": "Spór o inwestyturę",
-      "view": "Świeccy władcy mogą inwestować biskupów pierścieniem i pastorałem, symbolami urzędu duchowego."
+      "view": "Świeccy władcy mogą udzielać biskupom inwestytury pierścieniem i pastorałem, symbolami urzędu duchowego."
     },
     "figures": [
       "Kalikst II - papież, zwołał sobór i mu przewodniczył",
@@ -347,7 +347,7 @@ const data: CouncilDetailsOverlay = {
     ],
     "term": {
       "word": "Filioque",
-      "gloss": "„i od Syna” (Duch pochodzi od Ojca i Syna)"
+      "gloss": "»i od Syna« (Duch pochodzi od Ojca i Syna)"
     },
     "outcome": "Unię ogłoszono, lecz grecki kler i wierni ją odrzucili, a po śmierci Michała w 1282 r. została wypowiedziana. Przetrwały natomiast zasady konklawe przy wyborze papieża.",
     "dissent": [
@@ -372,14 +372,14 @@ const data: CouncilDetailsOverlay = {
       "Jacques de Molay - wielki mistrz templariuszy, spalony w 1314 r.",
       "Piotr Jan Olivi - franciszkanin, którego poglądy badano"
     ],
-    "outcome": "Templariuszy zniesiono dekretem papieskim (bez potępienia), a ich majątek przekazano joannitom. Potępiono beginki, a uniwersytetom polecono nauczać języków wschodnich.",
+    "outcome": "Zakon templariuszy zniesiono dekretem papieskim (bez potępienia), a ich majątek przekazano joannitom. Potępiono beginki, a uniwersytetom polecono nauczać języków wschodnich.",
     "dissent": []
   },
   "16": {
     "convokedBy": "Antypapież Jan XXIII pod naciskiem cesarza Zygmunta Luksemburskiego; ponownie zwołany przez Grzegorza XII (1415)",
     "presided": "Kolejno kardynałowie i Zygmunt; od 1417 r. papież Marcin V",
     "attendance": "ok. 600 członków z prawem głosu: ok. 29 kardynałów, ok. 180 biskupów, ponad 100 opatów, ok. 100 doktorów",
-    "context": "Trzech ludzi rościło sobie prawo do papiestwa (Rzym, Awinion, Piza). Zygmunt naciskał na sobór, który zakończyłby schizmę zachodnią i rozprawił się z Wyclifem i Husem.",
+    "context": "Trzech ludzi rościło sobie prawo do papiestwa (Rzym, Awinion, Piza). Zygmunt naciskał na sobór, który zakończyłby schizmę zachodnią i rozprawił się z Wiklifem i Husem.",
     "issue": {
       "name": "Wielka schizma zachodnia",
       "view": "Trzy rywalizujące linie (Rzym, Awinion, Piza) uważały się za prawowitych papieży."
@@ -419,9 +419,9 @@ const data: CouncilDetailsOverlay = {
     ],
     "term": {
       "word": "Laetentur caeli",
-      "gloss": "„Niech się radują niebiosa”: bulla unijna z 1439 r."
+      "gloss": "»Niech się radują niebiosa«: bulla unijna z 1439 r."
     },
-    "outcome": "Wschód odrzucił unię, Konstantynopol upadł w 1453 r., a synod formalnie ją wypowiedział w 1484 r. Pozostali w Bazylei złożyli Eugeniusza z urzędu i wybrali antypapieża Feliksa V (1439). Rzym nie uznaje sesji bazylejskich po przeniesieniu soboru w 1437 r.",
+    "outcome": "Wschód odrzucił unię, Konstantynopol upadł w 1453 r., a synod formalnie ją wypowiedział w 1484 r. Ojcowie, którzy pozostali w Bazylei, złożyli Eugeniusza z urzędu i wybrali antypapieża Feliksa V (1439). Rzym nie uznaje sesji bazylejskich po przeniesieniu soboru w 1437 r.",
     "dissent": [
       {
         "who": "Prawosławni",
@@ -444,7 +444,7 @@ const data: CouncilDetailsOverlay = {
       "Ludwik XII - król Francji popierający Pizę",
       "Franciszek I - król Francji, konkordat boloński"
     ],
-    "outcome": "Zakończył schizmę pizańską, orzekł, że dusza jest nieśmiertelna i indywidualna, oraz zatwierdził konkordat boloński (1516). Reformy przyniosły niewiele, a sobór zamknięto siedem miesięcy przed 95 tezami Lutra.",
+    "outcome": "Zakończył schizmę pizańską, orzekł, że dusza jest nieśmiertelna i indywidualna, oraz zatwierdził konkordat boloński (1516). Reformy przyniosły niewiele, a sobór zamknięto siedem miesięcy przed ogłoszeniem 95 tez Lutra.",
     "dissent": []
   },
   "19": {
@@ -477,7 +477,7 @@ const data: CouncilDetailsOverlay = {
   "20": {
     "convokedBy": "Papież Pius IX",
     "presided": "Papież Pius IX",
-    "attendance": "ok. 700–750 biskupów (łącznie ok. 800 ojców soboru); głosowanie końcowe 533–2",
+    "attendance": "ok. 700–750 biskupów (łącznie ok. 800 ojców soboru); głosowanie końcowe: 533 do 2",
     "context": "Pius IX chciał odpowiedzieć na racjonalizm i liberalizm oraz zdefiniować władzę papieża. Był to pierwszy sobór od 300 lat.",
     "issue": {
       "name": "Nieomylność papieża (przeciw galikanizmowi)",
@@ -491,9 +491,9 @@ const data: CouncilDetailsOverlay = {
     ],
     "term": {
       "word": "ex cathedra",
-      "gloss": "„z katedry” Piotrowej: uroczysta, nieomylna definicja papieża"
+      "gloss": "»z katedry« Piotrowej: uroczysta, nieomylna definicja papieża"
     },
-    "outcome": "Zdefiniował prymat i nieomylność papieża (Pastor aeternus, 18 lipca 1870), gdy ok. 60 przeciwników opuściło Rzym. Wojska włoskie zajęły Rzym, a sobór zawieszono i nigdy formalnie nie wznowiono.",
+    "outcome": "Zdefiniował prymat i nieomylność papieża (Pastor aeternus, 18 lipca 1870), po tym jak ok. 60 przeciwników opuściło Rzym. Wojska włoskie zajęły Rzym, a sobór zawieszono i nigdy formalnie nie wznowiono.",
     "dissent": [
       {
         "who": "Starokatolicy",
@@ -508,7 +508,7 @@ const data: CouncilDetailsOverlay = {
   "21": {
     "convokedBy": "Papież Jan XXIII",
     "presided": "Prezydium kardynałów; od 1963 r. papież Paweł VI (czterech kardynałów moderatorów)",
-    "attendance": "ok. 2100–2500 biskupów na sesji; ok. 2860 w ciągu czterech sesji",
+    "attendance": "ok. 2100–2500 biskupów na każdej sesji; ok. 2860 w ciągu czterech sesji",
     "context": "Jan XXIII chciał odnowić Kościół i otworzyć go na współczesny świat („aggiornamento”). Sobór dążył też do lepszych relacji z innymi chrześcijanami.",
     "issue": {
       "name": "Odnowa Kościoła (aggiornamento)",

@@ -43,7 +43,7 @@ const data: CreedsOverlay = {
           ", grzechów odpuszczenie, ",
           {
             "t": "ciała zmartwychwstanie",
-            "note": "Cielesne zmartwychwstanie na końcu czasów – nie tylko dalsze istnienie duszy."
+            "note": "Cielesne zmartwychwstanie na końcu czasów - nie tylko dalsze istnienie duszy."
           },
           ", żywot wieczny. Amen."
         ]
@@ -67,7 +67,7 @@ const data: CreedsOverlay = {
       "name": "Symbol nicejsko-konstantynopolitański",
       "date": "325 · rozszerzony 381",
       "tagline": "Jedyne wyznanie wiary wspólne Wschodowi i Zachodowi.",
-      "origin": "Sformułowany w Nicei (325) przeciw Ariuszowi, który nauczał, że Syn został stworzony. W Konstantynopolu (381) rozbudowano artykuł o Duchu Świętym. To najszerzej używane wyznanie wiary na świecie – odmawiane w niedzielnych liturgiach eucharystycznych katolików, prawosławnych, anglikanów i wielu luteranów.",
+      "origin": "Sformułowany w Nicei (325) przeciw Ariuszowi, który nauczał, że Syn został stworzony. W Konstantynopolu (381) rozbudowano artykuł o Duchu Świętym. To najszerzej używane wyznanie wiary na świecie - odmawiane w niedzielnych liturgiach eucharystycznych katolików, prawosławnych, anglikanów i wielu luteranów.",
       "text": [
         [
           "Wierzę w jednego Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, wszystkich rzeczy widzialnych i niewidzialnych."
@@ -76,17 +76,17 @@ const data: CreedsOverlay = {
           "I w jednego Pana Jezusa Chrystusa, Syna Bożego jednorodzonego, ",
           {
             "t": "który z Ojca jest zrodzony przed wszystkimi wiekami",
-            "note": "Syn nie ma początku: jest odwiecznie „zrodzony”, a nie stworzony w czasie – sedno sporu z Ariuszem."
+            "note": "Syn nie ma początku: jest odwiecznie „zrodzony”, a nie stworzony w czasie - sedno sporu z Ariuszem."
           },
           ". Bóg z Boga, Światłość ze Światłości, Bóg prawdziwy z Boga prawdziwego. ",
           {
             "t": "Zrodzony a nie stworzony",
-            "note": "Zrodzenie daje kogoś tej samej natury (Bóg z Boga); stworzenie – coś innego niż Stwórca (stworzenie)."
+            "note": "Zrodzenie daje kogoś tej samej natury (Bóg z Boga); stwarzanie - byt innej natury (stworzenie)."
           },
           ", ",
           {
             "t": "współistotny Ojcu",
-            "note": "Gr. homoousios – ta sama boska istota co Ojciec, nie tylko podobna (homoiousios). Najbardziej sporne słowo w dziejach wczesnego Kościoła."
+            "note": "Gr. homoousios - ta sama boska istota co Ojciec, nie tylko podobna (homoiousios). Najbardziej sporne słowo w dziejach wczesnego Kościoła."
           },
           ", a przez Niego wszystko się stało. On to dla nas, ludzi, i dla naszego zbawienia zstąpił z nieba. I za sprawą Ducha Świętego przyjął ciało z Maryi Dziewicy i stał się człowiekiem. Ukrzyżowany również za nas, pod Poncjuszem Piłatem został umęczony i pogrzebany. I zmartwychwstał dnia trzeciego, jak oznajmia Pismo. I wstąpił do nieba; siedzi po prawicy Ojca. I powtórnie przyjdzie w chwale sądzić żywych i umarłych, a królestwu Jego nie będzie końca."
         ],
@@ -94,7 +94,7 @@ const data: CreedsOverlay = {
           "Wierzę w Ducha Świętego, Pana i Ożywiciela, który od Ojca ",
           {
             "t": "i Syna",
-            "note": "Filioque („i od Syna”). Dodane na łacińskim Zachodzie (Toledo, 589), przyjęte w Rzymie w 1014 r. Nigdy nie przyjęte przez prawosławnych, Kościoły orientalne ani Kościół Wschodu – jedna z głównych przyczyn schizmy z 1054 r."
+            "note": "Filioque („i od Syna”). Dodane na łacińskim Zachodzie (Toledo, 589), przyjęte w Rzymie w 1014 r. Nigdy nie przyjęte przez prawosławnych, Kościoły orientalne ani Kościół Wschodu - jedna z głównych przyczyn schizmy z 1054 r."
           },
           " pochodzi. Który z Ojcem i Synem wspólnie odbiera uwielbienie i chwałę; który mówił przez Proroków. Wierzę w ",
           {
@@ -104,7 +104,7 @@ const data: CreedsOverlay = {
           ". Wyznaję ",
           {
             "t": "jeden chrzest na odpuszczenie grzechów",
-            "note": "Chrztu się nie powtarza i wiąże się go z odpuszczeniem grzechów – jedni rozumieją to sakramentalnie, inni jako znak."
+            "note": "Chrztu się nie powtarza i wiąże się go z odpuszczeniem grzechów - jedni rozumieją to sakramentalnie, inni jako znak."
           },
           ". I oczekuję wskrzeszenia umarłych. I życia wiecznego w przyszłym świecie. Amen."
         ]
@@ -121,13 +121,13 @@ const data: CreedsOverlay = {
       "keyPoints": [
         "Syn jest w pełni Bogiem, współistotnym Ojcu",
         "Duch Święty jest Panem i Ożywicielem",
-        "Spór o Filioque: od Ojca – i od Syna?"
+        "Spór o Filioque: od Ojca - i od Syna?"
       ]
     },
     "athanasian": {
       "name": "Symbol atanazjański",
       "date": "ok. 500",
-      "tagline": "Trójca i Wcielenie – z dogmatyczną precyzją.",
+      "tagline": "Trójca i Wcielenie - z dogmatyczną precyzją.",
       "origin": "Nazwany imieniem św. Atanazego, lecz napisany po łacinie, prawdopodobnie w południowej Galii około 500 r. Zwany też Quicumque vult od pierwszych słów. Dłuższy i bardziej techniczny od pozostałych wyznań, zaczyna się i kończy uroczystymi ostrzeżeniami.",
       "text": [
         [
@@ -142,7 +142,7 @@ const data: CreedsOverlay = {
           "Inna bowiem jest Osoba Ojca, inna Syna, inna Ducha Świętego. Lecz Ojca i Syna, i Ducha Świętego jedno jest Bóstwo, równa chwała, współwieczny majestat. … Tak więc Bogiem jest Ojciec, Bogiem Syn, Bogiem Duch Święty. A jednak nie trzej bogowie, lecz jeden jest Bóg."
         ],
         [
-          "Wiara prawdziwa wymaga zatem, abyśmy wierzyli i wyznawali, że Pan nasz Jezus Chrystus, Syn Boży, jest Bogiem i człowiekiem. … Jest zaś jeden – ",
+          "Wiara prawdziwa wymaga zatem, abyśmy wierzyli i wyznawali, że Pan nasz Jezus Chrystus, Syn Boży, jest Bogiem i człowiekiem. … Jest zaś jeden - ",
           {
             "t": "nie przez przemianę Bóstwa w ciało, lecz przez przyjęcie człowieczeństwa w Boga",
             "note": "Bóg nie zamienił się w człowieka; odwieczny Syn przyjął do siebie pełną naturę ludzką."
@@ -157,10 +157,10 @@ const data: CreedsOverlay = {
         "reformed": "uznany w Wyznaniu belgijskim"
       },
       "rejectedBy": {
-        "orthodox": "szanuje jego naukę, ale nie wiersz z Filioque"
+        "orthodox": "szanuje jego naukę, ale nie przyjmuje wiersza z Filioque"
       },
       "keyPoints": [
-        "Trzy Osoby, jeden Bóg – współrówne i współwieczne",
+        "Trzy Osoby, jeden Bóg - współrówne i współwieczne",
         "Chrystus: w pełni Bóg i w pełni człowiek, jedna Osoba",
         "Zawiera Filioque"
       ]
@@ -168,14 +168,14 @@ const data: CreedsOverlay = {
     "chalcedon": {
       "name": "Definicja chalcedońska",
       "date": "451",
-      "tagline": "Jedna Osoba, dwie natury – formuła, która podzieliła Wschód.",
-      "origin": "Ogłoszona przez Sobór chalcedoński, by wytyczyć drogę między Nestoriuszem (Chrystus jako dwie osoby) a Eutychesem (człowieczeństwo Chrystusa wchłonięte przez Jego bóstwo). Jej sformułowanie „w dwóch naturach” odrzuciły Kościoły Egiptu, Syrii i Armenii – dzisiejsze Kościoły orientalne.",
+      "tagline": "Jedna Osoba, dwie natury - formuła, która podzieliła Wschód.",
+      "origin": "Ogłoszona przez Sobór chalcedoński, by wytyczyć drogę między Nestoriuszem (Chrystus jako dwie osoby) a Eutychesem (człowieczeństwo Chrystusa wchłonięte przez Jego bóstwo). Jej sformułowanie „w dwóch naturach” odrzuciły Kościoły Egiptu, Syrii i Armenii - dzisiejsze Kościoły orientalne.",
       "text": [
         [
           "… jednego i tego samego Chrystusa, Syna, Pana, Jednorodzonego, poznawanego ",
           {
             "t": "w dwóch naturach",
-            "note": "Sporne sformułowanie. Kościoły orientalne wolą formułę św. Cyryla Aleksandryjskiego „jedna wcielona natura Boga Słowa” – w sensie jednej zjednoczonej natury bosko-ludzkiej, a nie natur zlanych w jedno."
+            "note": "Sporne sformułowanie. Kościoły orientalne wolą formułę św. Cyryla Aleksandryjskiego „jedna wcielona natura Boga Słowa” - w sensie jednej zjednoczonej natury bosko-ludzkiej, a nie natur zlanych w jedno."
           },
           " ",
           {
@@ -195,7 +195,7 @@ const data: CreedsOverlay = {
       },
       "keyPoints": [
         "Chrystus jest jedną Osobą",
-        "Prawdziwie Bóg i prawdziwie człowiek – dwie natury",
+        "Prawdziwie Bóg i prawdziwie człowiek - dwie natury",
         "Natury zjednoczone bez zmieszania i bez rozdzielenia"
       ]
     }
@@ -234,7 +234,7 @@ const data: CreedsOverlay = {
     {
       "name": "Kanony z Dordrechtu",
       "year": "1619",
-      "text": "Odpowiedź na stanowisko remonstrantów – źródło „pięciu punktów kalwinizmu”."
+      "text": "Odpowiedź na stanowisko remonstrantów - źródło „pięciu punktów kalwinizmu”."
     },
     {
       "name": "Westminsterskie wyznanie wiary",

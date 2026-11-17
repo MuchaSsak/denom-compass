@@ -51,7 +51,7 @@ export const councilDetails: Record<number, CouncilDetail> =  {
     ],
     "term": {
       "word": "ekporeuomenon",
-      "gloss": "the Spirit 'proceeds from the Father'"
+      "gloss": "the Spirit ‘proceeds from the Father’"
     },
     "outcome": "Expanded the Nicene Creed into the form still used today and ended Arianism in the empire. Canon 3 ranked Constantinople second after Rome, which Rome resisted for centuries.",
     "dissent": [
@@ -116,7 +116,7 @@ export const councilDetails: Record<number, CouncilDetail> =  {
     ],
     "term": {
       "word": "in two natures",
-      "gloss": "one person, truly God and truly man: 'without confusion, change, division or separation'"
+      "gloss": "one person, truly God and truly man: ‘without confusion, change, division or separation’"
     },
     "outcome": "Much of Egypt, Syria and Armenia did not receive it - with the Church of the East (431), one of the first lasting splits of the Church. Rome accepted the doctrine but rejected canon 28, which raised Constantinople's rank.",
     "dissent": [
@@ -153,7 +153,7 @@ export const councilDetails: Record<number, CouncilDetail> =  {
     ],
     "term": {
       "word": "Theopaschite formula",
-      "gloss": "'One of the Trinity suffered in the flesh'"
+      "gloss": "‘One of the Trinity suffered in the flesh’"
     },
     "outcome": "It failed to reconcile the Miaphysites, and it caused a schism in northern Italy (Aquileia) that lasted until about 700. Origenist ideas were condemned around the same time.",
     "dissent": [
@@ -397,7 +397,7 @@ export const councilDetails: Record<number, CouncilDetail> =  {
     ],
     "term": {
       "word": "Filioque",
-      "gloss": "'and the Son' (the Spirit proceeds from Father and Son)"
+      "gloss": "‘and the Son’ (the Spirit proceeds from Father and Son)"
     },
     "outcome": "Union was proclaimed but rejected by Greek clergy and people, and it was repudiated after Michael died in 1282. Its conclave rules for papal elections lasted.",
     "dissent": [
@@ -482,7 +482,7 @@ export const councilDetails: Record<number, CouncilDetail> =  {
     ],
     "term": {
       "word": "Laetentur caeli",
-      "gloss": "'Let the heavens rejoice': the 1439 bull of union"
+      "gloss": "‘Let the heavens rejoice’: the 1439 bull of union"
     },
     "outcome": "The union was rejected in the East, Constantinople fell in 1453, and a synod formally repudiated it in 1484. The Basel rump deposed Eugene and elected antipope Felix V (1439). Rome does not count the Basel sessions after the 1437 transfer.",
     "dissent": [
@@ -569,7 +569,7 @@ export const councilDetails: Record<number, CouncilDetail> =  {
     ],
     "term": {
       "word": "ex cathedra",
-      "gloss": "'from the chair' of Peter: a pope's solemn, infallible definition"
+      "gloss": "‘from the chair’ of Peter: a pope's solemn, infallible definition"
     },
     "outcome": "Defined papal primacy and infallibility (Pastor aeternus, 18 July 1870), after about 60 opponents left Rome. Italian troops took Rome, and the council was suspended and never formally resumed.",
     "dissent": [

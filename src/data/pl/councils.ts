@@ -8,7 +8,7 @@ const data: CouncilsOverlay = {
       "place": "Nicea (İznik, Turcja)",
       "summary": "Potępił Ariusza; Syn jest „współistotny” Ojcu.",
       "decisions": [
-        "Pierwsze Credo nicejskie (homoousios)",
+        "Pierwotny Symbol nicejski (homoousios)",
         "Wspólna data Wielkanocy",
         "20 kanonów dyscyplinarnych"
       ]
@@ -17,7 +17,7 @@ const data: CouncilsOverlay = {
       "name": "Konstantynopolitański I",
       "year": "381",
       "place": "Konstantynopol (Stambuł)",
-      "summary": "Potwierdził pełne bóstwo Ducha Świętego; dopełnił Credo nicejskie.",
+      "summary": "Potwierdził pełne bóstwo Ducha Świętego; uzupełnił Symbol nicejski.",
       "decisions": [
         "Symbol nicejsko-konstantynopolitański",
         "Potępienie macedonian i apolinarystów",
@@ -32,7 +32,7 @@ const data: CouncilsOverlay = {
       "decisions": [
         "Maryja ogłoszona Bogurodzicą (Theotokos)",
         "Potępienie Nestoriusza i pelagianizmu",
-        "Zakaz układania nowego wyznania wiary (kanon 7)"
+        "Zakaz układania nowego symbolu wiary (kanon 7)"
       ]
     },
     "4": {
@@ -50,7 +50,7 @@ const data: CouncilsOverlay = {
       "name": "Konstantynopolitański II",
       "year": "553",
       "place": "Konstantynopol",
-      "summary": "Odczytał Chalcedon w duchu Cyryla; potępił „Trzy Rozdziały”.",
+      "summary": "Zinterpretował Chalcedon w duchu Cyryla; potępił „Trzy Rozdziały”.",
       "decisions": [
         "Potępienie Teodora z Mopsuestii oraz pism Teodoreta i Ibasa",
         "Anatemy na nauki orygenistyczne"
@@ -62,7 +62,7 @@ const data: CouncilsOverlay = {
       "place": "Konstantynopol",
       "summary": "Chrystus ma dwie wole, boską i ludzką. Potępił monoteletyzm.",
       "decisions": [
-        "Zdefiniowanie diteletyzmu",
+        "Zdefiniowanie dioteletyzmu",
         "Pośmiertne potępienie papieża Honoriusza I"
       ]
     },
@@ -130,7 +130,7 @@ const data: CouncilsOverlay = {
       "name": "Lyoński I",
       "year": "1245",
       "place": "Lyon",
-      "summary": "Złożył z tronu cesarza Fryderyka II.",
+      "summary": "Zdetronizował cesarza Fryderyka II.",
       "decisions": [
         "Detronizacja Fryderyka II"
       ]
@@ -159,7 +159,7 @@ const data: CouncilsOverlay = {
       "name": "W Konstancji",
       "year": "1414–1418",
       "place": "Konstancja",
-      "summary": "Zakończył schizmę zachodnią trzech rywalizujących papieży; potępił Husa i Wyclifa.",
+      "summary": "Zakończył wielką schizmę zachodnią (trzech rywalizujących papieży); potępił Husa i Wiklifa.",
       "decisions": [
         "Wybór Marcina V",
         "Spalenie Jana Husa"
@@ -180,7 +180,7 @@ const data: CouncilsOverlay = {
       "name": "Laterański V",
       "year": "1512–1517",
       "place": "Rzym",
-      "summary": "Potwierdził nieśmiertelność duszy; zakończył się kilka miesięcy przed tezami Lutra.",
+      "summary": "Potwierdził nieśmiertelność duszy; zakończył się kilka miesięcy przed ogłoszeniem tez Lutra.",
       "decisions": [
         "Nieśmiertelność duszy",
         "Dekrety reformatorskie (słabo wdrożone)"
@@ -224,7 +224,7 @@ const data: CouncilsOverlay = {
     {
       "year": "431",
       "title": "Oddzielenie Kościoła Wschodu",
-      "text": "Po soborze efeskim Kościół w Persji zachowuje antiocheński język o dwóch naturach Chrystusa i tytuł „Chrystusorodzica”."
+      "text": "Po soborze efeskim Kościół w Persji zachowuje antiocheńskie sformułowania o dwóch naturach Chrystusa i tytuł „Chrystusorodzica”."
     },
     {
       "year": "451",

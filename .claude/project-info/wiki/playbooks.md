@@ -14,7 +14,7 @@
 
 ## Add a denomination
 1. `profiles.ts`: new entry (unique colour, `family`, `councils`, short copy).
-2. `stances.ts`: a row for all 24 questions.
+2. `stances.ts`: a row for all 26 questions.
 3. `icons.ts`: add a 48×48 symbol under the same id.
 4. `/councils` grid lists a fixed set of ids - add there if it accepts councils.
 5. `npm run validate`; check it doesn't steal another tradition's #1.

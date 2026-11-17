@@ -125,7 +125,7 @@ msgstr "Czy sakramenty są znakami, czy kanałami łaski? Czy zbawienie zależy 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Based on your answers on marriage, abortion and women’s ordination."
-msgstr "Na podstawie Twoich odpowiedzi o małżeństwie, aborcji i ordynacji kobiet."
+msgstr "Na podstawie twoich odpowiedzi o małżeństwie, aborcji i ordynacji kobiet."
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
@@ -176,6 +176,11 @@ msgstr "Porównuję z {n} tradycjami"
 #: src/pages/[lang]/creeds/[id].astro
 msgid "Confessed by"
 msgstr "Wyznają"
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/councils/[slug].astro
+msgid "Context, key figures, decisions and which churches accept it."
+msgstr "Tło, kluczowe postacie, postanowienia i Kościoły, które go przyjmują."
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
@@ -289,6 +294,11 @@ msgstr "Stanowczo"
 #: src/components/CompassChart.svelte
 msgid "Free will"
 msgstr "Wolna wola"
+
+#. js-lingui-explicit-id
+#: src/pages/[lang]/creeds/[id].astro
+msgid "Full text, origin and which churches use it."
+msgstr "Pełny tekst, pochodzenie i Kościoły, które go używają."
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
@@ -459,7 +469,7 @@ msgstr "Żadna z opisanych tu tradycji."
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
 msgid "Nontrinitarian"
-msgstr "Nietrynitarne"
+msgstr "Wyznania nietrynitarne"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
@@ -542,6 +552,11 @@ msgstr "Prywatność"
 #: src/pages/[lang]/terms.astro
 msgid "Privacy policy"
 msgstr "Polityka prywatności"
+
+#. js-lingui-explicit-id
+#: src/components/Quiz.svelte
+msgid "Progress"
+msgstr "Postęp"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte

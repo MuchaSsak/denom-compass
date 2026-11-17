@@ -21,7 +21,7 @@ export const optionTerms: Record<string, Record<string, { en: string; pl: string
   eucharist: {
     mystery: { en: 'metousiosis', pl: 'metousiosis' },
     union: { en: 'sacramental union', pl: 'unia sakramentalna' },
-    spiritual: { en: 'spiritual real presence', pl: 'duchowa rzeczywista obecność' },
+    spiritual: { en: 'spiritual real presence', pl: 'rzeczywista obecność duchowa' },
     memorial: { en: 'memorialism', pl: 'memorializm' },
   },
   infant: {

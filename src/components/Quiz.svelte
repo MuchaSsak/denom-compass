@@ -135,7 +135,7 @@
     >
       <svg viewBox="0 0 24 24" class="size-5"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
     </button>
-    <div class="h-1.5 flex-1 overflow-hidden rounded-full bg-surface-2" role="progressbar" aria-valuenow={progress} aria-valuemin="0" aria-valuemax="100">
+    <div class="h-1.5 flex-1 overflow-hidden rounded-full bg-surface-2" role="progressbar" aria-label={t('Progress')} aria-valuenow={progress} aria-valuemin="0" aria-valuemax="100">
       <div class="h-full rounded-full bg-gold transition-[width] duration-500 ease-out" style="width:{finishing ? 100 : progress}%"></div>
     </div>
     <span class="text-sm font-semibold tabular-nums text-muted">{Math.min(index + 1, total)}/{total}</span>

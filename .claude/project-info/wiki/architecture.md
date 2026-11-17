@@ -5,7 +5,7 @@
 src/
   data/
     types.ts          Question (explain, option detail), Denomination (notice), Council, Stance, Answers, Notes
-    questions.ts      24 questions: id, topic, kind (yesno|choice), text, hint, explain, weight, options (label, short, detail, axes)
+    questions.ts      26 questions: id, topic, kind (yesno|choice), text, hint, explain, weight, options (label, short, detail, axes)
     stances.ts        denom → question → option → 0..1 (generated from raw/research-matrix.md, then hand-maintained)
     profiles.ts       18 profiles (+ optional notice)
     denominations.ts  profiles + stances merged; denominationById; families

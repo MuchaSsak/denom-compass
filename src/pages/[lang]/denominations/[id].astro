@@ -52,7 +52,7 @@ const firmness = (s: number) => (s >= 1 ? t('Firm') : s >= 0.75 ? t('Mostly') : 
       <Badge id={d.id} color={d.color} size={96} />
       <div class="min-w-0">
         <p class="eyebrow" style={`color:color-mix(in oklab, ${d.color} 62%, var(--ink))`}>{familyName(t, d.family)}</p>
-        <h1 class="mt-1 font-display text-4xl leading-tight font-semibold text-balance sm:text-5xl">{d.name}</h1>
+        <h1 class="mt-1 font-display text-[clamp(1.5rem,6.8vw,2.25rem)] leading-tight font-semibold text-balance sm:text-5xl">{d.name}</h1>
         <p class="mt-2 text-lg text-muted">{d.tagline}</p>
       </div>
     </div>
@@ -97,7 +97,7 @@ const firmness = (s: number) => (s >= 1 ? t('Firm') : s >= 0.75 ? t('Mostly') : 
                   href={href(lang, `/councils/${councilSlug(c)}`)}
                   class="grid size-8 place-items-center rounded-lg text-xs font-bold tabular-nums transition hover:scale-110"
                   style={on ? `background:${d.color};color:${onColor(d.color)}` : 'background:var(--surface-2);color:var(--muted);opacity:.55'}
-                  aria-label={`${c.name} (${c.year}) - ${on ? t('accepted') : t('not accepted')}`}
+                  aria-label={`${c.n}. ${c.name} (${c.year}) - ${on ? t('accepted') : t('not accepted')}`}
                 >{c.n}</a>
                 <span class="pointer-events-none absolute bottom-full left-1/2 z-10 mb-1.5 hidden -translate-x-1/2 rounded-md bg-ink px-2 py-1 text-[11px] font-semibold whitespace-nowrap text-bg group-hover:block">{c.name} · {c.year}</span>
               </li>

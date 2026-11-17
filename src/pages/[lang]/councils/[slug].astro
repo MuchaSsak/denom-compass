@@ -44,13 +44,13 @@ const dissent = (x?.dissent ?? []).map((r) => ({ who: r.who, why: g(r.why) }));
 const mattersParts = matters ? g(matters) : [];
 const fullName = lang === 'pl' ? `Sobór ${c.name.charAt(0).toLowerCase()}${c.name.slice(1)}` : `${t('Council of')} ${c.name}`;
 ---
-<Base title={fullName} description={c.summary} wide>
+<Base title={fullName} description={`${fullName} (${c.year}, ${c.place}). ${c.summary} ${t('Context, key figures, decisions and which churches accept it.')}`} wide>
   <a href={href(lang, '/councils')} class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-muted hover:text-ink">← {t('All councils')}</a>
 
   <div class="mt-4 grid gap-6 lg:grid-cols-[1.5fr_1fr]">
     <article class="card min-w-0 p-6 sm:p-10">
       <p class="eyebrow">{t('Council #{n}', { n })} · {c.year}</p>
-      <h1 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">{c.name}</h1>
+      <h1 class="mt-2 font-display text-[clamp(1.5rem,6.8vw,2.25rem)] leading-tight font-semibold sm:text-5xl">{c.name}</h1>
       <p class="mt-3 font-display text-xl leading-relaxed"><Annotated parts={summary} /></p>
 
       {x && (
@@ -65,7 +65,7 @@ const fullName = lang === 'pl' ? `Sobór ${c.name.charAt(0).toLowerCase()}${c.na
           {x.term && (
             <p class="mt-6 flex flex-wrap items-baseline gap-x-3">
               <span class="font-display text-3xl font-semibold text-gold italic">{x.term.word}</span>
-              <span class="text-muted">„{x.term.gloss}”</span>
+              <span class="text-muted">{lang === 'pl' ? `„${x.term.gloss}”` : `“${x.term.gloss}”`}</span>
             </p>
           )}
         </>

@@ -27,10 +27,10 @@ export const privacy: Record<'en' | 'pl', LegalDoc> = {
       ] },
       { h: '3. Jakie dane, w jakim celu i na jakiej podstawie', body: [
         [
-          'Udostępnianie i zabezpieczenie Serwisu: adres IP, data i godzina, adres podstrony, odnośnik źródłowy, typ przeglądarki (logi serwera). Podstawa: prawnie uzasadniony interes administratora, czyli bezpieczne i stabilne działanie Serwisu (art. 6 ust. 1 lit. f RODO). Okres: zgodnie z retencją logów dostawcy hostingu, zwykle nie dłużej niż kilka dni.',
-          'Działanie quizu: odpowiedzi, notatki, historia wyników, wybrany motyw i język. Te dane zapisywane są wyłącznie w pamięci Twojej przeglądarki (localStorage) i nie są wysyłane do administratora. Podstawa zapisu w urządzeniu: art. 399 ust. 3 pkt 2 PKE (przechowywanie niezbędne do świadczenia usługi, której zażądałeś/aś). Okres: do czasu ich usunięcia przez Ciebie (patrz pkt 8).',
+          'Udostępnianie i zabezpieczenie Serwisu: adres IP, data i godzina, adres podstrony, odnośnik źródłowy, typ przeglądarki (logi serwera). Podstawa: prawnie uzasadniony interes administratora, czyli bezpieczne i stabilne działanie Serwisu (art. 6 ust. 1 lit. f RODO). Okres przechowywania: zgodnie z zasadami przechowywania logów przyjętymi przez dostawcę hostingu, zwykle nie dłużej niż kilka dni.',
+          'Działanie quizu: odpowiedzi, notatki, historia wyników, wybrany motyw i język. Te dane zapisywane są wyłącznie w pamięci Twojej przeglądarki (localStorage) i nie są wysyłane do administratora. Podstawa zapisu w urządzeniu: art. 399 ust. 3 pkt 2 PKE (przechowywanie niezbędne do świadczenia usługi, której zażądałeś/aś). Okres przechowywania: do czasu ich usunięcia przez Ciebie (patrz pkt 8).',
           'Interpretacja AI (funkcja dobrowolna, uruchamiana przyciskiem): Twoje odpowiedzi w quizie, notatki, opis własnej wiary i język strony, a także adres IP (na potrzeby ograniczenia liczby zapytań). Treści te mogą ujawniać przekonania religijne, czyli szczególną kategorię danych (art. 9 ust. 1 RODO). Podstawa: Twoja wyraźna zgoda (art. 6 ust. 1 lit. a oraz art. 9 ust. 2 lit. a RODO). Administrator nie zapisuje tych treści na serwerze; są one przekazywane jednorazowo do dostawcy modelu AI (pkt 5), a wynik wraca do Twojej przeglądarki. Licznik zapytań przechowywany jest w pamięci operacyjnej funkcji serwerowej przez około minutę.',
-          'Korespondencja e-mail: dane z wiadomości. Podstawa: prawnie uzasadniony interes w udzieleniu odpowiedzi (art. 6 ust. 1 lit. f RODO). Okres: do załatwienia sprawy, nie dłużej niż 12 miesięcy od ostatniej wiadomości.',
+          'Korespondencja e-mail: dane z wiadomości. Podstawa: prawnie uzasadniony interes w udzieleniu odpowiedzi (art. 6 ust. 1 lit. f RODO). Okres przechowywania: do załatwienia sprawy, nie dłużej niż 12 miesięcy od ostatniej wiadomości.',
           'Ustalenie, dochodzenie lub obrona roszczeń: dane niezbędne w danej sprawie (art. 6 ust. 1 lit. f RODO), do upływu terminów przedawnienia.',
         ],
       ] },
@@ -40,8 +40,8 @@ export const privacy: Record<'en' | 'pl', LegalDoc> = {
       { h: '5. Interpretacja AI: odbiorcy i ryzyka', body: [
         'Po kliknięciu przycisku i wyrażeniu zgody treści opisane w pkt 3 są wysyłane do OpenRouter, Inc. (USA), który przekazuje je do wybranego dostawcy modelu językowego (np. NVIDIA albo innego dostawcy darmowego modelu dostępnego w OpenRouter). Dostawcy ci mogą przetwarzać dane poza Europejskim Obszarem Gospodarczym.',
         'Serwis korzysta z darmowych modeli. Ich dostawcy mogą rejestrować zapytania i wykorzystywać je do ulepszania modeli, zgodnie z własnymi regulaminami. Dlatego prosimy: nie wpisuj imion, nazwisk, danych kontaktowych ani innych informacji, które pozwalają Cię zidentyfikować lub dotyczą innych osób.',
-        'Wynik interpretacji generowany jest automatycznie, może zawierać błędy i nie wywołuje wobec Ciebie skutków prawnych ani podobnie istotnych (art. 22 RODO nie ma zastosowania).',
-        'Zgodę możesz w każdej chwili wycofać przyciskiem w pkt 8 albo pisząc na adres administratora. Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania przed jej wycofaniem (art. 7 ust. 3 RODO). Bez zgody możesz korzystać z quizu i wszystkich pozostałych funkcji.',
+        'Wynik interpretacji generowany jest automatycznie, może zawierać błędy i nie wywołuje wobec Ciebie skutków prawnych ani w podobny sposób istotnie na Ciebie nie wpływa (art. 22 RODO nie ma zastosowania).',
+        'Zgodę możesz w każdej chwili wycofać przyciskiem w pkt 8 albo pisząc na adres administratora. Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej wycofaniem (art. 7 ust. 3 RODO). Bez zgody możesz korzystać z quizu i wszystkich pozostałych funkcji.',
       ] },
       { h: '6. Przekazywanie danych poza EOG', body: [
         'Przekazanie danych do Vercel Inc. opiera się na decyzji Komisji Europejskiej stwierdzającej odpowiedni stopień ochrony w ramach EU-US Data Privacy Framework (decyzja wykonawcza (UE) 2023/1795, art. 45 RODO).',
@@ -64,7 +64,7 @@ export const privacy: Record<'en' | 'pl', LegalDoc> = {
         'Możesz też usunąć dane strony w ustawieniach przeglądarki.',
       ] },
       { h: '9. Twoje prawa', body: [
-        'Przysługuje Ci prawo dostępu do danych (art. 15 RODO), ich sprostowania (art. 16), usunięcia (art. 17), ograniczenia przetwarzania (art. 18), przenoszenia (art. 20), sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie (art. 21) oraz cofnięcia zgody w dowolnym momencie (art. 7 ust. 3).',
+        'Przysługuje Ci prawo dostępu do danych (art. 15 RODO), ich sprostowania (art. 16), usunięcia (art. 17), ograniczenia przetwarzania (art. 18), przenoszenia (art. 20), sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie (art. 21) oraz wycofania zgody w dowolnym momencie (art. 7 ust. 3).',
         'Odpowiadamy bez zbędnej zwłoki, nie później niż w ciągu miesiąca (z możliwością przedłużenia o dwa miesiące, art. 12 ust. 3 RODO). Ponieważ administrator nie przechowuje treści quizu ani interpretacji AI, w wielu przypadkach nie jest w stanie Cię zidentyfikować (art. 11 ust. 2 RODO); dane w Twojej przeglądarce kontrolujesz bezpośrednio (pkt 8).',
       ] },
       { h: '10. Skarga do organu nadzorczego', body: [
@@ -152,14 +152,14 @@ export const terms: Record<'en' | 'pl', LegalDoc> = {
     intro: 'Zasady korzystania z serwisu Kompas denominacji. Korzystając z Serwisu, akceptujesz ten regulamin.',
     sections: [
       { h: '1. Usługodawca', body: [
-        `Serwis „Kompas denominacji” („Denomination Compass”) prowadzi Mateusz Muszarski, osoba fizyczna (Polska), e-mail: [${CONTACT}](mailto:${CONTACT}). Regulamin jest regulaminem świadczenia usług drogą elektroniczną w rozumieniu ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną.`,
+        `Serwis „Kompas denominacji” („Denomination Compass”) prowadzi Mateusz Muszarski, osoba fizyczna (Polska), e-mail: [${CONTACT}](mailto:${CONTACT}). Niniejszy dokument jest regulaminem świadczenia usług drogą elektroniczną w rozumieniu ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną.`,
       ] },
       { h: '2. Usługi i wymagania techniczne', body: [
         'Serwis udostępnia bezpłatnie: quiz porównujący poglądy z nauczaniem tradycji chrześcijańskich, opisy tradycji, doktryn, soborów i wyznań wiary oraz opcjonalną interpretację AI. Do korzystania potrzebna jest aktualna przeglądarka z włączonym JavaScriptem i pamięcią localStorage. Nie trzeba zakładać konta.',
         'Zabronione jest dostarczanie treści o charakterze bezprawnym, automatyczne masowe wysyłanie zapytań, obchodzenie limitów oraz działania zakłócające pracę Serwisu.',
       ] },
       { h: '3. Charakter treści', body: [
-        'Treści mają charakter informacyjny i edukacyjny. Opisy tradycji są uproszczonymi streszczeniami ich oficjalnego nauczania, opracowanymi na podstawie publicznie dostępnych źródeł, z zamiarem rzetelności i szacunku wobec każdej z nich. Wynik quizu jest przybliżeniem, a nie oceną wiary ani przynależności.',
+        'Treści mają charakter informacyjny i edukacyjny. Opisy tradycji są uproszczonymi streszczeniami ich oficjalnego nauczania, opracowanymi na podstawie publicznie dostępnych źródeł, z dbałością o rzetelność i szacunek wobec każdej z nich. Wynik quizu jest przybliżeniem, a nie oceną wiary ani przynależności.',
         'Serwis nie stanowi porady duszpasterskiej, teologicznej, prawnej ani psychologicznej i nie jest powiązany z żadnym Kościołem ani związkiem wyznaniowym. W sprawach wiary warto rozmawiać z duchownymi lub nauczycielami danej tradycji.',
       ] },
       { h: '4. Interpretacja AI', body: [
@@ -169,14 +169,14 @@ export const terms: Record<'en' | 'pl', LegalDoc> = {
         'Usługodawca dokłada starań, aby treści były poprawne i aktualne, ale nie gwarantuje ich kompletności ani nieprzerwanej dostępności Serwisu. W najszerszym zakresie dozwolonym przez prawo usługodawca nie odpowiada za decyzje podjęte na podstawie treści Serwisu ani wyników AI. Nie wyłącza to odpowiedzialności za szkodę wyrządzoną umyślnie (art. 473 § 2 Kodeksu cywilnego) ani uprawnień przysługujących konsumentom na mocy bezwzględnie obowiązujących przepisów.',
       ] },
       { h: '6. Prawa autorskie', body: [
-        'Teksty, układ i grafiki Serwisu (w tym ikony tradycji) są chronione prawem autorskim i należą do usługodawcy, o ile nie wskazano inaczej. Tradycyjne teksty wyznań wiary należą do domeny publicznej. Krótkie cytaty z podaniem źródła są dozwolone w granicach prawa cytatu.',
+        'Teksty, układ i grafiki Serwisu (w tym ikony tradycji) są chronione prawem autorskim, a prawa do nich przysługują usługodawcy, o ile nie wskazano inaczej. Tradycyjne teksty wyznań wiary należą do domeny publicznej. Krótkie cytaty z podaniem źródła są dozwolone w granicach prawa cytatu.',
       ] },
       { h: '7. Reklamacje', body: [
         `Reklamacje i zgłoszenia błędów (także merytorycznych) można kierować na adres [${CONTACT}](mailto:${CONTACT}). Odpowiadamy w ciągu 14 dni.`,
       ] },
       { h: '8. Prawo właściwe i zmiany', body: [
         'Regulamin podlega prawu polskiemu. Konsument zachowuje ochronę przyznaną mu przez bezwzględnie obowiązujące przepisy państwa swojego zwykłego pobytu. Spory rozstrzygają sądy właściwe według przepisów ogólnych; konsument może też skorzystać z pozasądowych sposobów rozwiązywania sporów.',
-        'Usługodawca może zmienić regulamin z ważnych przyczyn (np. zmiana przepisów lub funkcji Serwisu); nowa wersja obowiązuje od daty podanej na górze strony. Wersja polska ma pierwszeństwo przed tłumaczeniem.',
+        'Usługodawca może zmienić regulamin z ważnych przyczyn (np. zmiany przepisów lub funkcji Serwisu); nowa wersja obowiązuje od daty podanej na górze strony. Wersja polska ma pierwszeństwo przed tłumaczeniem.',
       ] },
     ],
   },

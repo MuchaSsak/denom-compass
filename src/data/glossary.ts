@@ -9,7 +9,7 @@ const L = '\\p{L}*';
 
 export const glossary: Entry[] = [
   { en: [['Arius', 'Arian' + L, 'semi-Arian' + L], 'Arius (d. 336), Alexandrian priest: the Son is God’s first and highest creature, not eternal God.'],
-    pl: [['Ariusz' + L, 'arian' + L, 'ariańsk' + L], 'Ariusz (zm. 336), kapłan z Aleksandrii: Syn jest pierwszym i najwyższym stworzeniem Boga, a nie odwiecznym Bogiem.'] },
+    pl: [['Ariusz' + L, 'arian' + L, 'ariańsk' + L], 'Ariusz (zm. 336), prezbiter z Aleksandrii: Syn jest pierwszym i najwyższym stworzeniem Boga, a nie odwiecznym Bogiem.'] },
   { en: [['homoousios', 'consubstantial'], 'Greek “of one substance”: the Son is God in exactly the same sense as the Father.'],
     pl: [['homoousios', 'współistotn' + L], 'Gr. „współistotny”: Syn jest Bogiem dokładnie w tym samym sensie co Ojciec.'] },
   { en: [['Pneumatomachi', 'Macedonian' + L], '“Fighters against the Spirit”: denied that the Holy Spirit is fully God.'],
@@ -53,11 +53,11 @@ export const glossary: Entry[] = [
   { en: [['investiture'], 'Who appoints bishops: kings or the Church. Settled by the Concordat of Worms (1122).'],
     pl: [['inwestytur' + L], 'Kto mianuje biskupów: władcy czy Kościół. Rozstrzygnięte konkordatem wormackim (1122).'] },
   { en: [['Concordat of Worms'], '1122 deal: the Church invests bishops with ring and staff, the emperor grants their lands.'],
-    pl: [['konkordat' + L + ' wormack' + L], 'Ugoda z 1122 r.: Kościół inwestował biskupów pierścieniem i pastorałem, cesarz nadawał im ziemie.'] },
+    pl: [['konkordat' + L + ' wormack' + L], 'Ugoda z 1122 r.: Kościół udzielał biskupom inwestytury pierścieniem i pastorałem, cesarz nadawał im ziemie.'] },
   { en: [['simony'], 'Buying or selling church offices or spiritual things.'],
     pl: [['symoni' + L], 'Kupowanie lub sprzedawanie urzędów kościelnych albo rzeczy duchowych.'] },
   { en: [['antipope' + L], 'A rival claimant to the papacy not recognised by the Catholic Church.'],
-    pl: [['antypap' + L], 'Rywalny pretendent do papiestwa, nieuznawany przez Kościół katolicki.'] },
+    pl: [['antypap' + L], 'Konkurencyjny pretendent do papiestwa, nieuznawany przez Kościół katolicki.'] },
   { en: [['Cathar' + L, 'Albigensian' + L], 'Dualist movement: matter is evil, created by an evil god; rejected the sacraments.'],
     pl: [['katarz' + L, 'katarów', 'katarami', 'albigens' + L], 'Ruch dualistyczny: materia jest zła, stworzona przez złego boga; odrzucali sakramenty.'] },
   { en: [['Waldensian' + L], 'Lay preaching movement of Peter Waldo (12th c.); later joined the Reformation.'],

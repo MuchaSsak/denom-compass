@@ -94,4 +94,6 @@ export const schisms = [
 ];
 
 /** URL slug, e.g. "Nicaea I" → "nicaea-i", "Basel–Ferrara–Florence" → "basel-ferrara-florence". */
-export const councilSlug = (c: Council) => c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+/** Always built from the English name, so localized council objects get the same URL. */
+const slugs = new Map(councils.map((c) => [c.n, c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')]));
+export const councilSlug = (c: Pick<Council, 'n'>) => slugs.get(c.n)!;

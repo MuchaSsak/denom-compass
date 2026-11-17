@@ -4,7 +4,7 @@ const data: QuestionsOverlay = {
   "trinity": {
     "text": "Kim jest Bóg?",
     "hint": "Nauka o Trójcy Świętej, określona w Nicei (325) i Konstantynopolu (381).",
-    "explain": "Nauka o Trójcy Świętej głosi, że jeden Bóg istnieje odwiecznie w trzech odrębnych Osobach, które mają jedną boską naturę – to nie trzech bogów ani jedna Osoba w trzech kolejnych przejawach. Wyznaje ją niemal każdy Kościół; nieliczne ruchy inaczej odczytują Biblię.",
+    "explain": "Nauka o Trójcy Świętej głosi, że jeden Bóg istnieje odwiecznie w trzech odrębnych Osobach, które mają jedną boską naturę - to nie trzech bogów ani jedna Osoba w trzech kolejnych przejawach. Wyznaje ją niemal każdy Kościół; nieliczne ruchy inaczej odczytują Biblię.",
     "options": {
       "yes": {
         "label": "Jeden Bóg w trzech równych sobie Osobach: Ojciec, Syn i Duch Święty",
@@ -25,7 +25,7 @@ const data: QuestionsOverlay = {
   },
   "authority": {
     "text": "Co ma ostatnie słowo w sprawach doktryny?",
-    "explain": "Gdy chrześcijanie się spierają, co rozstrzyga spór? Jedni mówią, że ostatecznym sędzią jest sama Biblia; inni – że Biblię trzeba czytać w żywej Tradycji Kościoła; nieliczni wierzą, że Bóg wciąż dodaje objawienie przez proroków.",
+    "explain": "Gdy chrześcijanie się spierają, co rozstrzyga spór? Jedni mówią, że ostatecznym sędzią jest sama Biblia; inni - że Biblię trzeba czytać w żywej Tradycji Kościoła; nieliczni wierzą, że Bóg wciąż dodaje objawienie przez proroków.",
     "options": {
       "scripture": {
         "label": "Samo Pismo Święte",
@@ -52,7 +52,7 @@ const data: QuestionsOverlay = {
   "pope": {
     "text": "Czy papież ma najwyższą władzę nad całym Kościołem?",
     "hint": "Powszechna jurysdykcja biskupa Rzymu (Sobór watykański I, 1870).",
-    "explain": "Katolicy wierzą, że Chrystus ustanowił Piotra głową apostołów, a biskup Rzymu dziedziczy tę funkcję wraz z pełną władzą nad każdym chrześcijaninem. Inni mogą szanować papieża jako historycznego zwierzchnika lub wcale, ale nie uznają jego jurysdykcji.",
+    "explain": "Katolicy wierzą, że Chrystus ustanowił Piotra głową apostołów, a biskup Rzymu dziedziczy tę funkcję wraz z pełną władzą nad każdym chrześcijaninem. Inni mogą szanować papieża jako historycznego zwierzchnika albo wcale go nie wyróżniać, ale nie uznają jego jurysdykcji.",
     "options": {
       "yes": {
         "label": "Tak, z ustanowienia Chrystusa",
@@ -89,7 +89,7 @@ const data: QuestionsOverlay = {
       "two": {
         "label": "Tylko pierwsze dwa (325 i 381)",
         "short": "Dwa",
-        "detail": "Nicea i Konstantynopol – Symbol nicejsko-konstantynopolitański."
+        "detail": "Nicea i Konstantynopol - Symbol nicejsko-konstantynopolitański."
       },
       "subordinate": {
         "label": "Dawne sobory są wiarygodne, ale wiąże tylko Pismo",
@@ -107,12 +107,12 @@ const data: QuestionsOverlay = {
     "explain": "Podczas Ostatniej Wieczerzy Jezus powiedział: „To jest Ciało moje”. Kościoły różnie rozumieją te słowa: rzeczywista przemiana, rzeczywista obecność bez przemiany, duchowe karmienie się albo pamiątkowa uczta.",
     "options": {
       "transub": {
-        "label": "Chleb i wino stają się Ciałem i Krwią Chrystusa (przeistoczenie – transsubstancjacja)",
+        "label": "Chleb i wino stają się Ciałem i Krwią Chrystusa (przeistoczenie - transsubstancjacja)",
         "short": "Transsubstancjacja",
         "detail": "Zmienia się substancja; pozostają jedynie postacie chleba i wina."
       },
       "mystery": {
-        "label": "Prawdziwie stają się Jego Ciałem i Krwią – to tajemnica, której nie definiujemy",
+        "label": "Prawdziwie stają się Jego Ciałem i Krwią - to tajemnica, której nie definiujemy",
         "short": "Przemiana (tajemnica)",
         "detail": "Rzeczywista przemiana, ale bez filozoficznego wyjaśnienia, jak zachodzi."
       },
@@ -132,7 +132,7 @@ const data: QuestionsOverlay = {
         "detail": "Akt wspominania i posłuszeństwa."
       },
       "none": {
-        "label": "Zewnętrzny obrzęd nie jest potrzebny – komunia jest wewnętrzna",
+        "label": "Zewnętrzny obrzęd nie jest potrzebny - komunia jest wewnętrzna",
         "short": "Tylko wewnętrzna"
       }
     }
@@ -156,7 +156,7 @@ const data: QuestionsOverlay = {
   "regeneration": {
     "text": "Czy chrzest sam w sobie obmywa z grzechu i daje nowe narodzenie?",
     "hint": "Odrodzenie przez chrzest.",
-    "explain": "Czy chrzest jest środkiem, przez który Bóg rzeczywiście przebacza i odradza – czy zewnętrznym znakiem czegoś, co już dokonało się wewnętrznie przez wiarę?",
+    "explain": "Czy chrzest jest środkiem, przez który Bóg rzeczywiście przebacza i odradza - czy zewnętrznym znakiem czegoś, co już dokonało się wewnętrznie przez wiarę?",
     "options": {
       "yes": {
         "label": "Tak, Bóg działa przez chrzest",
@@ -172,7 +172,7 @@ const data: QuestionsOverlay = {
   },
   "faithalone": {
     "text": "Czy jesteśmy usprawiedliwieni z samej wiary, bez uczynków?",
-    "hint": "Sola fide – centralne pytanie reformacji.",
+    "hint": "Sola fide - centralne pytanie reformacji.",
     "explain": "„Usprawiedliwiony” znaczy uznany za sprawiedliwego przed Bogiem lub uczyniony sprawiedliwym. Reformatorzy nauczali, że dzieje się to przez samą wiarę, a dobre uczynki są jej owocem. Katolicy i prawosławni nauczają o wierze działającej przez miłość i o łasce, która przemienia wierzącego.",
     "options": {
       "yes": {
@@ -183,7 +183,7 @@ const data: QuestionsOverlay = {
       "no": {
         "label": "Nie, z łaski przez wiarę działającą przez miłość",
         "short": "Nie",
-        "detail": "Wiara, miłość i posłuszeństwo razem, uzdolnione przez łaskę."
+        "detail": "Wiara, miłość i posłuszeństwo razem, możliwe dzięki łasce."
       }
     }
   },
@@ -204,7 +204,7 @@ const data: QuestionsOverlay = {
   },
   "losable": {
     "text": "Czy człowiek prawdziwie zbawiony może utracić zbawienie?",
-    "explain": "Jedni nauczają: „raz zbawiony, zawsze zbawiony” albo że prawdziwie wierzący na pewno wytrwają. Inni – że wierzący może się odwrócić i odpaść od łaski.",
+    "explain": "Jedni nauczają: „raz zbawiony, zawsze zbawiony” albo że prawdziwie wierzący na pewno wytrwają. Inni - że wierzący może się odwrócić i odpaść od łaski.",
     "options": {
       "yes": {
         "label": "Tak, można odpaść",
@@ -231,9 +231,9 @@ const data: QuestionsOverlay = {
     }
   },
   "perfection": {
-    "text": "Czy chrześcijanin może w tym życiu osiągnąć doskonałą miłość – wolność od świadomego grzechu?",
+    "text": "Czy chrześcijanin może w tym życiu osiągnąć doskonałą miłość - wolność od świadomego grzechu?",
     "hint": "Całkowite uświęcenie / chrześcijańska doskonałość.",
-    "explain": "John Wesley nauczał, że Bóg może tak napełnić wierzącego miłością, że ten przestaje świadomie grzeszyć – nie chodzi o bezgrzeszną doskonałość, lecz o serce w pełni oddane Bogu. Większość tradycji widzi świętość jako wzrost przez całe życie, nieukończony przed śmiercią.",
+    "explain": "John Wesley nauczał, że Bóg może tak napełnić wierzącego miłością, że ten przestaje świadomie grzeszyć - nie chodzi o bezgrzeszną doskonałość, lecz o serce w pełni oddane Bogu. Większość tradycji widzi świętość jako wzrost przez całe życie, nieukończony przed śmiercią.",
     "options": {
       "yes": {
         "label": "Tak, to możliwe",
@@ -261,8 +261,8 @@ const data: QuestionsOverlay = {
     }
   },
   "women": {
-    "text": "Czy kobiety mogą być ordynowane na pastorki lub kapłanki?",
-    "explain": "Chodzi o urząd duchowny – pastora prowadzącego zbór, kapłana lub biskupa – a nie o to, czy kobiety mogą nauczać, prowadzić posługi czy służyć w inny sposób, co uznają niemal wszystkie Kościoły.",
+    "text": "Czy kobiety mogą być ordynowane na pastorów lub kapłanów?",
+    "explain": "Chodzi o urząd duchowny - pastora prowadzącego zbór, kapłana lub biskupa - a nie o to, czy kobiety mogą nauczać, prowadzić służby w Kościele czy posługiwać w inny sposób, co uznają niemal wszystkie Kościoły.",
     "options": {
       "yes": {
         "label": "Tak",
@@ -301,11 +301,11 @@ const data: QuestionsOverlay = {
   },
   "theotokos": {
     "text": "Czy to właściwe, by nazywać Maryję „Matką Bożą”?",
-    "hint": "Bogurodzica (Theotokos) – tytuł potwierdzony w Efezie (431).",
+    "hint": "Bogurodzica (Theotokos) - tytuł potwierdzony w Efezie (431).",
     "explain": "Tytuł wyraża, że dziecko urodzone przez Maryję jest prawdziwie Bogiem Synem. Kościół Wschodu woli „Matka Chrystusa”, by podkreślić rozróżnienie natur, wyznając zarazem Bóstwo Chrystusa; niektórzy protestanci unikają tego określenia, bo może sugerować, że Maryja jest źródłem Boga.",
     "options": {
       "yes": {
-        "label": "Tak – urodziła Boga Syna w ciele",
+        "label": "Tak - urodziła Boga Syna w ciele",
         "short": "Tak"
       },
       "technical": {
@@ -371,7 +371,7 @@ const data: QuestionsOverlay = {
         "short": "Czyściec"
       },
       "intermediate": {
-        "label": "Oczekują zmartwychwstania, a my modlimy się za nich – bez definiowania czyśćca",
+        "label": "Oczekują zmartwychwstania, a my modlimy się za nich - bez definiowania czyśćca",
         "short": "Stan pośredni"
       },
       "heaven": {
@@ -390,7 +390,7 @@ const data: QuestionsOverlay = {
     "explain": "Zielonoświątkowcy oczekują, że każdy dar Ducha działa i jest czymś zwyczajnym. Wiele Kościołów wierzy, że cuda wciąż się zdarzają, ale nie są normą. Cesacjoniści uważają, że nadzwyczajne dary-znaki ustały wraz z apostołami.",
     "options": {
       "yes": {
-        "label": "Tak – każdy dar działa dziś i jest czymś zwyczajnym",
+        "label": "Tak - każdy dar działa dziś i jest czymś zwyczajnym",
         "short": "Normalne dziś"
       },
       "rare": {
@@ -398,7 +398,7 @@ const data: QuestionsOverlay = {
         "short": "Możliwe, nie norma"
       },
       "no": {
-        "label": "Nie – ustały wraz z apostołami",
+        "label": "Nie - ustały wraz z apostołami",
         "short": "Ustały"
       }
     }
@@ -408,11 +408,11 @@ const data: QuestionsOverlay = {
     "explain": "Przykazanie o szabacie wskazuje dzień siódmy. Adwentyści Dnia Siódmego uważają, że nadal ono obowiązuje. Większość Kościołów gromadzi się w niedzielę, dzień zmartwychwstania; niektórzy nie uznają jednego wymaganego dnia.",
     "options": {
       "yes": {
-        "label": "Sobota – szabat siódmego dnia nadal obowiązuje",
+        "label": "Sobota - szabat siódmego dnia nadal obowiązuje",
         "short": "Sobota"
       },
       "sunday": {
-        "label": "Niedziela – jego miejsce zajął dzień Pański",
+        "label": "Niedziela - jego miejsce zajął dzień Pański",
         "short": "Niedziela"
       },
       "free": {
@@ -434,14 +434,14 @@ const data: QuestionsOverlay = {
         "short": "Sumienie"
       },
       "never": {
-        "label": "Nie – chrześcijanie muszą odrzucać wszelką przemoc",
+        "label": "Nie - chrześcijanie muszą odrzucać wszelką przemoc",
         "short": "Nigdy"
       }
     }
   },
   "instruments": {
     "text": "Czy w nabożeństwie można używać instrumentów muzycznych?",
-    "explain": "Kościoły Chrystusa śpiewają a cappella, bo Nowy Testament wspomina tylko o śpiewie. Śpiew prawosławny również tradycyjnie jest bez akompaniamentu – ze zwyczaju, a nie z przepisu. Większość Kościołów chętnie korzysta z instrumentów.",
+    "explain": "Kościoły Chrystusa śpiewają a cappella, bo Nowy Testament wspomina tylko o śpiewie. Śpiew prawosławny również tradycyjnie jest bez akompaniamentu - ze zwyczaju, a nie z przepisu. Większość Kościołów chętnie korzysta z instrumentów.",
     "options": {
       "yes": {
         "label": "Tak, można",
@@ -455,7 +455,7 @@ const data: QuestionsOverlay = {
   },
   "marriage": {
     "text": "Czy Kościół może udzielać ślubu lub błogosławić pary jednopłciowe?",
-    "explain": "Kościół katolicki, Kościoły prawosławne i większość Kościołów ewangelikalnych nauczają, że małżeństwo to związek mężczyzny i kobiety. Niektóre Kościoły protestanckie (np. Kościół Episkopalny, ELCA, PCUSA) błogosławią małżeństwa osób tej samej płci, a inne pozostawiają decyzję poszczególnym zborom lub duchownym. Tradycje bywają tu podzielone między swoje Kościoły krajowe.",
+    "explain": "Kościół katolicki, Kościoły prawosławne i większość Kościołów ewangelikalnych nauczają, że małżeństwo to związek mężczyzny i kobiety. Niektóre Kościoły protestanckie (np. Kościół Episkopalny, ELCA, PCUSA) błogosławią małżeństwa osób tej samej płci, a inne pozostawiają decyzję poszczególnym zborom lub duchownym. Kościoły krajowe tej samej tradycji często różnią się w tej kwestii.",
     "options": {
       "no": {
         "label": "Nie - małżeństwo chrześcijańskie to związek mężczyzny i kobiety",
