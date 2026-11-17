@@ -97,7 +97,7 @@ const data: ProfilesOverlay = {
     "name": "Orientalne Kościoły prawosławne (przedchalcedońskie)",
     "short": "Kościoły orientalne",
     "tagline": "Starożytne Kościoły Egiptu, Etiopii, Armenii, Syrii i Indii.",
-    "summary": "Sześć Kościołów, które nie przyjęły Soboru chalcedońskiego (451) i wyznają jedną, zjednoczoną bosko-ludzką naturę Chrystusa (miafizytyzm). Dziś one i prawosławni w dużej mierze uważają ten rozłam za spór o słowa.",
+    "summary": "Sześć Kościołów, które nie przyjęły Soboru chalcedońskiego (451) i wyznają jedną, zjednoczoną bosko-ludzką naturę Chrystusa (miafizytyzm). Wspólne komisje z prawosławnymi (1989-1990) uznały, że obie strony wyznają tę samą wiarę innymi słowami, choć nie wszyscy to przyjmują.",
     "origin": {
       "year": "451",
       "event": "Oddzieliły się po odrzuceniu Soboru chalcedońskiego.",
@@ -113,7 +113,7 @@ const data: ProfilesOverlay = {
       "Sobory: nicejski, konstantynopolitański i efeski",
       "Pisma św. Cyryla"
     ],
-    "councilsNote": "Tylko trzy pierwsze; Sobór chalcedoński (451) jest odrzucany.",
+    "councilsNote": "Tylko trzy pierwsze; Sobór chalcedoński (451) nie jest przyjmowany.",
     "sacraments": "7 Świętych Tajemnic",
     "governance": "Episkopalny; każdy Kościół pod własnym patriarchą lub katolikosem",
     "worship": "Starożytne liturgie w językach koptyjskim, gyyz, ormiańskim, syryjskim i malajalam",
@@ -514,7 +514,7 @@ const data: ProfilesOverlay = {
       "Wyznanie z Dordrechtu (1632)",
       "Martyrs Mirror (Zwierciadło męczenników)"
     ],
-    "councilsNote": "Wiara trynitarna, ale symbole i sobory nie mają autorytetu – mają go uczniostwo i Pismo.",
+    "councilsNote": "Wyznaje naukę nicejską i chalcedońską, ale symbole i sobory nie są wiążące - autorytet mają uczniostwo i Pismo.",
     "sacraments": "Obrzędy – chrzest, Wieczerza Pańska, umywanie nóg",
     "governance": "Kongregacjonalny; w grupach konserwatywnych biskupi/starsi",
     "worship": "Proste; amisze i grupy Starego Porządku śpiewają powolne pieśni bez akompaniamentu",

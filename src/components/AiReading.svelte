@@ -100,11 +100,13 @@
     try {
       const res = await fetch('/api/analyze', {
         method: 'POST',
+        // Never spin forever: the server gives up at ~55 s.
+        signal: AbortSignal.timeout(65_000),
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ answers, notes: snapshotNotes, lang, consent: LEGAL_VERSION }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(errors[data.error] ?? data.message ?? t('Something went wrong.'));
+      if (!res.ok) throw new Error(errors[data.error] ?? (res.status === 504 ? errors.timeout : data.message) ?? t('Something went wrong.'));
       const r = data as AiResponse;
       reading = r.reading;
       model = r.model;
@@ -113,7 +115,8 @@
       saveAi({ key: cachedKey, result: r.reading, model, at });
       status = 'idle';
     } catch (e) {
-      error = (e as Error).message || t('Something went wrong.');
+      const name = (e as Error).name;
+      error = name === 'TimeoutError' || name === 'AbortError' ? errors.timeout : (e as Error).message || t('Something went wrong.');
       status = 'error';
     } finally {
       clearInterval(tick);

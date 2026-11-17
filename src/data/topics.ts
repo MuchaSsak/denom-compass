@@ -138,6 +138,14 @@ export const topics: Topic[] = [
     scripture: ['Exodus 20:8–11', 'Matthew 5:38–44', 'Ephesians 5:19', 'Psalm 150'],
     milestone: 'The Schleitheim Confession (1527) set out Anabaptist nonresistance; Adventists formally organised in 1863.',
   },
+  {
+    id: 'ethics',
+    title: 'Marriage & Life',
+    summary:
+      'Every tradition holds human life and marriage to be gifts of God, but they disagree on same-sex marriage and on exceptions in abortion. The fault line often runs through a tradition rather than between traditions: Anglican, Lutheran, Reformed and Methodist churches include both bodies that changed their teaching and bodies that kept the traditional one.',
+    scripture: ['Genesis 1:27', 'Matthew 19:4–6', 'Psalm 139:13–16', 'Galatians 3:28'],
+    milestone: 'The Didache (1st–2nd c.) already forbids abortion; the Episcopal Church authorised same-sex marriage in 2015 and the United Methodist Church removed its prohibitions in 2024.',
+  },
 ];
 
 export const topicTitles: Record<string, string> = Object.fromEntries(topics.map((t) => [t.id, t.title]));

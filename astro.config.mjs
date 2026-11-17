@@ -18,9 +18,13 @@ export default defineConfig({
   site,
   // Canonical URLs have no trailing slash (/en/councils); sitemap and Vercel follow suit.
   trailingSlash: 'never',
+  // Pre-i18n URLs (shared links) → English. The Vercel adapter turns these into 308 routes.
+  redirects: Object.fromEntries(
+    ['quiz', 'results', 'doctrines', 'councils', 'creeds', 'privacy', 'terms'].map((p) => [`/${p}`, { status: 308, destination: `/en/${p}` }]),
+  ),
   // Pages are prerendered (static); only /api/* runs on the server.
   adapter: onVercel
-    ? vercel({ maxDuration: 120 }) // free models can take ~20–90 s
+    ? vercel({ maxDuration: 60 }) // free models can take ~20–90 s
     : node({ mode: 'standalone' }),
   integrations: [
     svelte(),

@@ -19,7 +19,7 @@ for (const model of models) {
     const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' },
-      body: JSON.stringify({ model, messages: [{ role: 'system', content: system }, { role: 'user', content: prompt }], temperature: 0.3, max_tokens: 6000, reasoning: { effort: 'low', exclude: true }, response_format: { type: 'json_object' } }),
+      body: JSON.stringify({ model, messages: [{ role: 'system', content: system }, { role: 'user', content: prompt }], temperature: 0.3, max_tokens: 6000, reasoning: process.env.REASONING === 'off' ? { enabled: false } : { effort: 'low', exclude: true }, response_format: { type: 'json_object' } }),
       signal: AbortSignal.timeout(120_000),
     });
     const data: any = await res.json();

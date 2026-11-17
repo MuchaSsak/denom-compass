@@ -65,7 +65,9 @@ export function encodeAnswers(answers: Answers, order: { id: string; options: { 
 }
 
 export function decodeAnswers(code: string, order: { id: string; options: { id: string }[] }[]): Answers | null {
-  if (!code || code.length !== order.length) return null;
+  // Older links may be shorter (questions are only ever appended): missing answers count as skipped.
+  if (!code || code.length > order.length || !/^[0-9_]+$/.test(code)) return null;
+  code = code.padEnd(order.length, '_');
   const out: Answers = {};
   order.forEach((q, i) => {
     const c = code[i];

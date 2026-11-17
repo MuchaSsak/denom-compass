@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "perf-profiler-lighthouse-and-core-web-vitals@anthropic-plugin-directory": true
+  }
+}

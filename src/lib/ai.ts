@@ -31,7 +31,10 @@ export function buildPrompt(
   ranking: { id: string; percent: number }[],
   lang: 'en' | 'pl' = 'en',
 ) {
+  // Only the closest traditions go into the prompt: fewer input tokens, faster free models.
+  const top = new Set(ranking.slice(0, 8).map((r) => r.id));
   const traditions = denoms
+    .filter((d) => top.has(d.id))
     .map((d) => {
       const pos = questions.map((q) => `${q.id}=${dominantStance(d, q).label}`).join('; ');
       return `- ${d.id} | ${d.name} (${d.family})${d.notice ? ' [nontrinitarian]' : ''}\n  doctrines: ${d.doctrines.join('; ')}\n  positions: ${pos}`;

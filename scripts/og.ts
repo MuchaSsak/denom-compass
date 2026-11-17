@@ -13,8 +13,8 @@ const CHROME = process.env.CHROME_PATH ?? 'C:/Program Files/Google/Chrome/Applic
 const font = (p: string) => pathToFileURL(resolve('node_modules/@fontsource-variable', p)).href;
 
 const copy = {
-  en: { title: 'Which Christian tradition shares your beliefs?', sub: '24 short questions · 18 traditions · councils, creeds and doctrines', brand: 'Denomination Compass' },
-  pl: { title: 'Która tradycja chrześcijańska podziela Twoje przekonania?', sub: '24 krótkie pytania · 18 tradycji · sobory, wyznania wiary i doktryny', brand: 'Kompas wyznań' },
+  en: { title: 'Which Christian tradition shares your beliefs?', sub: '26 short questions · 18 traditions · councils, creeds and doctrines', brand: 'Denomination Compass' },
+  pl: { title: 'Która tradycja chrześcijańska podziela Twoje przekonania?', sub: '26 krótkich pytań · 18 tradycji · sobory, wyznania wiary i doktryny', brand: 'Kompas wyznań' },
 };
 
 const badge = (id: string, color: string, size: number) =>

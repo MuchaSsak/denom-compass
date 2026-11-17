@@ -164,6 +164,17 @@ const data: TopicsOverlay = {
       "Ps 150"
     ],
     "milestone": "Wyznanie z Schleitheim (1527) sformułowało anabaptystyczną zasadę niestawiania oporu; adwentyści formalnie zorganizowali się w 1863 r."
+  },
+  "ethics": {
+    "title": "Małżeństwo i życie",
+    "summary": "Każda tradycja uznaje ludzkie życie i małżeństwo za dar Boga, ale różnią się w sprawie małżeństw osób tej samej płci i wyjątków dotyczących aborcji. Granica często przebiega wewnątrz tradycji, a nie między nimi: wśród Kościołów anglikańskich, luterańskich, reformowanych i metodystycznych są zarówno te, które zmieniły nauczanie, jak i te, które zachowały tradycyjne.",
+    "scripture": [
+      "Rdz 1,27",
+      "Mt 19,4–6",
+      "Ps 139,13–16",
+      "Ga 3,28"
+    ],
+    "milestone": "Didache (I-II w.) już zakazuje aborcji; Kościół Episkopalny dopuścił małżeństwa osób tej samej płci w 2015 r., a Zjednoczony Kościół Metodystyczny zniósł swoje zakazy w 2024 r."
   }
 };
 

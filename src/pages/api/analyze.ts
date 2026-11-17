@@ -67,8 +67,8 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   const noteIds = new Set(Object.keys(notes));
 
   // Try each model in turn until one returns usable JSON, within the function's time budget
-  // (Vercel maxDuration is 120 s). A slow or garbled reply moves on to the next model.
-  const deadline = Date.now() + 110_000;
+  // (Vercel Hobby functions stop at 60 s). A slow or garbled reply moves on to the next model.
+  const deadline = Date.now() + 55_000;
   let last: { error: string; message: string; status: number } = { error: 'parse', message: 'The model returned an unreadable answer. Try again.', status: 502 };
   for (const model of models()) {
     const remaining = deadline - Date.now();
@@ -76,7 +76,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     try {
       const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
         method: 'POST',
-        signal: AbortSignal.timeout(Math.min(remaining, 75_000)),
+        signal: AbortSignal.timeout(Math.min(remaining, 45_000)),
         headers: {
           authorization: `Bearer ${key}`,
           'content-type': 'application/json',
@@ -90,8 +90,9 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
             { role: 'user', content: prompt },
           ],
           temperature: 0.3,
-          max_tokens: 8000,
-          reasoning: { effort: 'low', exclude: true },
+          max_tokens: 3500,
+          // Reasoning off: ~11 s instead of ~60 s on Nemotron, and no runaway replies.
+          reasoning: { enabled: false },
           response_format: { type: 'json_object' },
         }),
       });

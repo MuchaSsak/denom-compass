@@ -32,6 +32,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {bishops: 1},
     origsin: {yes: 1},
     theotokos: {yes: 1},
+    marriage: {no: 1},
+    abortion: {never: 1},
   },
   orthodox: {
     trinity: {yes: 1},
@@ -58,6 +60,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {bishops: 1},
     origsin: {yes: 0.25, no: 0.75},
     theotokos: {yes: 1},
+    marriage: {no: 1},
+    abortion: {never: 0.75, life: 0.5},
   },
   oriental: {
     trinity: {yes: 1},
@@ -84,6 +88,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {bishops: 1},
     origsin: {yes: 0.5, no: 0.5},
     theotokos: {yes: 1},
+    marriage: {no: 1},
+    abortion: {never: 0.75, life: 0.5},
   },
   assyrian: {
     trinity: {yes: 1},
@@ -110,6 +116,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {bishops: 1},
     origsin: {yes: 0.25, no: 0.75},
     theotokos: {technical: 1, yes: 0.25},
+    marriage: {no: 1},
+    abortion: {never: 0.75, life: 0.5},
   },
   anglican: {
     trinity: {yes: 1},
@@ -136,6 +144,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {bishops: 1, elders: 0.25},
     origsin: {yes: 0.75, no: 0.25},
     theotokos: {yes: 1, technical: 0.25},
+    marriage: {no: 0.75, local: 0.5, yes: 0.5},
+    abortion: {life: 0.5, some: 0.75, choice: 0.25},
   },
   lutheran: {
     trinity: {yes: 1},
@@ -162,6 +172,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {bishops: 0.5, elders: 0.5, congregation: 0.5},
     origsin: {yes: 1},
     theotokos: {yes: 1},
+    marriage: {no: 0.5, local: 0.75, yes: 0.5},
+    abortion: {life: 0.75, some: 0.75},
   },
   reformed: {
     trinity: {yes: 1},
@@ -188,6 +200,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {elders: 1},
     origsin: {yes: 1},
     theotokos: {technical: 1, yes: 0.5},
+    marriage: {no: 0.75, local: 0.25, yes: 0.5},
+    abortion: {life: 0.75, some: 0.5, choice: 0.25},
   },
   methodist: {
     trinity: {yes: 1},
@@ -214,6 +228,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {bishops: 0.5, elders: 0.75},
     origsin: {yes: 0.75, no: 0.25},
     theotokos: {technical: 0.75, yes: 0.5},
+    marriage: {no: 0.5, local: 0.75, yes: 0.25},
+    abortion: {life: 0.5, some: 0.75},
   },
   baptist: {
     trinity: {yes: 1},
@@ -240,6 +256,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {congregation: 1},
     origsin: {yes: 0.5, no: 0.5},
     theotokos: {technical: 0.75, no: 0.5},
+    marriage: {no: 1},
+    abortion: {life: 1, never: 0.5},
   },
   pentecostal: {
     trinity: {yes: 1},
@@ -266,6 +284,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {elders: 0.5, congregation: 0.75},
     origsin: {yes: 0.25, no: 0.75},
     theotokos: {technical: 0.75, no: 0.5},
+    marriage: {no: 1},
+    abortion: {life: 1, never: 0.5},
   },
   nondenom: {
     trinity: {yes: 1},
@@ -292,6 +312,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {elders: 0.5, congregation: 0.75},
     origsin: {yes: 0.5, no: 0.5},
     theotokos: {technical: 0.75, no: 0.5},
+    marriage: {no: 0.75, yes: 0.25},
+    abortion: {life: 1, never: 0.5},
   },
   anabaptist: {
     trinity: {yes: 1},
@@ -318,6 +340,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {bishops: 0.25, elders: 0.25, congregation: 0.75},
     origsin: {no: 1},
     theotokos: {technical: 0.75, no: 0.5},
+    marriage: {no: 0.75, local: 0.5},
+    abortion: {life: 0.75, never: 0.75},
   },
   quaker: {
     trinity: {yes: 0.5},
@@ -344,6 +368,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {congregation: 1},
     origsin: {no: 1},
     theotokos: {technical: 0.5, no: 0.5},
+    marriage: {yes: 0.75, local: 0.5, no: 0.5},
+    abortion: {some: 0.5, choice: 0.5, life: 0.5},
   },
   restorationist: {
     trinity: {yes: 1},
@@ -370,6 +396,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {elders: 0.25, congregation: 1},
     origsin: {no: 1},
     theotokos: {no: 1, technical: 0.5},
+    marriage: {no: 1, yes: 0.25},
+    abortion: {life: 1, never: 0.5},
   },
   adventist: {
     trinity: {yes: 1},
@@ -396,6 +424,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {elders: 1},
     origsin: {yes: 0.25, no: 0.75},
     theotokos: {technical: 0.75, no: 0.5},
+    marriage: {no: 1},
+    abortion: {some: 0.75, life: 0.75},
   },
   lds: {
     trinity: {separate: 1},
@@ -422,6 +452,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {prophet: 1},
     origsin: {no: 1},
     theotokos: {no: 0.75, yes: 0.25},
+    marriage: {no: 1},
+    abortion: {some: 0.75, life: 0.5},
   },
   jw: {
     trinity: {separate: 1},
@@ -448,6 +480,8 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {prophet: 1},
     origsin: {yes: 0.75, no: 0.25},
     theotokos: {no: 1},
+    marriage: {no: 1},
+    abortion: {never: 0.75, life: 0.75},
   },
   oneness: {
     trinity: {modal: 1},
@@ -474,5 +508,7 @@ export const stances: Record<string, Record<string, Stance>> = {
     governance: {elders: 0.5, congregation: 0.5},
     origsin: {yes: 0.25, no: 0.75},
     theotokos: {no: 0.75, technical: 0.25},
+    marriage: {no: 1},
+    abortion: {life: 0.75, never: 0.75},
   },
 };

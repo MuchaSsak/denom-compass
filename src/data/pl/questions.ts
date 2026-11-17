@@ -452,6 +452,47 @@ const data: QuestionsOverlay = {
         "short": "Nie"
       }
     }
+  },
+  "marriage": {
+    "text": "Czy Kościół może udzielać ślubu lub błogosławić pary jednopłciowe?",
+    "explain": "Kościół katolicki, Kościoły prawosławne i większość Kościołów ewangelikalnych nauczają, że małżeństwo to związek mężczyzny i kobiety. Niektóre Kościoły protestanckie (np. Kościół Episkopalny, ELCA, PCUSA) błogosławią małżeństwa osób tej samej płci, a inne pozostawiają decyzję poszczególnym zborom lub duchownym. Tradycje bywają tu podzielone między swoje Kościoły krajowe.",
+    "options": {
+      "no": {
+        "label": "Nie - małżeństwo chrześcijańskie to związek mężczyzny i kobiety",
+        "short": "Mężczyzna i kobieta"
+      },
+      "local": {
+        "label": "Każdy Kościół lub duchowny może zdecydować sam",
+        "short": "Decyzja lokalna"
+      },
+      "yes": {
+        "label": "Tak - pary jednopłciowe mogą otrzymać ślub lub błogosławieństwo",
+        "short": "Tak"
+      }
+    }
+  },
+  "abortion": {
+    "text": "Kiedy, jeśli w ogóle, aborcja jest moralnie dopuszczalna?",
+    "explain": "Wszystkie Kościoły uważają życie nienarodzone za cenne; różnią się co do wyjątków. Nauczanie katolickie zakazuje bezpośredniej aborcji w każdym przypadku, ale dopuszcza leczenie ratujące matkę, które pośrednio kończy ciążę. Wielu ewangelikałów dopuszcza ją tylko dla ratowania życia matki; niektóre Kościoły uwzględniają też np. gwałt lub ciężką chorobę dziecka; inne pozostawiają decyzję sumieniu kobiety.",
+    "options": {
+      "never": {
+        "label": "Nigdy jako czyn zamierzony",
+        "short": "Nigdy",
+        "detail": "Leczenie ratujące matkę, które pośrednio kończy ciążę, może być dopuszczalne."
+      },
+      "life": {
+        "label": "Tylko dla ratowania życia matki",
+        "short": "Tylko życie matki"
+      },
+      "some": {
+        "label": "W niektórych ciężkich przypadkach, np. gwałtu lub ciężkiej choroby dziecka",
+        "short": "Ciężkie przypadki"
+      },
+      "choice": {
+        "label": "To decyzja sumienia samej kobiety",
+        "short": "Sumienie kobiety"
+      }
+    }
   }
 };
 

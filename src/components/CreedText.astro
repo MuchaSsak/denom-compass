@@ -5,7 +5,7 @@ import AnnotTip from './AnnotTip.astro';
 interface Props { text: Part[][] }
 const { text } = Astro.props;
 ---
-<div class="creed font-display text-[1.2rem] leading-[1.75] sm:text-[1.35rem]">
+<div class="creed font-display break-words hyphens-auto text-[1.2rem] leading-[1.75] sm:text-[1.35rem]">
   {text.map((para) => <p><Annotated parts={para} /></p>)}
 </div>
 <AnnotTip />

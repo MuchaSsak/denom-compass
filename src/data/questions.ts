@@ -330,6 +330,36 @@ export const questions: Question[] = [
     weight: 1,
     options: yesno(['Yes, they’re fine', 'No, voices only']),
   },
+  // Ethics: appended last so share links made before they existed still decode.
+  {
+    id: 'marriage',
+    topic: 'ethics',
+    kind: 'choice',
+    text: 'Can the church marry or bless same-sex couples?',
+    explain:
+      'Catholic, Orthodox and most evangelical churches teach that marriage is between a man and a woman. Several Protestant bodies (e.g. the Episcopal Church, ELCA, PCUSA) celebrate same-sex marriages, while others leave the decision to each congregation or clergy member. Traditions are often divided between their national churches.',
+    weight: 1,
+    options: [
+      { id: 'no', label: 'No - Christian marriage is between a man and a woman', short: 'Man and woman' },
+      { id: 'local', label: 'Each church or minister may decide', short: 'Local decision' },
+      { id: 'yes', label: 'Yes - same-sex couples can be married or blessed', short: 'Yes' },
+    ],
+  },
+  {
+    id: 'abortion',
+    topic: 'ethics',
+    kind: 'choice',
+    text: 'When, if ever, is abortion morally permissible?',
+    explain:
+      'All churches regard unborn life as valuable; they differ on exceptions. Catholic teaching forbids direct abortion in every case but allows treatments that indirectly end a pregnancy to save the mother. Many evangelicals allow it only to save the mother’s life; some churches also accept cases like rape or severe fetal illness; others leave the decision to the woman’s conscience.',
+    weight: 1,
+    options: [
+      { id: 'never', label: 'Never as a deliberate act', short: 'Never', detail: 'Treatment to save the mother that indirectly ends the pregnancy may be allowed.' },
+      { id: 'life', label: 'Only to save the mother’s life', short: 'Mother’s life only' },
+      { id: 'some', label: 'In some grave cases, e.g. rape or severe illness of the child', short: 'Some grave cases' },
+      { id: 'choice', label: 'It is a decision for the woman’s own conscience', short: 'Her conscience' },
+    ],
+  },
 ];
 
 export const questionById = Object.fromEntries(questions.map((q) => [q.id, q]));
