@@ -1,8 +1,8 @@
 ---
-import Base from '../layouts/Base.astro';
-import Badge from '../components/Badge.astro';
-import { councils, schisms } from '../data/councils';
-import { denominations, denominationById } from '../data/denominations';
+import Base from '../../layouts/Base.astro';
+import Badge from '../../components/Badge.astro';
+import { councils, schisms, councilSlug } from '../../data/councils';
+import { denominations, denominationById } from '../../data/denominations';
 
 const acceptedBy = (n: number) => denominations.filter((d) => d.councils.includes(n));
 const eras = [
@@ -23,7 +23,7 @@ const eras = [
       <thead>
         <tr>
           <th class="w-44 text-left text-[11px] font-bold tracking-widest text-muted uppercase">Tradition</th>
-          {councils.map((c) => <th class="text-[11px] font-semibold text-muted tabular-nums" title={`${c.name} (${c.year})`}><a href={`#c${c.n}`}>{c.n}</a></th>)}
+          {councils.map((c) => <th class="text-[11px] font-semibold text-muted tabular-nums" title={`${c.name} (${c.year})`}><a href={`/councils/${councilSlug(c)}`} class="hover:text-ink">{c.n}</a></th>)}
         </tr>
       </thead>
       <tbody>
@@ -59,7 +59,7 @@ const eras = [
               <article class="card p-5 sm:p-6">
                 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <span class="font-display text-sm font-semibold text-gold tabular-nums">#{c.n}</span>
-                  <h3 class="font-display text-xl font-semibold">{c.name}</h3>
+                  <h3 class="font-display text-xl font-semibold"><a href={`/councils/${councilSlug(c)}`} class="hover:underline">{c.name}</a></h3>
                   <span class="text-sm text-muted">{c.year} · {c.place}</span>
                 </div>
                 <p class="mt-2 leading-relaxed">{c.summary}</p>
@@ -69,6 +69,7 @@ const eras = [
                   {acc.map((d) => (
                     <a href={`/denominations/${d.id}`} title={d.name} class="transition hover:scale-110"><Badge id={d.id} color={d.color} size={26} /></a>
                   ))}
+                  <a href={`/councils/${councilSlug(c)}`} class="ml-auto text-sm font-semibold hover:underline">Details →</a>
                 </div>
               </article>
             </li>

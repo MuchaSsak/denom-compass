@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Badge from '../../components/Badge.astro';
 import { denominations } from '../../data/denominations';
 import { questions } from '../../data/questions';
-import { councils } from '../../data/councils';
+import { councils, councilSlug } from '../../data/councils';
 import { topicTitles } from '../../data/topics';
 import { rankAll, idealAnswers, dominantStance } from '../../lib/scoring';
 import type { Denomination } from '../../data/types';
@@ -86,7 +86,7 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
             return (
               <li class:list={['group relative', c.n === 8 && 'sm:ml-2 sm:border-l sm:border-line sm:pl-3.5']}>
                 <a
-                  href={`/councils#c${c.n}`}
+                  href={`/councils/${councilSlug(c)}`}
                   class="grid size-8 place-items-center rounded-lg text-xs font-bold tabular-nums transition hover:scale-110"
                   style={on ? `background:${d.color};color:#fff` : 'background:var(--surface-2);color:var(--muted);opacity:.55'}
                   aria-label={`${c.name} (${c.year}) — ${on ? 'accepted' : 'not accepted'}`}

@@ -92,3 +92,6 @@ export const schisms = [
   { year: '1906', title: 'Pentecostal revival', text: 'Azusa Street sparks worldwide Pentecostalism; Oneness Pentecostals separate in 1916.', ids: ['pentecostal', 'oneness']  },
   { year: '20th c.', title: 'Non-denominational churches', text: 'Independent evangelical and charismatic churches multiply, especially after the 1970s.', ids: ['nondenom']  },
 ];
+
+/** URL slug, e.g. "Nicaea I" → "nicaea-i", "Basel–Ferrara–Florence" → "basel-ferrara-florence". */
+export const councilSlug = (c: Council) => c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');

@@ -16,3 +16,4 @@ Append-only. Newest at the bottom. Format: `## YYYY-MM-DD — title` then bullet
 
 ## [2026-11-17] ui | Less text: quiz info icon top-right (popover), no hints/shortcut/skip captions, "Not sure" + "Add a note", next/restart icons in top bar; footer removed; mobile nav -> menu; page intros trimmed; README in Learning Gems style
 ## [2026-11-17] ai | Note replies: AI answers each note ("Your notes, answered"); legacy cached readings auto-marked stale; validate checks replies sanitising
+## [2026-11-17] councils | Detail page per council at /councils/<slug> (facts, issue, decided, afterwards, received/not received, prev/next); list, overview table and profile tiles link to it. Detail facts pending research (raw/council-details.md)

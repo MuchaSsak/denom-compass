@@ -70,6 +70,22 @@ export interface Council {
   decisions: string[];
 }
 
+/** Extra "at a glance" facts for a council's detail page (raw/council-details.md). */
+export interface CouncilDetail {
+  convokedBy: string;
+  presided?: string;
+  attendance: string;
+  context: string;
+  issue: { name: string; view: string };
+  figures: string[];
+  term?: { word: string; gloss: string } | null;
+  outcome: string;
+  dissent: { who: string; why: string }[];
+  /** Related doctrine topics (/doctrines#id) and creeds (/creeds/id). */
+  topics?: string[];
+  creeds?: string[];
+}
+
 export type Answers = Record<string, OptionId | 'skip'>;
 /** Free-text notes per question id, plus `_general` for the overall reflection. */
 export type Notes = Record<string, string>;
