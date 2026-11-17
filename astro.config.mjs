@@ -16,6 +16,8 @@ const site = process.env.SITE_URL || 'https://denoms.muszarski.com';
 
 export default defineConfig({
   site,
+  // Canonical URLs have no trailing slash (/en/councils); sitemap and Vercel follow suit.
+  trailingSlash: 'never',
   // Pages are prerendered (static); only /api/* runs on the server.
   adapter: onVercel
     ? vercel({ maxDuration: 120 }) // free models can take ~20–90 s

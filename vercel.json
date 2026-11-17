@@ -94,5 +94,6 @@
       "destination": "/en/denominations/:path*",
       "permanent": true
     }
-  ]
+  ],
+  "trailingSlash": false
 }
