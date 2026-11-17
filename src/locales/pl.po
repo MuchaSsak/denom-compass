@@ -123,6 +123,11 @@ msgid "Are sacraments signs or channels of grace? Does salvation rest on God’s
 msgstr "Czy sakramenty są znakami, czy kanałami łaski? Czy zbawienie zależy od wyboru Boga, czy od twojej wolnej odpowiedzi?"
 
 #. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Based on your answers on marriage, abortion and women’s ordination."
+msgstr "Na podstawie Twoich odpowiedzi o małżeństwie, aborcji i ordynacji kobiet."
+
+#. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Began"
 msgstr "Początek"
@@ -217,12 +222,12 @@ msgstr "Usuń wszystkie moje dane z tego urządzenia"
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Denomination Compass"
-msgstr "Kompas wyznań"
+msgstr "Kompas denominacji"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Denomination Compass: which Christian tradition shares your beliefs?"
-msgstr "Kompas wyznań: która tradycja chrześcijańska podziela twoje przekonania?"
+msgstr "Kompas denominacji: która tradycja chrześcijańska podziela twoje przekonania?"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
@@ -402,6 +407,16 @@ msgid "Minority"
 msgstr "Mniejszość"
 
 #. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Moderate"
+msgstr "Umiarkowane"
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Moral views"
+msgstr "Poglądy moralne"
+
+#. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "More info"
 msgstr "Więcej informacji"
@@ -414,7 +429,7 @@ msgstr "Przeważnie"
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "My Denomination Compass result"
-msgstr "Mój wynik w Kompasie wyznań"
+msgstr "Mój wynik w Kompasie denominacji"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
@@ -527,6 +542,11 @@ msgstr "Prywatność"
 #: src/pages/[lang]/terms.astro
 msgid "Privacy policy"
 msgstr "Polityka prywatności"
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Progressive"
+msgstr "Postępowe"
 
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
@@ -774,6 +794,11 @@ msgstr "Przełącz tryb ciemny"
 #: src/pages/[lang]/councils/index.astro
 msgid "Tradition"
 msgstr "Tradycja"
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Traditional"
+msgstr "Tradycyjne"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro

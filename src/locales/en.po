@@ -123,6 +123,11 @@ msgid "Are sacraments signs or channels of grace? Does salvation rest on God’s
 msgstr "Are sacraments signs or channels of grace? Does salvation rest on God’s choice or your free response?"
 
 #. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Based on your answers on marriage, abortion and women’s ordination."
+msgstr "Based on your answers on marriage, abortion and women’s ordination."
+
+#. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Began"
 msgstr "Began"
@@ -402,6 +407,16 @@ msgid "Minority"
 msgstr "Minority"
 
 #. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Moderate"
+msgstr "Moderate"
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Moral views"
+msgstr "Moral views"
+
+#. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "More info"
 msgstr "More info"
@@ -527,6 +542,11 @@ msgstr "Privacy"
 #: src/pages/[lang]/terms.astro
 msgid "Privacy policy"
 msgstr "Privacy policy"
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Progressive"
+msgstr "Progressive"
 
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
@@ -774,6 +794,11 @@ msgstr "Toggle dark mode"
 #: src/pages/[lang]/councils/index.astro
 msgid "Tradition"
 msgstr "Tradition"
+
+#. js-lingui-explicit-id
+#: src/components/Results.svelte
+msgid "Traditional"
+msgstr "Traditional"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro

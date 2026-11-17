@@ -14,7 +14,7 @@ const font = (p: string) => pathToFileURL(resolve('node_modules/@fontsource-vari
 
 const copy = {
   en: { title: 'Which Christian tradition shares your beliefs?', sub: '26 short questions · 18 traditions · councils, creeds and doctrines', brand: 'Denomination Compass' },
-  pl: { title: 'Która tradycja chrześcijańska podziela Twoje przekonania?', sub: '26 krótkich pytań · 18 tradycji · sobory, wyznania wiary i doktryny', brand: 'Kompas wyznań' },
+  pl: { title: 'Która tradycja chrześcijańska podziela Twoje przekonania?', sub: '26 krótkich pytań · 18 tradycji · sobory, wyznania wiary i doktryny', brand: 'Kompas denominacji' },
 };
 
 const badge = (id: string, color: string, size: number) =>

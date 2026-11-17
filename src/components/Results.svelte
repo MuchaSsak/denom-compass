@@ -3,7 +3,7 @@
   import { fly, slide } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
   import type { Answers, Denomination, Question } from '../data/types';
-  import { rankAll, compassFromAnswers, compassForDenomination, type MatchResult } from '../lib/scoring';
+  import { rankAll, compassFromAnswers, compassForDenomination, progressiveScore, type MatchResult } from '../lib/scoring';
   import { latestResult, decodeAnswers, encodeAnswers, pushHistory, updateLatest } from '../lib/storage';
   import AiReading from './AiReading.svelte';
   import { useT, href, type Lang } from '../i18n';
@@ -50,6 +50,8 @@
   const points = $derived(
     denominations.map((d) => ({ id: d.id, name: d.short, color: d.color, ...compassForDenomination(d, questions) })),
   );
+  const prog = $derived(answers ? progressiveScore(answers) : null);
+  const progLabel = $derived(prog === null ? '' : prog < 0.34 ? t('Traditional') : prog < 0.67 ? t('Moderate') : t('Progressive'));
   const visible = $derived(showAll ? ranked : ranked.slice(0, 8));
 
   function headline(p: number) {
@@ -122,6 +124,18 @@
           <span class="text-muted">·</span>
           <a href={href(lang, '/quiz')} class="font-semibold underline-offset-4 hover:underline">{t('Take it yourself')}</a>
         </span>
+      </div>
+    {/if}
+
+    <!-- Traditional ↔ progressive (marriage, abortion, women's ordination); only from your answers. -->
+    {#if prog !== null}
+      <div class="mb-4 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[11px] font-semibold tracking-wide whitespace-nowrap text-muted uppercase" title={t('Based on your answers on marriage, abortion and women’s ordination.')}>
+        <span>{t('Traditional')}</span>
+        <span class="relative h-1.5 w-20 flex-none rounded-full bg-gradient-to-r from-[#8a6d3b]/50 via-line to-[#5b7fb5]/50 sm:w-40" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow={Math.round(prog * 100)} aria-label={`${t('Moral views')}: ${progLabel}`}>
+          <span class="absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-bg bg-ink" style="left:{prog * 100}%"></span>
+        </span>
+        <span>{t('Progressive')}</span>
+        <span class="rounded-full bg-surface-2 px-2 py-0.5 text-ink normal-case tracking-normal">{progLabel}</span>
       </div>
     {/if}
 

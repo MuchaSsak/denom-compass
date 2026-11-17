@@ -14,10 +14,10 @@ export interface LegalDoc { title: string; intro: string; sections: { h: string;
 export const privacy: Record<'en' | 'pl', LegalDoc> = {
   pl: {
     title: 'Polityka prywatności',
-    intro: 'Ta polityka wyjaśnia, jakie dane przetwarza serwis Kompas wyznań, w jakim celu i na jakiej podstawie oraz jakie prawa Ci przysługują. Serwis działa bez kont, bez plików cookie i bez analityki: Twoje odpowiedzi zostają w Twojej przeglądarce, chyba że sam(a) zlecisz interpretację AI.',
+    intro: 'Ta polityka wyjaśnia, jakie dane przetwarza serwis Kompas denominacji, w jakim celu i na jakiej podstawie oraz jakie prawa Ci przysługują. Serwis działa bez kont, bez plików cookie i bez analityki: Twoje odpowiedzi zostają w Twojej przeglądarce, chyba że sam(a) zlecisz interpretację AI.',
     sections: [
       { h: '1. Postanowienia ogólne', body: [
-        'Polityka dotyczy serwisu internetowego „Kompas wyznań” („Denomination Compass”, dalej: Serwis) we wszystkich wersjach językowych. Realizuje obowiązki informacyjne z art. 13 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO) oraz z art. 399 ust. 1 ustawy z dnia 12 lipca 2024 r. Prawo komunikacji elektronicznej (PKE).',
+        'Polityka dotyczy serwisu internetowego „Kompas denominacji” („Denomination Compass”, dalej: Serwis) we wszystkich wersjach językowych. Realizuje obowiązki informacyjne z art. 13 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO) oraz z art. 399 ust. 1 ustawy z dnia 12 lipca 2024 r. Prawo komunikacji elektronicznej (PKE).',
         'Serwis ma charakter informacyjno-edukacyjny i nie jest skierowany do dzieci. Z funkcji interpretacji AI mogą korzystać wyłącznie osoby, które ukończyły 16 lat.',
         'Połączenie z Serwisem jest szyfrowane (HTTPS). Administrator stosuje środki techniczne i organizacyjne odpowiednie do ryzyka (art. 32 RODO), w szczególności minimalizację danych: Serwis nie prowadzi bazy danych użytkowników.',
       ] },
@@ -83,7 +83,7 @@ export const privacy: Record<'en' | 'pl', LegalDoc> = {
     intro: 'This policy explains what data Denomination Compass processes, why, on what legal basis, and what your rights are. The site has no accounts, no cookies and no analytics: your answers stay in your browser unless you ask for an AI reading.',
     sections: [
       { h: '1. General provisions', body: [
-        'This policy covers the website "Denomination Compass" ("Kompas wyznań", the Website) in all language versions. It fulfils the information duties under Art. 13 of Regulation (EU) 2016/679 (GDPR) and Art. 399(1) of the Polish Electronic Communications Law of 12 July 2024 (PKE).',
+        'This policy covers the website "Denomination Compass" ("Kompas denominacji", the Website) in all language versions. It fulfils the information duties under Art. 13 of Regulation (EU) 2016/679 (GDPR) and Art. 399(1) of the Polish Electronic Communications Law of 12 July 2024 (PKE).',
         'The Website is informational and educational and is not directed at children. The AI reading may only be used by people aged 16 or over.',
         'Connections are encrypted (HTTPS). The controller applies technical and organisational measures appropriate to the risk (Art. 32 GDPR), in particular data minimisation: the Website keeps no user database.',
       ] },
@@ -149,10 +149,10 @@ export const privacy: Record<'en' | 'pl', LegalDoc> = {
 export const terms: Record<'en' | 'pl', LegalDoc> = {
   pl: {
     title: 'Regulamin',
-    intro: 'Zasady korzystania z serwisu Kompas wyznań. Korzystając z Serwisu, akceptujesz ten regulamin.',
+    intro: 'Zasady korzystania z serwisu Kompas denominacji. Korzystając z Serwisu, akceptujesz ten regulamin.',
     sections: [
       { h: '1. Usługodawca', body: [
-        `Serwis „Kompas wyznań” („Denomination Compass”) prowadzi Mateusz Muszarski, osoba fizyczna (Polska), e-mail: [${CONTACT}](mailto:${CONTACT}). Regulamin jest regulaminem świadczenia usług drogą elektroniczną w rozumieniu ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną.`,
+        `Serwis „Kompas denominacji” („Denomination Compass”) prowadzi Mateusz Muszarski, osoba fizyczna (Polska), e-mail: [${CONTACT}](mailto:${CONTACT}). Regulamin jest regulaminem świadczenia usług drogą elektroniczną w rozumieniu ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną.`,
       ] },
       { h: '2. Usługi i wymagania techniczne', body: [
         'Serwis udostępnia bezpłatnie: quiz porównujący poglądy z nauczaniem tradycji chrześcijańskich, opisy tradycji, doktryn, soborów i wyznań wiary oraz opcjonalną interpretację AI. Do korzystania potrzebna jest aktualna przeglądarka z włączonym JavaScriptem i pamięcią localStorage. Nie trzeba zakładać konta.',
@@ -185,7 +185,7 @@ export const terms: Record<'en' | 'pl', LegalDoc> = {
     intro: 'The rules for using Denomination Compass. By using the Website you accept these terms.',
     sections: [
       { h: '1. Provider', body: [
-        `"Denomination Compass" ("Kompas wyznań") is run by Mateusz Muszarski, a natural person (Poland), e-mail: [${CONTACT}](mailto:${CONTACT}). These terms are the terms of electronic services under the Polish Act of 18 July 2002 on providing services by electronic means.`,
+        `"Denomination Compass" ("Kompas denominacji") is run by Mateusz Muszarski, a natural person (Poland), e-mail: [${CONTACT}](mailto:${CONTACT}). These terms are the terms of electronic services under the Polish Act of 18 July 2002 on providing services by electronic means.`,
       ] },
       { h: '2. Services and technical requirements', body: [
         'The Website offers, free of charge: a quiz comparing your views with the teaching of Christian traditions, descriptions of traditions, doctrines, councils and creeds, and an optional AI reading. You need an up-to-date browser with JavaScript and localStorage enabled. No account is needed.',

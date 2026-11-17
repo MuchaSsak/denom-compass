@@ -94,3 +94,19 @@ export function dominantStance(d: Denomination, q: Question) {
   const opts = q.options.filter((o) => max > 0 && (st[o.id] ?? 0) === max);
   return { options: opts, strength: max, label: opts.map((o) => o.short ?? o.label).join(' / ') || ' - ' };
 }
+
+/**
+ * Traditional (0) ↔ progressive (1) on moral questions where churches split along that line:
+ * same-sex marriage, abortion, women's ordination. Null when none of them was answered.
+ */
+const PROGRESSIVE: Record<string, Record<string, number>> = {
+  marriage: { no: 0, local: 0.5, yes: 1 },
+  abortion: { never: 0, life: 0.2, some: 0.55, choice: 1 },
+  women: { no: 0, yes: 1 },
+};
+export function progressiveScore(answers: Answers): number | null {
+  const vals = Object.entries(PROGRESSIVE)
+    .map(([q, map]) => map[answers[q] as string])
+    .filter((v): v is number => typeof v === 'number');
+  return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+}

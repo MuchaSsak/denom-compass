@@ -33,7 +33,7 @@ export const profiles: Profile[] = [
     branches: ['Latin Church', 'Eastern Catholic Churches (Ukrainian, Maronite, Melkite, Syro-Malabar…)'],
   },
   {
-    id: 'orthodox', name: 'Eastern Orthodox', short: 'Orthodox', family: 'Orthodox',
+    id: 'orthodox', name: 'Eastern Orthodox', short: 'Eastern Orthodox', family: 'Orthodox',
     color: '#f0862b', accent: '#f1d3d9',
     tagline: 'The faith of the Fathers, kept in liturgy and icon.',
     summary: 'A communion of self-governing churches (Constantinople, Russia, Greece, Romania, Serbia…) that see themselves as the unchanged Church of the seven councils. Salvation is theosis - becoming by grace what God is by nature.',
