@@ -29,7 +29,6 @@
   const q = $derived(questions[index]);
   const progress = $derived(Math.round((index / total) * 100));
   const letters = 'ABCDEF';
-  const yesNoKeys = ['Y', 'N'];
   const skipped = $derived((picked ?? answers[q.id]) === 'skip');
 
   onMount(() => {
@@ -134,7 +133,20 @@
     <div class="h-1.5 flex-1 overflow-hidden rounded-full bg-surface-2" role="progressbar" aria-valuenow={progress} aria-valuemin="0" aria-valuemax="100">
       <div class="h-full rounded-full bg-gold transition-[width] duration-500 ease-out" style="width:{finishing ? 100 : progress}%"></div>
     </div>
-    <span class="w-14 text-right text-sm font-semibold tabular-nums text-muted">{Math.min(index + 1, total)}/{total}</span>
+    <span class="text-sm font-semibold tabular-nums text-muted">{Math.min(index + 1, total)}/{total}</span>
+    <button
+      class="grid size-10 flex-none place-items-center rounded-full border border-line bg-surface text-ink transition hover:bg-surface-2 disabled:opacity-30"
+      onclick={next}
+      disabled={!answers[q?.id] || finishing}
+      aria-label="Next question"
+    >
+      <svg viewBox="0 0 24 24" class="size-5"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+    </button>
+    {#if Object.keys(answers).length && !finishing}
+      <button class="grid size-10 flex-none place-items-center rounded-full text-muted transition hover:bg-surface-2 hover:text-ink" onclick={restart} aria-label="Start over" title="Start over">
+        <svg viewBox="0 0 24 24" class="size-[18px]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5" /></svg>
+      </button>
+    {/if}
   </div>
 
   {#if !ready}
@@ -150,11 +162,13 @@
   {:else}
     {#key index}
       <div class="flex flex-1 flex-col pt-9 sm:pt-12" in:fly={{ x: 40 * dir, duration: 320, easing: cubicOut, opacity: 0 }}>
-        <p class="eyebrow mb-3">{topics[q.topic] ?? q.topic}</p>
-        <h1 class="font-display text-[1.85rem] leading-[1.15] font-medium text-balance sm:text-[2.3rem]">{q.text}</h1>
-        {#if q.hint}<p class="mt-3 text-[0.95rem] text-muted">{q.hint}</p>{/if}
-        <div class="mt-4">
-          <Popover label="What does this mean?" title={topics[q.topic]}>
+        <div class="flex items-start gap-3">
+          <div class="min-w-0 flex-1">
+            <p class="eyebrow mb-3">{topics[q.topic] ?? q.topic}</p>
+            <h1 class="font-display text-[1.85rem] leading-[1.15] font-medium text-balance sm:text-[2.3rem]">{q.text}</h1>
+          </div>
+          <Popover label="What does this mean?" icon align="right">
+            {#if q.hint}<p class="mb-2 text-sm text-muted">{q.hint}</p>{/if}
             <p class="text-[0.95rem] leading-relaxed">{q.explain}</p>
             {#if q.options.some((o) => o.detail)}
               <dl class="mt-4 grid gap-2.5 border-t border-line pt-4 text-sm">
@@ -163,11 +177,11 @@
                 {/each}
               </dl>
             {/if}
-            <a href="/doctrines#{q.topic}" class="mt-4 inline-block text-sm font-semibold underline-offset-4 hover:underline">See who believes what →</a>
+            <a href="/doctrines#{q.topic}" class="mt-4 inline-block text-sm font-semibold underline-offset-4 hover:underline">Who believes what →</a>
           </Popover>
         </div>
 
-        <div class="mt-7 sm:mt-8">
+        <div class="mt-8 sm:mt-10">
           {#if q.kind === 'yesno'}
             <div class="grid grid-cols-2 gap-3">
               {#each q.options as o, i (o.id)}
@@ -179,7 +193,6 @@
                     onclick={() => choose(o.id)}
                   >
                     <span class="font-display leading-tight {o.label.length > 14 ? 'text-lg sm:text-xl' : 'text-2xl'}">{o.label}</span>
-                    <kbd class="absolute bottom-2.5 left-3 text-[0.7rem] font-medium opacity-40">{yesNoKeys[i]}</kbd>
                   </button>
                   {#if o.detail}
                     <span class="absolute top-1.5 right-1.5"><Tip text={o.detail} tone={sel ? 'inverted' : 'default'} align={i === 0 ? 'left' : 'right'} /></span>
@@ -209,58 +222,32 @@
             </div>
           {/if}
 
-          <!-- skip: encouraged, not hidden -->
           <button
-            class="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-dashed py-3.5 text-[0.95rem] font-semibold transition
-              {skipped ? 'border-gold bg-gold/10 text-ink' : 'border-line text-muted hover:border-gold hover:bg-gold/5 hover:text-ink'}"
+            class="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-dashed py-3 text-[0.95rem] font-semibold transition
+              {skipped ? 'border-gold bg-gold/10 text-ink' : 'border-line text-muted hover:border-gold hover:text-ink'}"
             onclick={() => choose('skip')}
-          >
-            <span class="grid size-6 place-items-center rounded-full bg-surface-2 text-xs font-bold">?</span>
-            I’m not sure — skip
-            <kbd class="ml-1 text-[0.7rem] font-medium opacity-50">S</kbd>
-          </button>
-          <p class="mt-2 text-center text-xs text-muted">Unsure is a real answer. Skipped questions never count for or against any tradition.</p>
+          >Not sure</button>
 
-          <!-- own words -->
-          <div class="mt-5 border-t border-line pt-4">
+          <div class="mt-4">
             {#if !noteOpen}
-              <button class="flex items-center gap-2 text-sm font-semibold text-muted hover:text-ink" onclick={() => (noteOpen = true)}>
+              <button class="mx-auto flex items-center gap-1.5 text-sm font-medium text-muted hover:text-ink" onclick={() => (noteOpen = true)}>
                 <svg viewBox="0 0 20 20" class="size-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3.5l3 3L7 16H4v-3z" /></svg>
-                Add your own words <span class="font-normal">(optional, for the AI reading)</span>
+                Add a note
               </button>
             {:else}
-              <div transition:slide={{ duration: 180 }}>
-                <label for="note-{q.id}" class="flex items-center justify-between text-sm font-semibold">
-                  In your own words
-                  <span class="text-xs font-normal text-muted tabular-nums">{(notes[q.id] ?? '').length}/{NOTE_MAX}</span>
-                </label>
-                <textarea
-                  id="note-{q.id}"
-                  rows="3"
-                  maxlength={NOTE_MAX}
-                  value={notes[q.id] ?? ''}
-                  oninput={onNote}
-                  placeholder="Nuance, doubts, ‘yes, but…’ — saved in this browser and read by the AI on your results page."
-                  class="mt-2 w-full resize-y rounded-xl border border-line bg-surface px-3.5 py-2.5 text-[0.95rem] leading-relaxed outline-none placeholder:text-muted/70 focus:border-gold"
-                ></textarea>
-                {#if answers[q.id] && index < total - 1}
-                  <button class="mt-2 text-sm font-semibold text-muted hover:text-ink" onclick={next}>Continue →</button>
-                {/if}
-              </div>
+              <textarea
+                id="note-{q.id}"
+                rows="3"
+                maxlength={NOTE_MAX}
+                value={notes[q.id] ?? ''}
+                oninput={onNote}
+                aria-label="Your note"
+                placeholder="In your own words…"
+                class="w-full resize-y rounded-xl border border-line bg-surface px-3.5 py-2.5 text-[0.95rem] leading-relaxed outline-none placeholder:text-muted/70 focus:border-gold"
+                transition:slide={{ duration: 180 }}
+              ></textarea>
             {/if}
           </div>
-        </div>
-
-        <div class="mt-auto flex items-center justify-between pt-10 text-xs text-muted">
-          <span class="hidden sm:inline">Keys: {q.kind === 'yesno' ? 'Y / N' : `1–${q.options.length}`} · S skip · ← back</span>
-          <span class="flex gap-4 sm:ml-auto">
-            {#if answers[q.id] && index < total - 1}
-              <button class="font-medium hover:text-ink" onclick={next}>Keep answer →</button>
-            {/if}
-            {#if Object.keys(answers).length}
-              <button class="font-medium hover:text-ink" onclick={restart}>Start over</button>
-            {/if}
-          </span>
         </div>
       </div>
     {/key}

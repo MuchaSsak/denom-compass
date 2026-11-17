@@ -19,14 +19,12 @@ const familyNote: Record<string, string> = {
   <header class="pt-12 pb-4 sm:pt-16">
     <p class="eyebrow">The traditions</p>
     <h1 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">{denominations.length} ways of being Christian</h1>
-    <p class="mt-3 max-w-2xl text-muted">Each profile lists the councils a tradition accepts, its key doctrines and what sets it apart — at a glance.</p>
   </header>
 
   {groups.map((g) => (
     <section class="mt-10">
       <div class="mb-4 flex items-baseline gap-3 border-b border-line pb-2">
         <h2 class="font-display text-2xl font-semibold">{g.family}</h2>
-        <p class="text-sm text-muted">{familyNote[g.family]}</p>
       </div>
       <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {g.items.map((d) => (

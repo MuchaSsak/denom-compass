@@ -13,3 +13,5 @@ Append-only. Newest at the bottom. Format: `## YYYY-MM-DD — title` then bullet
 - Visual QA with headless Chrome (desktop 1280 + mobile 390 dark). Fixed: unlayered `.btn` overriding Tailwind `hidden`; donut `%` wrap; compass badge overlap (repulsion); mobile nav overflow.
 - Astro 7 tracks preview servers; a stale one blocks a new `astro preview`. `preview` script now uses `astro preview --force`.
 - Wiki set up: `CLAUDE.md` (schema + routing table), `index.md`, `log.md`, `raw/` (research matrix, Mobbin refs), `wiki/` (overview, architecture, scoring, design, decisions, playbooks, research/*).
+
+## [2026-11-17] ui | Less text: quiz info icon top-right (popover), no hints/shortcut/skip captions, "Not sure" + "Add a note", next/restart icons in top bar; footer removed; mobile nav -> menu; page intros trimmed; README in Learning Gems style

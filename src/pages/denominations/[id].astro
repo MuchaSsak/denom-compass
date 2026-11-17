@@ -167,7 +167,6 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
 
       <section class="card p-6">
         <h2 class="font-display text-xl font-semibold">Closest relatives</h2>
-        <p class="mt-1 text-sm text-muted">Traditions that would score highest on this one’s own answers.</p>
         <ul class="mt-4 grid gap-3">
           {relatives.map((r) => (
             <li>
@@ -187,7 +186,7 @@ const firmness = (s: number) => (s >= 1 ? 'Firm' : s >= 0.75 ? 'Mostly' : s >= 0
       <a href="/quiz" class="card flex items-center justify-between gap-4 p-6 transition hover:-translate-y-0.5" style={`background: color-mix(in oklab, ${d.color} 12%, var(--surface))`}>
         <span>
           <span class="block font-semibold">Are you {d.short}?</span>
-          <span class="block text-sm text-muted">Take the {questions.length}-question quiz</span>
+          
         </span>
         <span class="btn btn-primary h-10 px-4 text-sm">Start</span>
       </a>

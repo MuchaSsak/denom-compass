@@ -107,16 +107,16 @@ import AiReading from './AiReading.svelte';
   <section class="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center text-center">
     <p class="eyebrow">No results yet</p>
     <h1 class="mt-3 font-display text-3xl">Take the quiz first</h1>
-    <p class="mt-3 text-muted">24 short questions, about three minutes. Your answers are saved only in this browser.</p>
+    
     <a href="/quiz" class="btn btn-primary mt-8">Start the quiz</a>
   </section>
 {:else}
   <div class="pt-8 sm:pt-12">
     {#if shared}
       <div class="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-surface-2 px-4 py-3 text-sm">
-        <span>You’re viewing a shared result.</span>
+        <span>Shared result</span>
         <span class="flex gap-2">
-          <button class="font-semibold underline-offset-4 hover:underline" onclick={saveShared}>Save to my history</button>
+          <button class="font-semibold underline-offset-4 hover:underline" onclick={saveShared}>Save</button>
           <span class="text-muted">·</span>
           <a href="/quiz" class="font-semibold underline-offset-4 hover:underline">Take it yourself</a>
         </span>
@@ -140,7 +140,6 @@ import AiReading from './AiReading.svelte';
         </div>
         <div class="flex items-center gap-4 sm:flex-col sm:gap-2">
           <Donut percent={top.percent} color={topD.color} size={124} stroke={11} />
-          <p class="text-sm text-muted sm:text-center">agreement on {answeredCount} answers</p>
         </div>
       </div>
 
@@ -154,7 +153,7 @@ import AiReading from './AiReading.svelte';
 
       {#if close.length}
         <p class="mt-4 text-sm text-muted">
-          Neck and neck with {#each close as c, i}<a class="font-semibold text-ink underline-offset-4 hover:underline" href="/denominations/{c.id}">{byId[c.id].short} ({c.percent}%)</a>{i < close.length - 1 ? ', ' : ''}{/each} — the gap is within 3 points.
+          Neck and neck with {#each close as c, i}<a class="font-semibold text-ink underline-offset-4 hover:underline" href="/denominations/{c.id}">{byId[c.id].short} ({c.percent}%)</a>{i < close.length - 1 ? ', ' : ''}{/each}
         </p>
       {/if}
 
@@ -192,7 +191,6 @@ import AiReading from './AiReading.svelte';
           <p class="eyebrow">Every tradition</p>
           <h2 class="mt-1 font-display text-3xl font-semibold">How you compare</h2>
         </div>
-        <p class="hidden text-sm text-muted sm:block">Tap a row to see where you agree.</p>
       </div>
 
       <div class="card mt-5 divide-y divide-line overflow-hidden">
@@ -257,12 +255,7 @@ import AiReading from './AiReading.svelte';
       <div>
         <p class="eyebrow">The compass</p>
         <h2 class="mt-1 font-display text-3xl font-semibold">Where you stand</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          Two of the oldest fault lines in Christian thought. <strong class="text-ink">Left ↔ right</strong>: are baptism, the Eucharist
-          and ordination signs and memorials, or channels of grace? <strong class="text-ink">Top ↔ bottom</strong>: does salvation rest on
-          God’s choice alone, or on grace that invites our free cooperation?
-        </p>
-        <p class="mt-3 text-sm text-muted">Positions are computed from the same answers, so traditions near you share your instincts on these two axes — even if they differ elsewhere.</p>
+        <p class="mt-3 leading-relaxed text-muted">Are sacraments signs or channels of grace? Does salvation rest on God’s choice or your free response?</p>
       </div>
       <CompassChart {points} {you} highlight={ranked.slice(0, 3).map((r) => r.id)} />
     </section>
