@@ -5,6 +5,7 @@ import { denominations } from '../../data/denominations';
 import { rankAll } from '../../lib/scoring';
 import { buildPrompt, extractJson, sanitize, DEFAULT_MODELS, type AiResponse } from '../../lib/ai';
 import { NOTE_MAX, GENERAL_MAX } from '../../lib/storage';
+import { LEGAL_VERSION } from '../../data/legal';
 import type { Answers, Notes } from '../../data/types';
 
 export const prerender = false;
@@ -14,7 +15,7 @@ const json = (body: unknown, status = 200) =>
 
 function apiKey() {
   if (OPENROUTER_API_KEY) return OPENROUTER_API_KEY;
-  // `astro preview` doesn't always inject .env into the server process — load it ourselves.
+  // `astro preview` doesn't always inject .env into the server process - load it ourselves.
   try { process.loadEnvFile?.(); } catch { /* no .env */ }
   return process.env.OPENROUTER_API_KEY || '';
 }
@@ -36,11 +37,13 @@ function limited(ip: string) {
 export const POST: APIRoute = async ({ request, clientAddress }) => {
   const key = apiKey();
   if (!key) return json({ error: 'missing_key', message: 'Add OPENROUTER_API_KEY to .env and restart the server.' }, 503);
-  if (limited(clientAddress ?? 'local')) return json({ error: 'rate_limited', message: 'Too many requests — wait a minute.' }, 429);
+  if (limited(clientAddress ?? 'local')) return json({ error: 'rate_limited', message: 'Too many requests - wait a minute.' }, 429);
 
-  let body: { answers?: Answers; notes?: Notes; lang?: string };
+  let body: { answers?: Answers; notes?: Notes; lang?: string; consent?: string };
   try { body = await request.json(); } catch { return json({ error: 'bad_request', message: 'Invalid JSON.' }, 400); }
   const lang = body.lang === 'pl' ? 'pl' : 'en';
+  // Nothing is forwarded to the AI provider without the user's explicit consent to the current policy.
+  if (body.consent !== LEGAL_VERSION) return json({ error: 'consent_required', message: 'Explicit consent is required.' }, 403);
 
   // sanitise input against known ids & limits
   const answers: Answers = {};

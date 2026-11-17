@@ -6,7 +6,7 @@ export const optionTerms: Record<string, Record<string, { en: string; pl: string
   trinity: {
     yes: { en: 'Trinitarianism', pl: 'trynitaryzm' },
     separate: { en: 'subordinationism', pl: 'subordynacjonizm' },
-    modal: { en: 'modalism, Oneness', pl: 'modalizm, unicjanizm' },
+    modal: { en: 'Oneness theology; critics call it modalism', pl: 'teologia jedności; krytycy nazywają ją modalizmem' },
   },
   authority: {
     scripture: { en: 'sola Scriptura', pl: 'sola Scriptura' },

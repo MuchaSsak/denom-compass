@@ -289,7 +289,7 @@ const data: CouncilsOverlay = {
     {
       "year": "1906",
       "title": "Przebudzenie zielonoświątkowe",
-      "text": "Azusa Street daje początek światowemu ruchowi zielonoświątkowemu; unicjanie oddzielają się w 1916 r."
+      "text": "Azusa Street daje początek światowemu ruchowi zielonoświątkowemu; zielonoświątkowcy jedności oddzielają się w 1916 r."
     },
     {
       "year": "XX w.",

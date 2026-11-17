@@ -15,7 +15,7 @@
 
 Exposed to Tailwind via `@theme` (`bg-surface`, `text-muted`, `border-line`, `text-gold`…). Dark mode = `.dark` on `<html>` (`@custom-variant dark`), set pre-paint from `dc:theme` or `prefers-color-scheme`.
 
-Component classes (`.card .btn .btn-primary .btn-ghost .chip .eyebrow .badge`) live in `@layer components` — **must stay layered** or they override Tailwind utilities like `hidden`.
+Component classes (`.card .btn .btn-primary .btn-ghost .chip .eyebrow .badge`) live in `@layer components` - **must stay layered** or they override Tailwind utilities like `hidden`.
 
 Fonts: Fraunces (display, `font-display`), Inter (UI).
 
@@ -26,4 +26,4 @@ catholic crossed keys · orthodox three-bar cross · oriental Coptic cross · as
 ## Patterns
 - Quiz: one question/screen, thin gold progress, circular back, Yes/No = 2 tall tiles, choices = lettered cards, selected = inverted ink fill, 260 ms auto-advance, fly-in transition by direction.
 - Results: hero card tinted with match colour, donut with centred %, ranked bars, expandable ✓/~/✕ breakdown, quadrant compass.
-- Profile pages: compact — quick-facts strip, 21 council tiles (7 | 14 split), short bullet lists, collapsible positions.
+- Profile pages: compact - quick-facts strip, 21 council tiles (7 | 14 split), short bullet lists, collapsible positions.

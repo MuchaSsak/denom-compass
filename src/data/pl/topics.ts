@@ -3,7 +3,7 @@ import type { TopicsOverlay } from '../localized';
 const data: TopicsOverlay = {
   "trinity": {
     "title": "Trójca Święta",
-    "summary": "Niemal wszystkie Kościoły wyznają jednego Boga w trzech równych sobie i współwiecznych Osobach. Arianie (IV w.) odrzucali pełne bóstwo Syna; podobny pogląd mają dziś Świadkowie Jehowy, mormoni nauczają o trzech odrębnych istotach, a zielonoświątkowcy jedności widzą jedną Osobę w trzech przejawach.",
+    "summary": "Niemal wszystkie Kościoły wyznają jednego Boga w trzech równych sobie i współwiecznych Osobach. Arianie (IV w.) odrzucali pełne bóstwo Syna; podobny pogląd mają dziś Świadkowie Jehowy, Święci w Dniach Ostatnich nauczają o trzech odrębnych istotach, a zielonoświątkowcy jedności widzą jedną Osobę w trzech przejawach.",
     "scripture": [
       "Mt 28,19",
       "J 1,1–14",
@@ -51,14 +51,14 @@ const data: TopicsOverlay = {
   },
   "baptism": {
     "title": "Chrzest",
-    "summary": "Większość historycznych Kościołów chrzci niemowlęta i naucza, że chrzest daje nowe narodzenie (odrodzenie przez chrzest). Kościoły reformowane chrzczą niemowlęta jako znak przymierza. Baptyści, zielonoświątkowcy i anabaptyści chrzczą tylko wierzących, zwykle przez zanurzenie; Kościoły Chrystusowe chrzczą wierzących „na odpuszczenie grzechów”.",
+    "summary": "Większość historycznych Kościołów chrzci niemowlęta i naucza, że chrzest daje nowe narodzenie (odrodzenie przez chrzest). Kościoły reformowane chrzczą niemowlęta jako znak przymierza. Baptyści, zielonoświątkowcy i anabaptyści chrzczą tylko wierzących, zwykle przez zanurzenie; Kościoły Chrystusa chrzczą wierzących „na odpuszczenie grzechów”.",
     "scripture": [
       "Dz 2,38–39",
       "Rz 6,3–4",
       "Tt 3,5",
       "1 P 3,21"
     ],
-    "milestone": "W Zurychu w 1525 r. Konrad Grebel ponownie ochrzcił Jörga Blaurocka – to narodziny ruchu anabaptystycznego."
+    "milestone": "W Zurychu w 1525 r. Konrad Grebel ochrzcił Jörga Blaurocka na podstawie wyznania wiary - to narodziny ruchu anabaptystycznego."
   },
   "justification": {
     "title": "Usprawiedliwienie",
@@ -84,7 +84,7 @@ const data: TopicsOverlay = {
   },
   "original-sin": {
     "title": "Grzech pierworodny",
-    "summary": "Kościoły zachodnie (za Augustynem) nauczają, że ludzkość dziedziczy winę Adama oraz skażoną naturę. Kościoły wschodnie mówią o „grzechu prarodzicielskim”: dziedziczymy śmiertelność i skłonność do grzechu, a nie osobistą winę. Niektóre tradycje (mormoni, Kościoły Chrystusowe) uczą, że każdy odpowiada tylko za własne grzechy.",
+    "summary": "Kościoły zachodnie (za Augustynem) nauczają, że ludzkość dziedziczy winę Adama oraz skażoną naturę. Kościoły wschodnie mówią o „grzechu prarodzicielskim”: dziedziczymy śmiertelność i skłonność do grzechu, a nie osobistą winę. Niektóre tradycje (Święci w Dniach Ostatnich, Kościoły Chrystusa) uczą, że każdy odpowiada tylko za własne grzechy.",
     "scripture": [
       "Rz 5,12–19",
       "Ps 51,7",
@@ -156,7 +156,7 @@ const data: TopicsOverlay = {
   },
   "practice": {
     "title": "Nabożeństwo i praktyka",
-    "summary": "Niektóre wyróżniki dotyczą tego, jak chrześcijanie żyją i sprawują kult: adwentyści dnia siódmego święcą sobotni szabat; anabaptyści i kwakrzy odmawiają służby wojskowej; Kościoły Chrystusowe śpiewają a cappella, podobnie jak prawosławni (z tradycji, a nie z przepisu). Te pytania często szybko wskazują konkretną tradycję.",
+    "summary": "Niektóre wyróżniki dotyczą tego, jak chrześcijanie żyją i sprawują kult: adwentyści dnia siódmego święcą sobotni szabat; anabaptyści i kwakrzy zachowują historyczne świadectwo pokoju i tradycyjnie odmawiają służby wojskowej; Kościoły Chrystusa śpiewają a cappella, podobnie jak prawosławni (z tradycji, a nie z przepisu). Te pytania często szybko wskazują konkretną tradycję.",
     "scripture": [
       "Wj 20,8–11",
       "Mt 5,38–44",

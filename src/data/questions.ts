@@ -25,12 +25,12 @@ export const questions: Question[] = [
     text: 'Who is God?',
     hint: 'The doctrine of the Trinity, defined at Nicaea (325) and Constantinople (381).',
     explain:
-      'The Trinity teaches one God existing eternally as three distinct Persons who share one divine nature — not three gods, and not one Person wearing three masks. Almost every church confesses it; a few movements read the Bible differently.',
+      'The Trinity teaches one God existing eternally as three distinct Persons who share one divine nature - not three gods, and not one Person in three successive modes. Almost every church confesses it; a few movements read the Bible differently.',
     weight: 3,
     options: [
       { id: 'yes', label: 'One God in three co-equal Persons: Father, Son and Holy Spirit', short: 'Trinity', detail: 'Classic Nicene teaching: three Persons, one divine essence.' },
-      { id: 'separate', label: 'The Father is supreme; the Son and Spirit are separate or subordinate', short: 'Separate beings', detail: 'E.g. Jesus as God’s first creation, or Father and Son as separate beings.' },
-      { id: 'modal', label: 'One divine Person revealing Himself as Father, Son and Spirit', short: 'Oneness', detail: 'Father, Son and Spirit as roles or manifestations of one Person (modalism).' },
+      { id: 'separate', label: 'Father, Son and Spirit are separate beings, or the Son is created or subordinate', short: 'Separate beings', detail: 'E.g. Jesus as God’s first creation, or Father and Son as separate beings.' },
+      { id: 'modal', label: 'One divine Person revealing Himself as Father, Son and Spirit', short: 'Oneness', detail: 'Father, Son and Spirit as manifestations of one Person.' },
     ],
   },
   {
@@ -75,9 +75,9 @@ export const questions: Question[] = [
       { id: 'all21', label: 'All 21, including Trent and Vatican II', short: 'All 21', detail: 'Catholic count, through Vatican II (1962–65).' },
       { id: 'seven', label: 'The first seven (325–787)', short: 'Seven', detail: 'Through Nicaea II, which approved icons.' },
       { id: 'three', label: 'Only the first three (325–431)', short: 'Three', detail: 'Stops before Chalcedon’s “two natures” definition (451).' },
-      { id: 'two', label: 'Only the first two (325 & 381)', short: 'Two', detail: 'Nicaea and Constantinople — the Nicene Creed.' },
+      { id: 'two', label: 'Only the first two (325 & 381)', short: 'Two', detail: 'Nicaea and Constantinople - the Nicene Creed.' },
       { id: 'subordinate', label: 'Early councils are trustworthy, but only Scripture binds', short: 'Under Scripture', detail: 'Respected as faithful summaries, not infallible.' },
-      { id: 'none', label: 'None of them have real authority', short: 'None' },
+      { id: 'none', label: 'No council has binding authority', short: 'None' },
     ],
   },
   {
@@ -90,11 +90,11 @@ export const questions: Question[] = [
     weight: 2,
     options: [
       { id: 'transub', label: 'The bread and wine become Christ’s body and blood (transubstantiation)', short: 'Transubstantiation', detail: 'The substance changes; only the appearance of bread and wine remains.', axes: { x: 1 } },
-      { id: 'mystery', label: 'They truly become His body and blood — a mystery we don’t define', short: 'Real change (mystery)', detail: 'A real change, but without a philosophical explanation of how.', axes: { x: 1 } },
+      { id: 'mystery', label: 'They truly become His body and blood - a mystery we don’t define', short: 'Real change (mystery)', detail: 'A real change, but without a philosophical explanation of how.', axes: { x: 1 } },
       { id: 'union', label: 'Christ’s body and blood are present in, with and under the bread and wine', short: 'Sacramental union', detail: 'Bread remains bread, and Christ’s body is truly there too.', axes: { x: 0.8 } },
       { id: 'spiritual', label: 'Christ is truly but spiritually present to those who believe', short: 'Spiritual presence', detail: 'Believers feed on Christ by faith through the Spirit.', axes: { x: 0.1 } },
       { id: 'memorial', label: 'It is a symbolic memorial of His sacrifice', short: 'Memorial', detail: 'An act of remembrance and obedience.', axes: { x: -1 } },
-      { id: 'none', label: 'No outward ritual is needed — communion is inward', short: 'Inward only', axes: { x: -1 } },
+      { id: 'none', label: 'No outward ritual is needed - communion is inward', short: 'Inward only', axes: { x: -1 } },
     ],
   },
   {
@@ -117,7 +117,7 @@ export const questions: Question[] = [
     text: 'Does baptism itself wash away sin and give new birth?',
     hint: 'Baptismal regeneration.',
     explain:
-      'Is baptism a means by which God actually forgives and regenerates — or an outward sign of something that has already happened inwardly through faith?',
+      'Is baptism a means by which God actually forgives and regenerates - or an outward sign of something that has already happened inwardly through faith?',
     weight: 1.5,
     options: yesno(['Yes, God acts through it', 'No, it’s a sign'], { x: 1 }, { x: -1 }, [
       'Baptism is a real means of grace that saves (1 Peter 3:21).',
@@ -129,11 +129,11 @@ export const questions: Question[] = [
     topic: 'justification',
     kind: 'yesno',
     text: 'Are we justified by faith alone, apart from works?',
-    hint: 'Sola fide — the central question of the Reformation.',
+    hint: 'Sola fide - the central question of the Reformation.',
     explain:
       '“Justified” means declared or made right with God. The Reformers taught this happens through faith alone, with good works following as fruit. Catholics and Orthodox teach faith working through love, with grace transforming the believer.',
     weight: 2,
-    options: yesno(['Yes, faith alone', 'No, faith and works together'], { y: -0.6 }, { y: 1 }, [
+    options: yesno(['Yes, faith alone', 'No, by grace through faith working in love'], { y: -0.6 }, { y: 1 }, [
       'Good works follow salvation but do not contribute to it.',
       'Grace-enabled faith, love and obedience together.',
     ]),
@@ -173,10 +173,10 @@ export const questions: Question[] = [
     id: 'perfection',
     topic: 'sanctification',
     kind: 'yesno',
-    text: 'Can a Christian reach perfect love — freedom from willful sin — in this life?',
+    text: 'Can a Christian reach perfect love - freedom from willful sin - in this life?',
     hint: 'Entire sanctification / Christian perfection.',
     explain:
-      'John Wesley taught that God can so fill a believer with love that they no longer knowingly sin — not sinless perfection, but a heart wholly given to God. Most traditions see holiness as lifelong growth, never complete before death.',
+      'John Wesley taught that God can so fill a believer with love that they no longer knowingly sin - not sinless perfection, but a heart wholly given to God. Most traditions see holiness as lifelong growth, never complete before death.',
     weight: 1,
     options: yesno(['Yes, it’s possible', 'No, not before death'], { y: 0.5 }, { y: -0.1 }),
   },
@@ -187,7 +187,7 @@ export const questions: Question[] = [
     text: 'Do valid priests and bishops need ordination in an unbroken line from the Apostles?',
     hint: 'Apostolic succession.',
     explain:
-      'Catholic, Orthodox and Anglican churches hold that bishops are ordained by bishops in a chain reaching back to the Apostles, and that this is needed for valid sacraments. Most Protestants locate apostolic continuity in faithful teaching instead.',
+      'Catholic, Orthodox and other ancient Eastern churches hold that bishops are ordained by bishops in a chain reaching back to the Apostles, and that this is needed for valid sacraments. Anglicans and some Lutherans keep the historic episcopate, with differing views on whether it is essential. Most Protestants locate apostolic continuity in faithful teaching.',
     weight: 1.5,
     options: yesno(['Yes, it’s essential', 'No, it isn’t required'], { x: 1 }, { x: -0.8 }),
   },
@@ -197,7 +197,7 @@ export const questions: Question[] = [
     kind: 'yesno',
     text: 'Can women be ordained as pastors or priests?',
     explain:
-      'This is about ordained leadership — senior pastor, priest or bishop — not whether women can teach, lead ministries or serve in other ways, which nearly all churches affirm.',
+      'This is about ordained leadership - senior pastor, priest or bishop - not whether women can teach, lead ministries or serve in other ways, which nearly all churches affirm.',
     weight: 1,
     options: yesno(['Yes', 'No']),
   },
@@ -205,7 +205,7 @@ export const questions: Question[] = [
     id: 'governance',
     topic: 'ministry',
     kind: 'choice',
-    text: 'Who should govern the church?',
+    text: 'How is the church rightly governed?',
     explain:
       'Church government ranges from bishops overseeing regions, to elders in connected councils, to each congregation deciding for itself, to a central prophet or governing body.',
     weight: 1.5,
@@ -221,12 +221,12 @@ export const questions: Question[] = [
     topic: 'mary',
     kind: 'choice',
     text: 'Is it right to call Mary “Mother of God”?',
-    hint: 'Theotokos — affirmed at Ephesus (431).',
+    hint: 'Theotokos - affirmed at Ephesus (431).',
     explain:
-      'The title protects a claim about Jesus: the child Mary bore is truly God, not a man later joined to God. Some accept the logic but avoid the phrase because it can sound like Mary is the source of God.',
+      'The title affirms that the child Mary bore is truly God the Son. The Church of the East prefers “Mother of Christ” to keep the natures distinct, while confessing Christ as God; some Protestants avoid the phrase because it can sound as if Mary were the source of God.',
     weight: 1,
     options: [
-      { id: 'yes', label: 'Yes — she bore God the Son in the flesh', short: 'Yes' },
+      { id: 'yes', label: 'Yes - she bore God the Son in the flesh', short: 'Yes' },
       { id: 'technical', label: 'It’s technically true, but I’d avoid the title', short: 'True, but avoid', detail: 'Affirms Jesus is God from conception, prefers “mother of Jesus/Christ”.' },
       { id: 'no', label: 'No', short: 'No' },
     ],
@@ -247,7 +247,7 @@ export const questions: Question[] = [
     kind: 'yesno',
     text: 'Is it right to ask saints in heaven to pray for you?',
     explain:
-      'Just as you might ask a friend to pray for you, many Christians ask the departed saints — who are alive in Christ — to intercede. Others hold that prayer should be addressed to God alone.',
+      'Many Christians ask the departed saints to intercede, as one asks a friend to pray, believing they are alive in Christ. Others hold that Scripture gives no warrant for this and that prayer goes to God alone through Christ, the one mediator.',
     weight: 1.5,
     options: yesno(['Yes', 'No, pray to God alone'], { x: 0.6 }, { x: -0.4 }),
   },
@@ -258,7 +258,7 @@ export const questions: Question[] = [
     text: 'Is it right to venerate icons and holy images?',
     hint: 'Defended at Nicaea II (787).',
     explain:
-      'Veneration (bowing, kissing an icon) is distinguished from worship, which belongs to God alone; honour passes to the person depicted. Critics see it as at odds with the commandment against images.',
+      'Supporters distinguish veneration (bowing, kissing an icon) from worship, which belongs to God alone, and say honour passes to the person depicted. Critics see it as at odds with the commandment against images.',
     weight: 1,
     options: yesno(['Yes', 'No'], { x: 0.8 }, { x: -0.5 }),
   },
@@ -272,9 +272,9 @@ export const questions: Question[] = [
     weight: 1.5,
     options: [
       { id: 'purgatory', label: 'Many are purified first (purgatory), then enter heaven', short: 'Purgatory' },
-      { id: 'intermediate', label: 'They await the resurrection, and we pray for them — without defining purgatory', short: 'Intermediate state' },
+      { id: 'intermediate', label: 'They await the resurrection, and we pray for them - without defining purgatory', short: 'Intermediate state' },
       { id: 'heaven', label: 'They go straight to be with Christ', short: 'With Christ' },
-      { id: 'sleep', label: 'They are unconscious until the resurrection', short: 'Soul sleep' },
+      { id: 'sleep', label: 'They are unconscious until the resurrection', short: 'Sleep until resurrection' },
     ],
   },
   {
@@ -287,9 +287,9 @@ export const questions: Question[] = [
       'Pentecostals expect every gift of the Spirit to be active and normal. Many churches believe miracles still happen but are not the norm. Cessationists hold the sign-gifts ended with the apostles.',
     weight: 1.5,
     options: [
-      { id: 'yes', label: 'Yes — every gift is active and normal today', short: 'Normal today' },
+      { id: 'yes', label: 'Yes - every gift is active and normal today', short: 'Normal today' },
       { id: 'rare', label: 'They can still happen, but aren’t the norm', short: 'Possible, not normal' },
-      { id: 'no', label: 'No — they ended with the apostles', short: 'Ceased' },
+      { id: 'no', label: 'No - they ended with the apostles', short: 'Ceased' },
     ],
   },
   {
@@ -301,8 +301,8 @@ export const questions: Question[] = [
       'The fourth commandment names the seventh day. Seventh-day Adventists hold it is still binding. Most churches gather on Sunday, the day of the resurrection; some see no single required day.',
     weight: 2,
     options: [
-      { id: 'yes', label: 'Saturday — the seventh-day Sabbath is still binding', short: 'Saturday' },
-      { id: 'sunday', label: 'Sunday — the Lord’s Day has taken its place', short: 'Sunday' },
+      { id: 'yes', label: 'Saturday - the seventh-day Sabbath is still binding', short: 'Saturday' },
+      { id: 'sunday', label: 'Sunday - the Lord’s Day has taken its place', short: 'Sunday' },
       { id: 'free', label: 'No particular day is required', short: 'No set day' },
     ],
   },
@@ -317,7 +317,7 @@ export const questions: Question[] = [
     options: [
       { id: 'just', label: 'Yes, in a just war or self-defence', short: 'Just war' },
       { id: 'conscience', label: 'It’s a matter of personal conscience', short: 'Conscience' },
-      { id: 'never', label: 'No — Christians must refuse all violence', short: 'Never' },
+      { id: 'never', label: 'No - Christians must refuse all violence', short: 'Never' },
     ],
   },
   {

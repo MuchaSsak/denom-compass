@@ -11,10 +11,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "The Son is a created being; 'there was when he was not.'"
     },
     "figures": [
-      "Constantine I — emperor who called the council",
-      "Arius — Alexandrian priest, condemned and exiled",
-      "Alexander of Alexandria — Arius's bishop, led opposition",
-      "Athanasius — Alexander's deacon, later Nicene champion"
+      "Constantine I - emperor who called the council",
+      "Arius - Alexandrian priest, condemned and exiled",
+      "Alexander of Alexandria - Arius's bishop, led opposition",
+      "Athanasius - Alexander's deacon, later Nicene champion"
     ],
     "term": {
       "word": "homoousios",
@@ -44,10 +44,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "The Holy Spirit is a creature, not fully God like the Father."
     },
     "figures": [
-      "Theodosius I — emperor who called the council",
-      "Gregory of Nazianzus — theologian, presided briefly, resigned",
-      "Meletius of Antioch — first president, died mid-council",
-      "Nectarius — new archbishop, closed the council"
+      "Theodosius I - emperor who called the council",
+      "Gregory of Nazianzus - theologian, presided briefly, resigned",
+      "Meletius of Antioch - first president, died mid-council",
+      "Nectarius - new archbishop, closed the council"
     ],
     "term": {
       "word": "ekporeuomenon",
@@ -78,10 +78,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Mary bore Christ, not God; the divine Word and the man stay distinct."
     },
     "figures": [
-      "Cyril of Alexandria — led the council against Nestorius",
-      "Nestorius — archbishop of Constantinople, deposed",
-      "John of Antioch — led a rival eastern synod",
-      "Celestine I — pope, sent legates in support"
+      "Cyril of Alexandria - led the council against Nestorius",
+      "Nestorius - archbishop of Constantinople, deposed",
+      "John of Antioch - led a rival eastern synod",
+      "Celestine I - pope, sent legates in support"
     ],
     "term": {
       "word": "Theotokos",
@@ -105,20 +105,20 @@ export const councilDetails: Record<number, CouncilDetail> =  {
     "attendance": "about 350–500 bishops (Leo: 600; tradition: 630)",
     "context": "The 'Robber Synod' of Ephesus (449) had cleared the monk Eutyches. The new emperor Marcian called a fresh council to settle how Christ is God and man.",
     "issue": {
-      "name": "Monophysitism (Eutychianism)",
-      "view": "After the union Christ has one nature; the human is absorbed into the divine."
+      "name": "Eutychianism",
+      "view": "After the union Christ has one nature; the human is absorbed into the divine. (The Oriental Orthodox also condemn Eutyches.)"
     },
     "figures": [
-      "Leo I — pope whose Tome set the doctrine",
-      "Marcian — emperor who called the council",
-      "Dioscorus of Alexandria — patriarch, deposed",
-      "Eutyches — monk whose teaching was condemned"
+      "Leo I - pope whose Tome set the doctrine",
+      "Marcian - emperor who called the council",
+      "Dioscorus of Alexandria - patriarch, deposed",
+      "Eutyches - monk whose teaching was condemned"
     ],
     "term": {
       "word": "in two natures",
       "gloss": "one person, truly God and truly man: 'without confusion, change, division or separation'"
     },
-    "outcome": "Much of Egypt, Syria and Armenia rejected it, the first lasting split of the Church. Rome accepted the doctrine but rejected canon 28, which raised Constantinople's rank.",
+    "outcome": "Much of Egypt, Syria and Armenia did not receive it - with the Church of the East (431), one of the first lasting splits of the Church. Rome accepted the doctrine but rejected canon 28, which raised Constantinople's rank.",
     "dissent": [
       {
         "who": "Oriental Orthodox (Coptic, Armenian, Syriac, Ethiopian…)",
@@ -146,10 +146,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Defenders: condemning dead teachers Chalcedon had cleared would betray Chalcedon."
     },
     "figures": [
-      "Justinian I — emperor who drove the condemnation",
-      "Vigilius — pope, resisted, later gave in",
-      "Eutychius — patriarch who presided",
-      "Theodore of Mopsuestia — teacher condemned after death"
+      "Justinian I - emperor who drove the condemnation",
+      "Vigilius - pope, resisted, later gave in",
+      "Eutychius - patriarch who presided",
+      "Theodore of Mopsuestia - teacher condemned after death"
     ],
     "term": {
       "word": "Theopaschite formula",
@@ -180,10 +180,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Christ has only one will, the divine, not a human will too."
     },
     "figures": [
-      "Constantine IV — emperor, called and chaired it",
-      "Agatho — pope whose letter set the doctrine",
-      "Macarius of Antioch — Monothelite patriarch, deposed",
-      "Honorius I — earlier pope, condemned posthumously"
+      "Constantine IV - emperor, called and chaired it",
+      "Agatho - pope whose letter set the doctrine",
+      "Macarius of Antioch - Monothelite patriarch, deposed",
+      "Honorius I - earlier pope, condemned posthumously"
     ],
     "term": {
       "word": "dyothelitism",
@@ -210,10 +210,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Images of Christ and the saints are idols; venerating them breaks the commandment."
     },
     "figures": [
-      "Irene — empress-regent who called the council",
-      "Tarasius — patriarch who presided",
-      "Hadrian I — pope, sent legates",
-      "John of Damascus — earlier defender of icons, honoured"
+      "Irene - empress-regent who called the council",
+      "Tarasius - patriarch who presided",
+      "Hadrian I - pope, sent legates",
+      "John of Damascus - earlier defender of icons, honoured"
     ],
     "term": {
       "word": "proskynesis vs latreia",
@@ -227,7 +227,7 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       },
       {
         "who": "Oriental Orthodox and Church of the East",
-        "why": "Not party to it, though both use images."
+        "why": "Not party to it; Oriental Orthodox use icons, while the Church of the East traditionally displays the Cross rather than icons."
       }
     ],
     "topics": [
@@ -244,10 +244,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Photius was the lawful patriarch; Rome had no right to judge it."
     },
     "figures": [
-      "Photius — scholar-patriarch, deposed and condemned",
-      "Ignatius — patriarch restored to his see",
-      "Basil I — emperor who backed the council",
-      "Hadrian II — pope whose legates presided"
+      "Photius - scholar-patriarch, deposed and condemned",
+      "Ignatius - patriarch restored to his see",
+      "Basil I - emperor who backed the council",
+      "Hadrian II - pope whose legates presided"
     ],
     "outcome": "A larger council in 879–880 under Pope John VIII's legates restored Photius and annulled 869–870. The West listed 869–870 as ecumenical only from the 11th–12th century, partly for its canon against lay control of bishops.",
     "dissent": [
@@ -270,9 +270,9 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Lay rulers may invest bishops with ring and staff, the symbols of spiritual office."
     },
     "figures": [
-      "Callistus II — pope who called and led it",
-      "Henry V — emperor, party to the Concordat of Worms",
-      "Gregory VII — earlier reform pope who began the fight"
+      "Callistus II - pope who called and led it",
+      "Henry V - emperor, party to the Concordat of Worms",
+      "Gregory VII - earlier reform pope who began the fight"
     ],
     "term": {
       "word": "investiture",
@@ -294,10 +294,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Anacletus II, not Innocent II, was the rightful pope."
     },
     "figures": [
-      "Innocent II — pope who called and led it",
-      "Anacletus II — rival pope, died 1138",
-      "Bernard of Clairvaux — abbot who rallied support for Innocent",
-      "Roger II of Sicily — Anacletus's ally, excommunicated"
+      "Innocent II - pope who called and led it",
+      "Anacletus II - rival pope, died 1138",
+      "Bernard of Clairvaux - abbot who rallied support for Innocent",
+      "Roger II of Sicily - Anacletus's ally, excommunicated"
     ],
     "outcome": "Annulled Anacletus's ordinations and declared that marriages of priests were invalid, not merely unlawful. Arnold of Brescia was condemned around this time.",
     "dissent": [],
@@ -315,9 +315,9 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "The emperor's antipopes (Victor IV and successors) were the true popes."
     },
     "figures": [
-      "Alexander III — pope who called and led it",
-      "Frederick I Barbarossa — emperor, reconciled in 1177",
-      "Rufinus of Assisi — canonist, gave the opening sermon"
+      "Alexander III - pope who called and led it",
+      "Frederick I Barbarossa - emperor, reconciled in 1177",
+      "Rufinus of Assisi - canonist, gave the opening sermon"
     ],
     "term": {
       "word": "two-thirds rule",
@@ -335,14 +335,14 @@ export const councilDetails: Record<number, CouncilDetail> =  {
     "attendance": "about 404–412 bishops, plus 800+ abbots and priors",
     "context": "Innocent III wanted to reform the Church, fight heresy and launch a new crusade. It was the largest and most important medieval council.",
     "issue": {
-      "name": "Cathar (Albigensian) heresy",
+      "name": "Catharism (Albigensians)",
       "view": "Matter is evil, made by an evil principle; sacraments and Church are worthless."
     },
     "figures": [
-      "Innocent III — pope, drafted the decrees himself",
-      "Joachim of Fiore — abbot whose Trinity theory was condemned",
-      "Frederick II — confirmed as emperor over Otto IV",
-      "Peter Lombard — theologian upheld against Joachim"
+      "Innocent III - pope, drafted the decrees himself",
+      "Joachim of Fiore - abbot whose Trinity theory was condemned",
+      "Frederick II - confirmed as emperor over Otto IV",
+      "Peter Lombard - theologian upheld against Joachim"
     ],
     "term": {
       "word": "transubstantiation",
@@ -369,10 +369,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "The emperor holds power over Italy and is not subject to papal judgment."
     },
     "figures": [
-      "Innocent IV — pope who called and led it",
-      "Frederick II — emperor, deposed by the council",
-      "Thaddeus of Suessa — Frederick's lawyer and defender",
-      "Baldwin II — Latin emperor of Constantinople, attended"
+      "Innocent IV - pope who called and led it",
+      "Frederick II - emperor, deposed by the council",
+      "Thaddeus of Suessa - Frederick's lawyer and defender",
+      "Baldwin II - Latin emperor of Constantinople, attended"
     ],
     "outcome": "Declared Frederick deposed, though he fought on until he died in 1250. It also issued decrees on usury, the Mongols and aid for the Latin East.",
     "dissent": [],
@@ -390,10 +390,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Greeks: the Spirit proceeds from the Father alone, not 'and the Son'."
     },
     "figures": [
-      "Gregory X — pope who called and led it",
-      "Michael VIII Palaiologos — Byzantine emperor who sought union",
-      "Bonaventure — Franciscan theologian, died during council",
-      "Thomas Aquinas — summoned, died on the way"
+      "Gregory X - pope who called and led it",
+      "Michael VIII Palaiologos - Byzantine emperor who sought union",
+      "Bonaventure - Franciscan theologian, died during council",
+      "Thomas Aquinas - summoned, died on the way"
     ],
     "term": {
       "word": "Filioque",
@@ -424,10 +424,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Templars: innocent; their confessions were extracted by torture."
     },
     "figures": [
-      "Clement V — pope who called and led it",
-      "Philip IV of France — king pushing suppression",
-      "Jacques de Molay — Templar Grand Master, burned 1314",
-      "Peter John Olivi — Franciscan whose ideas were examined"
+      "Clement V - pope who called and led it",
+      "Philip IV of France - king pushing suppression",
+      "Jacques de Molay - Templar Grand Master, burned 1314",
+      "Peter John Olivi - Franciscan whose ideas were examined"
     ],
     "outcome": "The Templars were suppressed by papal decree (not condemned) and their property given to the Hospitallers. Beguines were condemned, and universities were told to teach Eastern languages.",
     "dissent": [],
@@ -445,10 +445,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Three rival lines (Rome, Avignon, Pisa) each claimed to be the true pope."
     },
     "figures": [
-      "Sigismund — king/emperor who forced the council",
-      "Jan Hus — Czech reformer, burned in 1415",
-      "Gregory XII — Roman pope who resigned",
-      "Martin V — pope elected 1417, ending schism"
+      "Sigismund - king/emperor who forced the council",
+      "Jan Hus - Czech reformer, burned in 1415",
+      "Gregory XII - Roman pope who resigned",
+      "Martin V - pope elected 1417, ending schism"
     ],
     "term": {
       "word": "Haec sancta",
@@ -475,10 +475,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Greeks: the Spirit proceeds from the Father alone; the pope lacks universal jurisdiction."
     },
     "figures": [
-      "Eugene IV — pope who moved and led it",
-      "John VIII Palaiologos — Byzantine emperor seeking union",
-      "Mark of Ephesus — Greek bishop who refused to sign",
-      "Bessarion — Greek bishop who backed union"
+      "Eugene IV - pope who moved and led it",
+      "John VIII Palaiologos - Byzantine emperor seeking union",
+      "Mark of Ephesus - Greek bishop who refused to sign",
+      "Bessarion - Greek bishop who backed union"
     ],
     "term": {
       "word": "Laetentur caeli",
@@ -509,10 +509,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "A council can judge and depose the pope."
     },
     "figures": [
-      "Julius II — pope who called it",
-      "Leo X — pope who finished it",
-      "Louis XII — French king backing Pisa",
-      "Francis I — French king, Concordat of Bologna"
+      "Julius II - pope who called it",
+      "Leo X - pope who finished it",
+      "Louis XII - French king backing Pisa",
+      "Francis I - French king, Concordat of Bologna"
     ],
     "outcome": "Ended the Pisan schism, defined the soul as immortal and individual, and confirmed the Concordat of Bologna (1516). Its reforms came to little, and it closed seven months before Luther's 95 Theses.",
     "dissent": [],
@@ -530,10 +530,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Justification by faith alone; Scripture alone is authority; only two sacraments."
     },
     "figures": [
-      "Paul III — pope who called it",
-      "Charles V — emperor who pushed for a council",
-      "Giovanni Morone — legate who steered the final period",
-      "Pius IV — pope who confirmed its decrees"
+      "Paul III - pope who called it",
+      "Charles V - emperor who pushed for a council",
+      "Giovanni Morone - legate who steered the final period",
+      "Pius IV - pope who confirmed its decrees"
     ],
     "term": {
       "word": "ex opere operato",
@@ -562,10 +562,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "The pope's solemn rulings need the Church's consent; councils limit the pope."
     },
     "figures": [
-      "Pius IX — pope who called and led it",
-      "Henry Edward Manning — leading infallibilist archbishop",
-      "Félix Dupanloup — leader of the opposing minority",
-      "Ignaz von Döllinger — historian, excommunicated 1871"
+      "Pius IX - pope who called and led it",
+      "Henry Edward Manning - leading infallibilist archbishop",
+      "Félix Dupanloup - leader of the opposing minority",
+      "Ignaz von Döllinger - historian, excommunicated 1871"
     ],
     "term": {
       "word": "ex cathedra",
@@ -597,10 +597,10 @@ export const councilDetails: Record<number, CouncilDetail> =  {
       "view": "Traditionalists: changes to liturgy, religious liberty and ecumenism break with tradition."
     },
     "figures": [
-      "John XXIII — pope who called it",
-      "Paul VI — pope who completed it",
-      "Augustin Bea — cardinal behind ecumenism decree",
-      "Marcel Lefebvre — archbishop leading traditionalist opposition"
+      "John XXIII - pope who called it",
+      "Paul VI - pope who completed it",
+      "Augustin Bea - cardinal behind ecumenism decree",
+      "Marcel Lefebvre - archbishop leading traditionalist opposition"
     ],
     "term": {
       "word": "aggiornamento",

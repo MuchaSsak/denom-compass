@@ -16,7 +16,7 @@ src/
   lib/
     scoring.ts        scoreDenomination, rankAll, compass*, idealAnswers, dominantStance
     storage.ts        localStorage wrapper, share codes, notes, AI cache, updateLatest
-    ai.ts             buildPrompt, extractJson, sanitize, DEFAULT_MODELS (no secrets — imported by server + validate)
+    ai.ts             buildPrompt, extractJson, sanitize, DEFAULT_MODELS (no secrets - imported by server + validate)
   components/
     Quiz, Results, AiReading, CompassChart, Donut, Badge (.svelte) · Tip (tooltip), Popover (.svelte)
     Badge.astro, CreedText.astro (annotated creed + positioned tooltip)

@@ -11,10 +11,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Syn jest stworzeniem; „był czas, kiedy Go nie było”."
     },
     "figures": [
-      "Konstantyn Wielki — cesarz, który zwołał sobór",
-      "Ariusz — prezbiter aleksandryjski, potępiony i zesłany",
-      "Aleksander Aleksandryjski — biskup Ariusza, przewodził opozycji",
-      "Atanazy — diakon Aleksandra, później obrońca wiary nicejskiej"
+      "Konstantyn Wielki - cesarz, który zwołał sobór",
+      "Ariusz - prezbiter aleksandryjski, potępiony i zesłany",
+      "Aleksander Aleksandryjski - biskup Ariusza, przewodził opozycji",
+      "Atanazy - diakon Aleksandra, później obrońca wiary nicejskiej"
     ],
     "term": {
       "word": "homoousios",
@@ -38,10 +38,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Duch Święty jest stworzeniem, a nie w pełni Bogiem jak Ojciec."
     },
     "figures": [
-      "Teodozjusz I — cesarz, który zwołał sobór",
-      "Grzegorz z Nazjanzu — teolog, krótko przewodniczył, ustąpił",
-      "Melecjusz z Antiochii — pierwszy przewodniczący, zmarł w trakcie soboru",
-      "Nektariusz — nowy arcybiskup, zamknął sobór"
+      "Teodozjusz I - cesarz, który zwołał sobór",
+      "Grzegorz z Nazjanzu - teolog, krótko przewodniczył, ustąpił",
+      "Melecjusz z Antiochii - pierwszy przewodniczący, zmarł w trakcie soboru",
+      "Nektariusz - nowy arcybiskup, zamknął sobór"
     ],
     "term": {
       "word": "ekporeuomenon",
@@ -65,10 +65,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Maryja zrodziła Chrystusa, nie Boga; boskie Słowo i człowiek pozostają odrębni."
     },
     "figures": [
-      "Cyryl Aleksandryjski — prowadził sobór przeciw Nestoriuszowi",
-      "Nestoriusz — arcybiskup Konstantynopola, złożony z urzędu",
-      "Jan z Antiochii — stanął na czele konkurencyjnego synodu wschodniego",
-      "Celestyn I — papież, wysłał legatów na poparcie"
+      "Cyryl Aleksandryjski - prowadził sobór przeciw Nestoriuszowi",
+      "Nestoriusz - arcybiskup Konstantynopola, złożony z urzędu",
+      "Jan z Antiochii - stanął na czele konkurencyjnego synodu wschodniego",
+      "Celestyn I - papież, wysłał legatów na poparcie"
     ],
     "term": {
       "word": "Theotokos",
@@ -88,20 +88,20 @@ const data: CouncilDetailsOverlay = {
     "attendance": "ok. 350–500 biskupów (Leon: 600; tradycja: 630)",
     "context": "„Synod zbójecki” w Efezie (449) uniewinnił mnicha Eutychesa. Nowy cesarz Marcjan zwołał kolejny sobór, by rozstrzygnąć, jak Chrystus jest Bogiem i człowiekiem.",
     "issue": {
-      "name": "Monofizytyzm (eutychianizm)",
-      "view": "Po zjednoczeniu Chrystus ma jedną naturę; ludzka zostaje wchłonięta przez boską."
+      "name": "Eutychianizm",
+      "view": "Po zjednoczeniu Chrystus ma jedną naturę; ludzka zostaje wchłonięta przez boską. (Kościoły orientalne również potępiają Eutychesa.)"
     },
     "figures": [
-      "Leon I Wielki — papież, którego List dogmatyczny wyznaczył naukę",
-      "Marcjan — cesarz, który zwołał sobór",
-      "Dioskur Aleksandryjski — patriarcha, złożony z urzędu",
-      "Eutyches — mnich, którego nauczanie potępiono"
+      "Leon I Wielki - papież, którego List dogmatyczny wyznaczył naukę",
+      "Marcjan - cesarz, który zwołał sobór",
+      "Dioskur Aleksandryjski - patriarcha, złożony z urzędu",
+      "Eutyches - mnich, którego nauczanie potępiono"
     ],
     "term": {
       "word": "w dwóch naturach",
       "gloss": "jedna Osoba, prawdziwy Bóg i prawdziwy człowiek: „bez zmieszania, bez zmiany, bez podziału i bez rozłączenia”"
     },
-    "outcome": "Znaczna część Egiptu, Syrii i Armenii go odrzuciła — był to pierwszy trwały rozłam Kościoła. Rzym przyjął naukę soboru, ale odrzucił kanon 28, który podnosił rangę Konstantynopola.",
+    "outcome": "Znaczna część Egiptu, Syrii i Armenii go nie przyjęła - obok Kościoła Wschodu (431) był to jeden z pierwszych trwałych rozłamów Kościoła. Rzym przyjął naukę soboru, ale odrzucił kanon 28, który podnosił rangę Konstantynopola.",
     "dissent": [
       {
         "who": "Kościoły orientalne (koptyjski, ormiański, syryjski, etiopski…)",
@@ -123,10 +123,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Obrońcy: potępienie zmarłych nauczycieli, których Chalcedon oczyścił z zarzutów, byłoby zdradą Chalcedonu."
     },
     "figures": [
-      "Justynian I — cesarz, który przeforsował potępienie",
-      "Wigiliusz — papież, stawiał opór, później ustąpił",
-      "Eutychiusz — patriarcha, który przewodniczył",
-      "Teodor z Mopsuestii — nauczyciel potępiony po śmierci"
+      "Justynian I - cesarz, który przeforsował potępienie",
+      "Wigiliusz - papież, stawiał opór, później ustąpił",
+      "Eutychiusz - patriarcha, który przewodniczył",
+      "Teodor z Mopsuestii - nauczyciel potępiony po śmierci"
     ],
     "term": {
       "word": "formuła teopaschicka",
@@ -154,10 +154,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Chrystus ma tylko jedną wolę, boską, a nie także ludzką."
     },
     "figures": [
-      "Konstantyn IV — cesarz, zwołał sobór i mu przewodniczył",
-      "Agaton — papież, którego list wyznaczył naukę",
-      "Makary z Antiochii — patriarcha monotelecki, złożony z urzędu",
-      "Honoriusz I — wcześniejszy papież, potępiony pośmiertnie"
+      "Konstantyn IV - cesarz, zwołał sobór i mu przewodniczył",
+      "Agaton - papież, którego list wyznaczył naukę",
+      "Makary z Antiochii - patriarcha monotelecki, złożony z urzędu",
+      "Honoriusz I - wcześniejszy papież, potępiony pośmiertnie"
     ],
     "term": {
       "word": "diteletyzm",
@@ -181,10 +181,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Wizerunki Chrystusa i świętych są bożkami; oddawanie im czci łamie przykazanie."
     },
     "figures": [
-      "Irena — cesarzowa-regentka, która zwołała sobór",
-      "Tarazjusz — patriarcha, który przewodniczył",
-      "Hadrian I — papież, wysłał legatów",
-      "Jan Damasceński — wcześniejszy obrońca ikon, uczczony przez sobór"
+      "Irena - cesarzowa-regentka, która zwołała sobór",
+      "Tarazjusz - patriarcha, który przewodniczył",
+      "Hadrian I - papież, wysłał legatów",
+      "Jan Damasceński - wcześniejszy obrońca ikon, uczczony przez sobór"
     ],
     "term": {
       "word": "proskynesis a latreia",
@@ -198,7 +198,7 @@ const data: CouncilDetailsOverlay = {
       },
       {
         "who": "Kościoły orientalne i Kościół Wschodu",
-        "why": "Nie brały w nim udziału, choć oba używają wizerunków."
+        "why": "Nie brały w nim udziału; Kościoły orientalne używają ikon, a Kościół Wschodu tradycyjnie zamiast ikon eksponuje krzyż."
       }
     ]
   },
@@ -212,10 +212,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Focjusz był prawowitym patriarchą; Rzym nie miał prawa tego osądzać."
     },
     "figures": [
-      "Focjusz — uczony patriarcha, złożony z urzędu i potępiony",
-      "Ignacy — patriarcha przywrócony na stolicę",
-      "Bazyli I — cesarz, który poparł sobór",
-      "Hadrian II — papież, którego legaci przewodniczyli"
+      "Focjusz - uczony patriarcha, złożony z urzędu i potępiony",
+      "Ignacy - patriarcha przywrócony na stolicę",
+      "Bazyli I - cesarz, który poparł sobór",
+      "Hadrian II - papież, którego legaci przewodniczyli"
     ],
     "outcome": "Większy sobór z lat 879–880, z udziałem legatów papieża Jana VIII, przywrócił Focjusza i unieważnił sobór z lat 869–870. Zachód uznał go za powszechny dopiero w XI–XII w., po części ze względu na kanon przeciw świeckiej kontroli nad biskupami.",
     "dissent": [
@@ -235,9 +235,9 @@ const data: CouncilDetailsOverlay = {
       "view": "Świeccy władcy mogą inwestować biskupów pierścieniem i pastorałem, symbolami urzędu duchowego."
     },
     "figures": [
-      "Kalikst II — papież, zwołał sobór i mu przewodniczył",
-      "Henryk V — cesarz, strona konkordatu wormackiego",
-      "Grzegorz VII — wcześniejszy papież reformator, który rozpoczął spór"
+      "Kalikst II - papież, zwołał sobór i mu przewodniczył",
+      "Henryk V - cesarz, strona konkordatu wormackiego",
+      "Grzegorz VII - wcześniejszy papież reformator, który rozpoczął spór"
     ],
     "term": {
       "word": "inwestytura",
@@ -256,10 +256,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Prawowitym papieżem był Anaklet II, a nie Innocenty II."
     },
     "figures": [
-      "Innocenty II — papież, zwołał sobór i mu przewodniczył",
-      "Anaklet II — konkurencyjny papież, zm. 1138",
-      "Bernard z Clairvaux — opat, który zjednał poparcie dla Innocentego",
-      "Roger II Sycylijski — sojusznik Anakleta, ekskomunikowany"
+      "Innocenty II - papież, zwołał sobór i mu przewodniczył",
+      "Anaklet II - konkurencyjny papież, zm. 1138",
+      "Bernard z Clairvaux - opat, który zjednał poparcie dla Innocentego",
+      "Roger II Sycylijski - sojusznik Anakleta, ekskomunikowany"
     ],
     "outcome": "Unieważnił święcenia udzielone przez Anakleta i orzekł, że małżeństwa kapłanów są nieważne, a nie tylko niegodziwe. Mniej więcej w tym czasie potępiono Arnolda z Brescii.",
     "dissent": []
@@ -274,9 +274,9 @@ const data: CouncilDetailsOverlay = {
       "view": "Prawdziwymi papieżami byli antypapieże cesarza (Wiktor IV i jego następcy)."
     },
     "figures": [
-      "Aleksander III — papież, zwołał sobór i mu przewodniczył",
-      "Fryderyk I Barbarossa — cesarz, pojednany w 1177 r.",
-      "Rufin z Asyżu — kanonista, wygłosił kazanie na otwarcie"
+      "Aleksander III - papież, zwołał sobór i mu przewodniczył",
+      "Fryderyk I Barbarossa - cesarz, pojednany w 1177 r.",
+      "Rufin z Asyżu - kanonista, wygłosił kazanie na otwarcie"
     ],
     "term": {
       "word": "zasada dwóch trzecich",
@@ -291,14 +291,14 @@ const data: CouncilDetailsOverlay = {
     "attendance": "ok. 404–412 biskupów oraz ponad 800 opatów i przeorów",
     "context": "Innocenty III chciał zreformować Kościół, zwalczyć herezje i rozpocząć nową krucjatę. Był to największy i najważniejszy sobór średniowiecza.",
     "issue": {
-      "name": "Herezja katarów (albigensów)",
+      "name": "Kataryzm (albigensi)",
       "view": "Materia jest zła, stworzona przez złą zasadę; sakramenty i Kościół nie mają wartości."
     },
     "figures": [
-      "Innocenty III — papież, sam zredagował dekrety",
-      "Joachim z Fiore — opat, którego teorię Trójcy potępiono",
-      "Fryderyk II — potwierdzony jako cesarz zamiast Ottona IV",
-      "Piotr Lombard — teolog, którego nauczanie obroniono przed Joachimem"
+      "Innocenty III - papież, sam zredagował dekrety",
+      "Joachim z Fiore - opat, którego teorię Trójcy potępiono",
+      "Fryderyk II - potwierdzony jako cesarz zamiast Ottona IV",
+      "Piotr Lombard - teolog, którego nauczanie obroniono przed Joachimem"
     ],
     "term": {
       "word": "transsubstancjacja",
@@ -322,10 +322,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Cesarz sprawuje władzę nad Italią i nie podlega sądowi papieża."
     },
     "figures": [
-      "Innocenty IV — papież, zwołał sobór i mu przewodniczył",
-      "Fryderyk II — cesarz, złożony z tronu przez sobór",
-      "Tadeusz z Sessy — prawnik i obrońca Fryderyka",
-      "Baldwin II — łaciński cesarz Konstantynopola, uczestnik soboru"
+      "Innocenty IV - papież, zwołał sobór i mu przewodniczył",
+      "Fryderyk II - cesarz, złożony z tronu przez sobór",
+      "Tadeusz z Sessy - prawnik i obrońca Fryderyka",
+      "Baldwin II - łaciński cesarz Konstantynopola, uczestnik soboru"
     ],
     "outcome": "Ogłosił detronizację Fryderyka, który jednak walczył dalej aż do śmierci w 1250 r. Sobór wydał też dekrety o lichwie, Mongołach i pomocy dla łacińskiego Wschodu.",
     "dissent": []
@@ -340,10 +340,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Grecy: Duch pochodzi od samego Ojca, a nie „i od Syna”."
     },
     "figures": [
-      "Grzegorz X — papież, zwołał sobór i mu przewodniczył",
-      "Michał VIII Paleolog — cesarz bizantyjski zabiegający o unię",
-      "Bonawentura — teolog franciszkański, zmarł w trakcie soboru",
-      "Tomasz z Akwinu — wezwany na sobór, zmarł w drodze"
+      "Grzegorz X - papież, zwołał sobór i mu przewodniczył",
+      "Michał VIII Paleolog - cesarz bizantyjski zabiegający o unię",
+      "Bonawentura - teolog franciszkański, zmarł w trakcie soboru",
+      "Tomasz z Akwinu - wezwany na sobór, zmarł w drodze"
     ],
     "term": {
       "word": "Filioque",
@@ -367,10 +367,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Templariusze: niewinni; ich zeznania wymuszono torturami."
     },
     "figures": [
-      "Klemens V — papież, zwołał sobór i mu przewodniczył",
-      "Filip IV Piękny — król Francji forsujący kasatę zakonu",
-      "Jacques de Molay — wielki mistrz templariuszy, spalony w 1314 r.",
-      "Piotr Jan Olivi — franciszkanin, którego poglądy badano"
+      "Klemens V - papież, zwołał sobór i mu przewodniczył",
+      "Filip IV Piękny - król Francji forsujący kasatę zakonu",
+      "Jacques de Molay - wielki mistrz templariuszy, spalony w 1314 r.",
+      "Piotr Jan Olivi - franciszkanin, którego poglądy badano"
     ],
     "outcome": "Templariuszy zniesiono dekretem papieskim (bez potępienia), a ich majątek przekazano joannitom. Potępiono beginki, a uniwersytetom polecono nauczać języków wschodnich.",
     "dissent": []
@@ -385,10 +385,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Trzy rywalizujące linie (Rzym, Awinion, Piza) uważały się za prawowitych papieży."
     },
     "figures": [
-      "Zygmunt Luksemburski — król, później cesarz, wymusił zwołanie soboru",
-      "Jan Hus — czeski reformator, spalony w 1415 r.",
-      "Grzegorz XII — papież rzymski, który abdykował",
-      "Marcin V — papież wybrany w 1417 r., co zakończyło schizmę"
+      "Zygmunt Luksemburski - król, później cesarz, wymusił zwołanie soboru",
+      "Jan Hus - czeski reformator, spalony w 1415 r.",
+      "Grzegorz XII - papież rzymski, który abdykował",
+      "Marcin V - papież wybrany w 1417 r., co zakończyło schizmę"
     ],
     "term": {
       "word": "Haec sancta",
@@ -412,10 +412,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Grecy: Duch pochodzi od samego Ojca; papież nie ma powszechnej jurysdykcji."
     },
     "figures": [
-      "Eugeniusz IV — papież, przeniósł sobór i mu przewodniczył",
-      "Jan VIII Paleolog — cesarz bizantyjski zabiegający o unię",
-      "Marek z Efezu — biskup grecki, który odmówił podpisu",
-      "Bessarion — biskup grecki, zwolennik unii"
+      "Eugeniusz IV - papież, przeniósł sobór i mu przewodniczył",
+      "Jan VIII Paleolog - cesarz bizantyjski zabiegający o unię",
+      "Marek z Efezu - biskup grecki, który odmówił podpisu",
+      "Bessarion - biskup grecki, zwolennik unii"
     ],
     "term": {
       "word": "Laetentur caeli",
@@ -439,10 +439,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Sobór może sądzić papieża i złożyć go z urzędu."
     },
     "figures": [
-      "Juliusz II — papież, który zwołał sobór",
-      "Leon X — papież, który go zakończył",
-      "Ludwik XII — król Francji popierający Pizę",
-      "Franciszek I — król Francji, konkordat boloński"
+      "Juliusz II - papież, który zwołał sobór",
+      "Leon X - papież, który go zakończył",
+      "Ludwik XII - król Francji popierający Pizę",
+      "Franciszek I - król Francji, konkordat boloński"
     ],
     "outcome": "Zakończył schizmę pizańską, orzekł, że dusza jest nieśmiertelna i indywidualna, oraz zatwierdził konkordat boloński (1516). Reformy przyniosły niewiele, a sobór zamknięto siedem miesięcy przed 95 tezami Lutra.",
     "dissent": []
@@ -457,10 +457,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Usprawiedliwienie z samej wiary; jedynym autorytetem jest samo Pismo; tylko dwa sakramenty."
     },
     "figures": [
-      "Paweł III — papież, który zwołał sobór",
-      "Karol V — cesarz, który naciskał na zwołanie soboru",
-      "Giovanni Morone — legat, który pokierował ostatnim okresem obrad",
-      "Pius IV — papież, który zatwierdził dekrety"
+      "Paweł III - papież, który zwołał sobór",
+      "Karol V - cesarz, który naciskał na zwołanie soboru",
+      "Giovanni Morone - legat, który pokierował ostatnim okresem obrad",
+      "Pius IV - papież, który zatwierdził dekrety"
     ],
     "term": {
       "word": "ex opere operato",
@@ -484,10 +484,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Uroczyste orzeczenia papieża wymagają zgody Kościoła; sobory ograniczają władzę papieża."
     },
     "figures": [
-      "Pius IX — papież, zwołał sobór i mu przewodniczył",
-      "Henry Edward Manning — arcybiskup, czołowy zwolennik nieomylności",
-      "Félix Dupanloup — przywódca mniejszości opozycyjnej",
-      "Ignaz von Döllinger — historyk, ekskomunikowany w 1871 r."
+      "Pius IX - papież, zwołał sobór i mu przewodniczył",
+      "Henry Edward Manning - arcybiskup, czołowy zwolennik nieomylności",
+      "Félix Dupanloup - przywódca mniejszości opozycyjnej",
+      "Ignaz von Döllinger - historyk, ekskomunikowany w 1871 r."
     ],
     "term": {
       "word": "ex cathedra",
@@ -515,10 +515,10 @@ const data: CouncilDetailsOverlay = {
       "view": "Tradycjonaliści: zmiany w liturgii, wolność religijna i ekumenizm zrywają z Tradycją."
     },
     "figures": [
-      "Jan XXIII — papież, który zwołał sobór",
-      "Paweł VI — papież, który go dokończył",
-      "Augustin Bea — kardynał, inicjator dekretu o ekumenizmie",
-      "Marcel Lefebvre — arcybiskup, przywódca opozycji tradycjonalistycznej"
+      "Jan XXIII - papież, który zwołał sobór",
+      "Paweł VI - papież, który go dokończył",
+      "Augustin Bea - kardynał, inicjator dekretu o ekumenizmie",
+      "Marcel Lefebvre - arcybiskup, przywódca opozycji tradycjonalistycznej"
     ],
     "term": {
       "word": "aggiornamento",

@@ -1,0 +1,10 @@
+---
+import LegalPage from '../../components/LegalPage.astro';
+import { terms } from '../../data/legal';
+import { langPaths, useT, type Lang } from '../../i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const t = useT(lang);
+---
+<LegalPage doc={terms[lang]} {lang} other={{ path: '/privacy', label: t('Privacy policy') }} />

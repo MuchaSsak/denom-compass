@@ -41,7 +41,7 @@ export interface Denomination {
   id: string;
   name: string;
   short: string;
-  family: 'Catholic' | 'Orthodox' | 'Church of the East' | 'Protestant' | 'Restorationist' | 'Nontrinitarian';
+  family: 'Catholic' | 'Orthodox' | 'Church of the East' | 'Anglican' | 'Protestant' | 'Historic peace churches' | 'Restorationist' | 'Nontrinitarian';
   color: string;
   accent: string;
   tagline: string;

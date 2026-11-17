@@ -31,7 +31,7 @@ function write(key: string, value: unknown) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
   } catch {
-    /* storage unavailable — app still works for this session */
+    /* storage unavailable - app still works for this session */
   }
 }
 

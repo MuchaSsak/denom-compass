@@ -7,7 +7,9 @@ export function familyName(t: T, f: Denomination['family']) {
     Catholic: t('Catholic'),
     Orthodox: t('Orthodox'),
     'Church of the East': t('Church of the East'),
+    Anglican: t('Anglican'),
     Protestant: t('Protestant'),
+    'Historic peace churches': t('Historic peace churches'),
     Restorationist: t('Restorationist'),
     Nontrinitarian: t('Nontrinitarian'),
   };

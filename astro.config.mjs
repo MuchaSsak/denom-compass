@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config';
 import svelte from '@astrojs/svelte';
+import sitemap from '@astrojs/sitemap';
 import node from '@astrojs/node';
 import vercel from '@astrojs/vercel';
 import tailwindcss from '@tailwindcss/vite';
@@ -10,9 +11,8 @@ import { lingui } from '@lingui/vite-plugin';
 // Everywhere else (npm run preview / dev) → standalone Node server.
 const onVercel = !!process.env.VERCEL;
 
-// Absolute URLs for canonical / Open Graph tags. Vercel provides the production domain.
-const site = process.env.SITE_URL
-  || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'https://denomination-compass.vercel.app');
+// Absolute URLs for canonical, hreflang, sitemap and Open Graph tags.
+const site = process.env.SITE_URL || 'https://denoms.muszarski.com';
 
 export default defineConfig({
   site,
@@ -20,7 +20,14 @@ export default defineConfig({
   adapter: onVercel
     ? vercel({ maxDuration: 120 }) // free models can take ~20–90 s
     : node({ mode: 'standalone' }),
-  integrations: [svelte()],
+  integrations: [
+    svelte(),
+    // One sitemap with xhtml:link hreflang alternates for /en and /pl; the "/" redirect and 404 are excluded.
+    sitemap({
+      i18n: { defaultLocale: 'en', locales: { en: 'en', pl: 'pl' } },
+      filter: (page) => /\/(en|pl)(\/|$)/.test(new URL(page).pathname),
+    }),
+  ],
   vite: { plugins: [tailwindcss(), lingui()] },
   env: {
     schema: {

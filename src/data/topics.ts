@@ -40,7 +40,7 @@ export const topics: Topic[] = [
     summary:
       'Councils of bishops settled the great disputes about Christ and the Trinity. The number a church accepts is one of the clearest dividing lines: 2 (Church of the East), 3 (Oriental Orthodox), 7 (Eastern Orthodox), 21 (Catholic). Classical Protestants accept the early councils insofar as they agree with Scripture.',
     scripture: ['Acts 15:1–29'],
-    milestone: 'Chalcedon (451) defined Christ as one Person “in two natures” — the definition that divided Chalcedonian and Oriental churches.',
+    milestone: 'Chalcedon (451) defined Christ as one Person “in two natures” - the definition that divided Chalcedonian and Oriental churches.',
   },
   {
     id: 'eucharist',
@@ -48,7 +48,7 @@ export const topics: Topic[] = [
     summary:
       'Catholics teach transubstantiation: the substance of bread and wine becomes Christ’s body and blood. Orthodox affirm a real change but decline to define how. Lutherans confess Christ’s body “in, with and under” the elements. Calvin taught a real but spiritual presence; Zwingli and most Baptists see a memorial. Quakers practise no outward rite.',
     scripture: ['John 6:51–58', 'Matthew 26:26–28', '1 Corinthians 10:16; 11:23–29'],
-    milestone: 'The Marburg Colloquy (1529) — Luther and Zwingli agreed on 14 of 15 articles, but not on the Supper.',
+    milestone: 'The Marburg Colloquy (1529) - Luther and Zwingli agreed on 14 of 15 articles, but not on the Supper.',
   },
   {
     id: 'baptism',
@@ -56,13 +56,13 @@ export const topics: Topic[] = [
     summary:
       'Most historic churches baptise infants and teach that baptism brings new birth (baptismal regeneration). Reformed churches baptise infants as a covenant sign. Baptists, Pentecostals and Anabaptists baptise believers only, usually by immersion; Churches of Christ baptise believers “for the forgiveness of sins”.',
     scripture: ['Acts 2:38–39', 'Romans 6:3–4', 'Titus 3:5', '1 Peter 3:21'],
-    milestone: 'In Zürich, 1525, Conrad Grebel re-baptised George Blaurock — the birth of the Anabaptist movement.',
+    milestone: 'In Zürich, 1525, Conrad Grebel baptised George Blaurock on confession of faith - the birth of the Anabaptist movement.',
   },
   {
     id: 'justification',
     title: 'Justification',
     summary:
-      'How is a sinner made right with God? Protestants teach justification by grace through faith alone, with Christ’s righteousness imputed. Catholics teach justification by grace through faith working in love, with righteousness infused and growing. Orthodox frame salvation as theosis — union with God — rather than in legal terms.',
+      'How is a sinner made right with God? Protestants teach justification by grace through faith alone, with Christ’s righteousness imputed. Catholics teach justification by grace through faith working in love, with righteousness infused and growing. Orthodox frame salvation as theosis - union with God - rather than in legal terms.',
     scripture: ['Romans 3:28', 'Ephesians 2:8–10', 'James 2:24', 'Galatians 5:6'],
     milestone: 'Trent’s Decree on Justification (1547) answered the Reformers; the 1999 Joint Declaration found substantial Lutheran–Catholic agreement.',
   },
@@ -86,7 +86,7 @@ export const topics: Topic[] = [
     id: 'sanctification',
     title: 'Holiness & Perfection',
     summary:
-      'John Wesley taught “Christian perfection” or entire sanctification — a work of grace in which love so fills the heart that it no longer wilfully sins. The Holiness movement and early Pentecostals built on this. Most other traditions see sanctification as lifelong growth never complete before death.',
+      'John Wesley taught “Christian perfection” or entire sanctification - a work of grace in which love so fills the heart that it no longer wilfully sins. The Holiness movement and early Pentecostals built on this. Most other traditions see sanctification as lifelong growth never complete before death.',
     scripture: ['Matthew 5:48', '1 Thessalonians 5:23', '1 John 3:6–9'],
     milestone: 'Wesley’s “A Plain Account of Christian Perfection” (1766).',
   },
@@ -102,7 +102,7 @@ export const topics: Topic[] = [
     id: 'mary',
     title: 'Mary',
     summary:
-      'Ephesus (431) called Mary “Theotokos” — God-bearer — to protect the unity of Christ’s person. Catholics and Orthodox also hold her perpetual virginity; Catholics dogmatically define the Immaculate Conception (1854) and Assumption (1950). Most Protestants honour Mary as mother of Jesus but reject later Marian doctrines.',
+      'Ephesus (431) called Mary “Theotokos” - God-bearer - to protect the unity of Christ’s person. Catholics and Orthodox also hold her perpetual virginity; Catholics dogmatically define the Immaculate Conception (1854) and Assumption (1950). Most Protestants honour Mary as mother of Jesus but reject later Marian doctrines.',
     scripture: ['Luke 1:28–48', 'Mark 6:3', 'John 19:26–27'],
     milestone: 'The Church of the East preferred “Christotokos” (Christ-bearer) and parted from the imperial church after 431.',
   },
@@ -110,7 +110,7 @@ export const topics: Topic[] = [
     id: 'saints',
     title: 'Saints & Icons',
     summary:
-      'Catholic, Orthodox and Oriental churches ask the saints to intercede and venerate icons — honour passing to the person depicted, worship reserved to God alone. Lutherans keep images but do not invoke saints; Reformed and Anabaptist traditions removed images from worship.',
+      'Catholic, Orthodox and Oriental churches ask the saints to intercede and venerate icons - honour passing to the person depicted, worship reserved to God alone. Lutherans keep images but do not invoke saints; Reformed and Anabaptist traditions removed images from worship.',
     scripture: ['Hebrews 12:1', 'Revelation 5:8', 'Exodus 20:4–5'],
     milestone: 'Nicaea II (787) ended the first wave of Iconoclasm; the “Triumph of Orthodoxy” (843) is still celebrated each Lent.',
   },
@@ -126,7 +126,7 @@ export const topics: Topic[] = [
     id: 'spirit',
     title: 'Gifts of the Spirit',
     summary:
-      'Pentecostals and charismatics hold that every spiritual gift — tongues, prophecy, healing — continues today, and many teach a distinct baptism in the Spirit. Cessationists (many Reformed, Baptists and Churches of Christ) believe the sign-gifts ended with the apostles. Many traditions take a middle position.',
+      'Pentecostals and charismatics hold that every spiritual gift - tongues, prophecy, healing - continues today, and many teach a distinct baptism in the Spirit. Cessationists (many Reformed, Baptists and Churches of Christ) believe the sign-gifts ended with the apostles. Many traditions take a middle position.',
     scripture: ['Acts 2:1–4', '1 Corinthians 12–14', 'Joel 2:28'],
     milestone: 'The Azusa Street Revival in Los Angeles (1906) launched global Pentecostalism.',
   },
@@ -134,7 +134,7 @@ export const topics: Topic[] = [
     id: 'practice',
     title: 'Worship & Practice',
     summary:
-      'Some distinctives are about how Christians live and worship: Seventh-day Adventists keep the Saturday Sabbath; Anabaptists and Quakers refuse military service; Churches of Christ sing a cappella, as do Orthodox (by tradition rather than rule). These questions often pinpoint a tradition quickly.',
+      'Some distinctives are about how Christians live and worship: Seventh-day Adventists keep the Saturday Sabbath; Anabaptists and Quakers keep a historic peace witness and traditionally refuse military service; Churches of Christ sing a cappella, as do Orthodox (by tradition rather than rule). These questions often pinpoint a tradition quickly.',
     scripture: ['Exodus 20:8–11', 'Matthew 5:38–44', 'Ephesians 5:19', 'Psalm 150'],
     milestone: 'The Schleitheim Confession (1527) set out Anabaptist nonresistance; Adventists formally organised in 1863.',
   },

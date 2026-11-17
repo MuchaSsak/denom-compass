@@ -67,7 +67,7 @@ const data: CreedsOverlay = {
       "name": "Symbol nicejsko-konstantynopolitański",
       "date": "325 · rozszerzony 381",
       "tagline": "Jedyne wyznanie wiary wspólne Wschodowi i Zachodowi.",
-      "origin": "Sformułowany w Nicei (325) przeciw Ariuszowi, który nauczał, że Syn został stworzony. W Konstantynopolu (381) rozbudowano artykuł o Duchu Świętym. To najszerzej używane wyznanie wiary na świecie – odmawiane w każdej katolickiej, prawosławnej, anglikańskiej i luterańskiej liturgii eucharystycznej.",
+      "origin": "Sformułowany w Nicei (325) przeciw Ariuszowi, który nauczał, że Syn został stworzony. W Konstantynopolu (381) rozbudowano artykuł o Duchu Świętym. To najszerzej używane wyznanie wiary na świecie – odmawiane w niedzielnych liturgiach eucharystycznych katolików, prawosławnych, anglikanów i wielu luteranów.",
       "text": [
         [
           "Wierzę w jednego Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, wszystkich rzeczy widzialnych i niewidzialnych."
@@ -134,7 +134,7 @@ const data: CreedsOverlay = {
           "Ktokolwiek chce być zbawiony, przede wszystkim musi trzymać się wiary powszechnej. … A wiara powszechna jest ta: abyśmy czcili jednego Boga w Trójcy i Trójcę w jedności, ",
           {
             "t": "nie mieszając Osób ani nie rozdzielając istoty",
-            "note": "Wyklucza naraz dwa błędy: modalizm (jedna Osoba w trzech sposobach przejawiania się) i tryteizm (trzech bogów)."
+            "note": "W ujęciu tego wyznania wyklucza to zarówno modalizm (jedna Osoba w trzech sposobach przejawiania się), jak i tryteizm (trzech bogów)."
           },
           "."
         ],

@@ -10,816 +10,899 @@ msgstr ""
 #. js-lingui-explicit-id
 #: src/i18n/extractor.ts
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #. js-lingui-explicit-id
 #: src/i18n/extractor.ts
 msgid "{n} of {total}"
-msgstr ""
+msgstr "{n} z {total}"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "{n} of 21"
-msgstr ""
+msgstr "{n} z 21"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "A near-perfect match"
-msgstr ""
+msgstr "Niemal idealne dopasowanie"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "A perfect match"
-msgstr ""
+msgstr "Idealne dopasowanie"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "A short theology quiz that maps your beliefs onto the major Christian traditions."
-msgstr ""
+msgstr "Krótki quiz teologiczny, który zestawia twoje przekonania z głównymi tradycjami chrześcijańskimi."
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "accepted"
-msgstr ""
+msgstr "przyjęty"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "Accepted by"
-msgstr ""
+msgstr "Przyjmują"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Accepted:"
-msgstr ""
+msgstr "Przyjęte:"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "Add a note"
-msgstr ""
+msgstr "Dodaj notatkę"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Adherents"
-msgstr ""
+msgstr "Wyznawcy"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Afterwards"
-msgstr ""
+msgstr "Następstwa"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "AI can be wrong."
-msgstr ""
+msgstr "AI może się mylić."
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "AI consent withdrawn."
+msgstr "Zgoda na interpretację AI została wycofana."
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "AI is not set up on this server yet."
-msgstr ""
+msgstr "AI nie jest jeszcze skonfigurowane na tym serwerze."
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "AI reading"
-msgstr ""
+msgstr "Interpretacja AI"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "All councils"
-msgstr ""
+msgstr "Wszystkie sobory"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/[id].astro
 msgid "All creeds"
-msgstr ""
+msgstr "Wszystkie wyznania wiary"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "All data from this site was deleted from this device."
+msgstr "Wszystkie dane tej strony zostały usunięte z tego urządzenia."
+
+#. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Anglican"
+msgstr "Anglikanizm"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Answer some questions or write a few words first."
-msgstr ""
+msgstr "Najpierw odpowiedz na kilka pytań albo napisz parę słów."
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Applied ✓"
-msgstr ""
+msgstr "Zastosowano ✓"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Are sacraments signs or channels of grace? Does salvation rest on God’s choice or your free response?"
-msgstr ""
+msgstr "Czy sakramenty są znakami, czy kanałami łaski? Czy zbawienie zależy od wyboru Boga, czy od twojej wolnej odpowiedzi?"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Began"
-msgstr ""
+msgstr "Początek"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Best fits"
-msgstr ""
+msgstr "Najlepiej pasują"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Called by"
-msgstr ""
+msgstr "Zwołał"
 
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
 msgid "Catholic"
-msgstr ""
+msgstr "Katolicyzm"
 
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
 msgid "Church of the East"
-msgstr ""
+msgstr "Kościół Wschodu"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "Click again to delete everything"
+msgstr "Kliknij ponownie, aby usunąć wszystko"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Closest relatives"
-msgstr ""
+msgstr "Najbliższe tradycje"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Compare all"
-msgstr ""
+msgstr "Porównaj wszystkie"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "Comparing with {n} traditions"
-msgstr ""
+msgstr "Porównuję z {n} tradycjami"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/[id].astro
 msgid "Confessed by"
-msgstr ""
+msgstr "Wyznają"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Council #{n}"
-msgstr ""
+msgstr "Sobór nr {n}"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Council of"
-msgstr ""
+msgstr "Sobór"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 #: src/pages/[lang]/councils/index.astro
 msgid "Councils"
-msgstr ""
+msgstr "Sobory"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Councils accepted"
-msgstr ""
+msgstr "Przyjmowane sobory"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 #: src/pages/[lang]/creeds/index.astro
 msgid "Creeds"
-msgstr ""
+msgstr "Wyznania wiary"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/index.astro
 msgid "Creeds & confessions"
-msgstr ""
+msgstr "Symbole i wyznania wiary"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Decided"
-msgstr ""
+msgstr "Co postanowiono"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "Delete all my data on this device"
+msgstr "Usuń wszystkie moje dane z tego urządzenia"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Denomination Compass"
-msgstr ""
+msgstr "Kompas wyznań"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Denomination Compass: which Christian tradition shares your beliefs?"
-msgstr ""
+msgstr "Kompas wyznań: która tradycja chrześcijańska podziela twoje przekonania?"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Describe your faith in your own words…"
-msgstr ""
+msgstr "Opisz swoją wiarę własnymi słowami…"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "Details"
-msgstr ""
+msgstr "Szczegóły"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/doctrines.astro
 msgid "divided"
-msgstr ""
+msgstr "podzielone"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Divided"
-msgstr ""
+msgstr "Podzielone"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 #: src/pages/[lang]/doctrines.astro
 msgid "Doctrines"
-msgstr ""
+msgstr "Doktryny"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/doctrines.astro
 msgid "Doctrines compared"
-msgstr ""
+msgstr "Porównanie doktryn"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "Ecumenical councils"
-msgstr ""
+msgstr "Sobory powszechne"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Every tradition"
-msgstr ""
+msgstr "Wszystkie tradycje"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Explore"
-msgstr ""
+msgstr "Poznaj"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/doctrines.astro
 msgid "Faded = divided."
-msgstr ""
+msgstr "Wyblakłe = podzielone."
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Firm"
-msgstr ""
+msgstr "Stanowczo"
 
 #. js-lingui-explicit-id
 #: src/components/CompassChart.svelte
 msgid "Free will"
-msgstr ""
+msgstr "Wolna wola"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Get my AI reading"
-msgstr ""
+msgstr "Poproś o interpretację AI"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Governance"
-msgstr ""
+msgstr "Ustrój"
+
+#. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Historic peace churches"
+msgstr "Historyczne Kościoły pokoju"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "How the branches formed"
-msgstr ""
+msgstr "Jak powstały odłamy"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "How you compare"
-msgstr ""
+msgstr "Jak wypadasz w porównaniu"
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "I agree that my answers and notes, which may reveal my religious beliefs, are sent to OpenRouter (USA) and an AI model provider, possibly outside the EEA, to generate this reading. Free models may store prompts. I am 16 or older."
+msgstr "Wyrażam zgodę na przesłanie moich odpowiedzi i notatek, które mogą ujawniać moje przekonania religijne, do OpenRouter (USA) i dostawcy modelu AI, także poza EOG, w celu przygotowania tej interpretacji. Darmowe modele mogą przechowywać zapytania. Mam ukończone 16 lat."
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "I matched {percent}% with {name}"
-msgstr ""
+msgstr "Pasuję w {percent}% do: {name}"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/[id].astro
 msgid "In short"
-msgstr ""
+msgstr "W skrócie"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "In your own words"
-msgstr ""
+msgstr "Własnymi słowami"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "In your own words…"
-msgstr ""
+msgstr "Własnymi słowami…"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Is this your tradition?"
-msgstr ""
+msgstr "Czy to twoja tradycja?"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Key doctrines"
-msgstr ""
+msgstr "Kluczowe doktryny"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Key figures"
-msgstr ""
+msgstr "Kluczowe postacie"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Key texts"
-msgstr ""
+msgstr "Kluczowe teksty"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Language"
-msgstr ""
+msgstr "Język"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/index.astro
 msgid "Later confessions"
-msgstr ""
+msgstr "Późniejsze wyznania wiary"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/doctrines.astro
 msgid "Legend"
-msgstr ""
+msgstr "Legenda"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Link copied ✓"
-msgstr ""
+msgstr "Skopiowano link ✓"
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Made by"
+msgstr "Stworzone przez"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Main bodies"
-msgstr ""
+msgstr "Główne Kościoły"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Match #{n}"
-msgstr ""
+msgstr "Dopasowanie nr {n}"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Minority"
-msgstr ""
+msgstr "Mniejszość"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "More info"
-msgstr ""
+msgstr "Więcej informacji"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Mostly"
-msgstr ""
+msgstr "Przeważnie"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "My Denomination Compass result"
-msgstr ""
+msgstr "Mój wynik w Kompasie wyznań"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Neck and neck with"
-msgstr ""
+msgstr "Łeb w łeb z:"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "Next question"
-msgstr ""
+msgstr "Następne pytanie"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "No AI consent was stored."
+msgstr "Nie zapisano żadnej zgody na interpretację AI."
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "No results yet"
-msgstr ""
+msgstr "Brak wyników"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "None of the traditions here."
-msgstr ""
+msgstr "Żadna z opisanych tu tradycji."
 
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
 msgid "Nontrinitarian"
-msgstr ""
+msgstr "Nietrynitarne"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "not accepted"
-msgstr ""
+msgstr "nieprzyjęty"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Not received"
-msgstr ""
+msgstr "Nie przyjmują"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "Not sure"
-msgstr ""
+msgstr "Nie wiem"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/[id].astro
 msgid "Not used by"
-msgstr ""
+msgstr "Nie używają"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Optional"
-msgstr ""
+msgstr "Opcjonalnie"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/[id].astro
 msgid "Origin"
-msgstr ""
+msgstr "Pochodzenie"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Origins"
-msgstr ""
+msgstr "Początki"
 
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
 msgid "Orthodox"
-msgstr ""
+msgstr "Prawosławie"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Out of date - update to include your latest answers and notes."
-msgstr ""
+msgstr "Nieaktualne - zaktualizuj, by uwzględnić najnowsze odpowiedzi i notatki."
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Please confirm the consent above first."
+msgstr "Najpierw zaznacz zgodę powyżej."
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Positions at a glance"
-msgstr ""
+msgstr "Stanowiska w skrócie"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Present"
-msgstr ""
+msgstr "Obecni"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Presided"
-msgstr ""
+msgstr "Przewodniczył"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "Previous question"
-msgstr ""
+msgstr "Poprzednie pytanie"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Privacy"
-msgstr ""
+msgstr "Prywatność"
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+#: src/layouts/Base.astro
+#: src/pages/[lang]/terms.astro
+msgid "Privacy policy"
+msgstr "Polityka prywatności"
 
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
 msgid "Protestant"
-msgstr ""
+msgstr "Protestantyzm"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Question notes"
-msgstr ""
+msgstr "Notatki do pytań"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 #: src/pages/[lang]/quiz.astro
 msgid "Quiz"
-msgstr ""
+msgstr "Quiz"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/index.astro
 msgid "Read"
-msgstr ""
+msgstr "Czytaj"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Read more"
-msgstr ""
+msgstr "Czytaj więcej"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Reading…"
-msgstr ""
+msgstr "Analizuję…"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "Received as ecumenical by the Catholic Church only"
-msgstr ""
+msgstr "Uznawane za powszechne tylko przez Kościół katolicki"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Received by"
-msgstr ""
+msgstr "Przyjmują"
 
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
 msgid "Restorationist"
-msgstr ""
+msgstr "Ruchy restoracjonistyczne"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Results"
-msgstr ""
+msgstr "Wyniki"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Retake"
-msgstr ""
+msgstr "Powtórz quiz"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Run again"
-msgstr ""
+msgstr "Uruchom ponownie"
 
 #. js-lingui-explicit-id
 #: src/components/CompassChart.svelte
 msgid "Sacramental"
-msgstr ""
+msgstr "Sakramentalne"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Sacraments"
-msgstr ""
+msgstr "Sakramenty"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/doctrines.astro
 msgid "Scroll left"
-msgstr ""
+msgstr "Przewiń w lewo"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/doctrines.astro
 msgid "Scroll right"
-msgstr ""
+msgstr "Przewiń w prawo"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Share result"
-msgstr ""
+msgstr "Udostępnij wynik"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Shared result"
-msgstr ""
+msgstr "Udostępniony wynik"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "Shared, in part, by nearly every tradition"
-msgstr ""
+msgstr "Częściowo wspólne niemal wszystkim tradycjom"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Show all {n}"
-msgstr ""
+msgstr "Pokaż wszystkie ({n})"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Show fewer"
-msgstr ""
+msgstr "Pokaż mniej"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Something went wrong."
-msgstr ""
+msgstr "Coś poszło nie tak."
 
 #. js-lingui-explicit-id
 #: src/components/CompassChart.svelte
 msgid "Sovereign grace"
-msgstr ""
+msgstr "Suwerenna łaska"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "Start over"
-msgstr ""
+msgstr "Zacznij od nowa"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Start the quiz"
-msgstr ""
+msgstr "Rozpocznij quiz"
 
 #. js-lingui-explicit-id
 #: src/components/CompassChart.svelte
 msgid "Symbolic"
-msgstr ""
+msgstr "Symboliczne"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Take it yourself"
-msgstr ""
+msgstr "Rozwiąż quiz"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Take the quiz"
-msgstr ""
+msgstr "Rozwiąż quiz"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Take the quiz first"
-msgstr ""
+msgstr "Najpierw rozwiąż quiz"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Tensions"
-msgstr ""
+msgstr "Napięcia"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Terms"
-msgstr ""
+msgstr "Regulamin"
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+#: src/pages/[lang]/privacy.astro
+msgid "Terms of use"
+msgstr "Regulamin"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "The 21 councils"
-msgstr ""
+msgstr "21 soborów"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "The 21 ecumenical councils: what each decided and which traditions accept it."
-msgstr ""
+msgstr "21 soborów powszechnych: co każdy postanowił i które tradycje go przyjmują."
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "The AI service is unavailable right now. Try again later."
-msgstr ""
+msgstr "Usługa AI jest teraz niedostępna. Spróbuj później."
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "The compass"
-msgstr ""
+msgstr "Kompas"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "The free AI quota is used up for now. Try again later."
-msgstr ""
+msgstr "Darmowy limit AI na razie się wyczerpał. Spróbuj później."
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/index.astro
 msgid "The great creeds of Christianity, phrase by phrase, and who confesses them."
-msgstr ""
+msgstr "Wielkie symbole wiary chrześcijaństwa, fraza po frazie, i kto je wyznaje."
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "The great divisions, in order"
-msgstr ""
+msgstr "Wielkie podziały po kolei"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "The issue"
-msgstr ""
+msgstr "O co chodziło"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "The model returned an unreadable answer. Try again."
-msgstr ""
+msgstr "Model zwrócił nieczytelną odpowiedź. Spróbuj ponownie."
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "The model took too long. Try again."
-msgstr ""
+msgstr "Model odpowiadał zbyt długo. Spróbuj ponownie."
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "The Polish version is the original and prevails."
+msgstr "Wersja polska jest wersją oryginalną i ma pierwszeństwo."
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "The undivided Church"
-msgstr ""
+msgstr "Kościół niepodzielony"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "The Western councils"
-msgstr ""
+msgstr "Sobory zachodnie"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "To reflect on"
-msgstr ""
+msgstr "Do przemyślenia"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
 msgid "Toggle dark mode"
-msgstr ""
+msgstr "Przełącz tryb ciemny"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "Tradition"
-msgstr ""
+msgstr "Tradycja"
+
+#. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Traditions"
+msgstr "Tradycje"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Update AI reading"
-msgstr ""
+msgstr "Zaktualizuj interpretację AI"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Use “{label}”"
-msgstr ""
+msgstr "Użyj „{label}”"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "Version {v} · in force from {date}"
+msgstr "Wersja {v} · obowiązuje od {date}"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "Weighing your answers…"
-msgstr ""
+msgstr "Analizuję twoje odpowiedzi…"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/creeds/index.astro
 msgid "What Christians confess together"
-msgstr ""
+msgstr "Co chrześcijanie wyznają wspólnie"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "What do you believe?"
-msgstr ""
+msgstr "W co wierzysz?"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "What does this mean?"
-msgstr ""
+msgstr "Co to znaczy?"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "What sets it apart"
-msgstr ""
+msgstr "Co ją wyróżnia"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "What you believe"
-msgstr ""
+msgstr "W co wierzysz"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "What your words add"
-msgstr ""
+msgstr "Co wnoszą twoje słowa"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "When"
-msgstr ""
+msgstr "Kiedy"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Where"
-msgstr ""
+msgstr "Gdzie"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Where you stand"
-msgstr ""
+msgstr "Gdzie się znajdujesz"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 #: src/pages/[lang]/doctrines.astro
 msgid "Who believes what"
-msgstr ""
+msgstr "Kto w co wierzy"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/doctrines.astro
 msgid "Who believes what: the big doctrinal questions, tradition by tradition."
-msgstr ""
+msgstr "Kto w co wierzy: wielkie pytania doktrynalne, tradycja po tradycji."
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Why it matters today"
-msgstr ""
+msgstr "Dlaczego to ważne dziś"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "Withdraw AI consent"
+msgstr "Wycofaj zgodę na interpretację AI"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Worship"
-msgstr ""
+msgstr "Nabożeństwo"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "You"
-msgstr ""
+msgstr "Ty"
 
 #. js-lingui-explicit-id
 #: src/components/CompassChart.svelte
 msgid "YOU"
-msgstr ""
+msgstr "TY"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
 msgid "Your closest match"
-msgstr ""
+msgstr "Twoje najbliższe dopasowanie"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
-msgid "Your closest match — loosely"
-msgstr ""
+msgid "Your closest match - loosely"
+msgstr "Twoje najbliższe dopasowanie, choć luźne"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
 msgid "Your note"
-msgstr ""
+msgstr "Twoja notatka"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Your notes, answered"
-msgstr ""
+msgstr "Odpowiedzi na twoje notatki"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 #: src/pages/[lang]/results.astro
 msgid "Your results"
-msgstr ""
+msgstr "Twoje wyniki"

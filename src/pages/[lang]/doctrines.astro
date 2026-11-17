@@ -55,7 +55,7 @@ function holders(qid: string, oid: string) {
                         <li class="flex items-center gap-3 rounded-xl bg-surface-2/70 px-3 py-2">
                           <span class="w-36 flex-none text-sm font-medium sm:w-44">{o.short ?? o.label}</span>
                           <span class="flex flex-wrap gap-1">
-                            {hs.length === 0 && <span class="text-xs text-muted">—</span>}
+                            {hs.length === 0 && <span class="text-xs text-muted"> - </span>}
                             {hs.map(({ d, s }) => (
                               <a href={href(lang, `/denominations/${d.id}`)} title={`${d.name}${s < 0.75 ? ` (${t('divided')})` : ''}`} style={s < 0.75 ? 'opacity:.4' : ''} class="transition hover:scale-110 hover:opacity-100">
                                 <Badge id={d.id} color={d.color} size={26} />

@@ -7,9 +7,92 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
+    }
+  ],
+  "regions": [
+    "fra1"
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^\\s*pl(?:[-_;,].*)?$"
+        }
+      ],
+      "destination": "/pl",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "destination": "/en",
+      "permanent": false
+    },
+    {
+      "source": "/quiz",
+      "destination": "/en/quiz",
+      "permanent": true
+    },
+    {
+      "source": "/results",
+      "destination": "/en/results",
+      "permanent": true
+    },
+    {
+      "source": "/doctrines",
+      "destination": "/en/doctrines",
+      "permanent": true
+    },
+    {
+      "source": "/councils",
+      "destination": "/en/councils",
+      "permanent": true
+    },
+    {
+      "source": "/creeds",
+      "destination": "/en/creeds",
+      "permanent": true
+    },
+    {
+      "source": "/denominations",
+      "destination": "/en/denominations",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/en/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/en/terms",
+      "permanent": true
+    },
+    {
+      "source": "/councils/:path*",
+      "destination": "/en/councils/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/creeds/:path*",
+      "destination": "/en/creeds/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/denominations/:path*",
+      "destination": "/en/denominations/:path*",
+      "permanent": true
     }
   ]
 }

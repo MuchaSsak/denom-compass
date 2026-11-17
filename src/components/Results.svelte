@@ -56,14 +56,14 @@
     if (p === 100) return t('A perfect match');
     if (p >= 90) return t('A near-perfect match');
     if (p >= 75) return t('Your closest match');
-    return t('Your closest match — loosely');
+    return t('Your closest match - loosely');
   }
 
   function stanceLabel(d: Denomination, qid: string) {
     const st = d.stances[qid] ?? {};
     const q = qById[qid];
     const max = Math.max(0, ...Object.values(st));
-    if (max === 0) return '—';
+    if (max === 0) return ' - ';
     return q.options.filter((o) => (st[o.id] ?? 0) === max).map((o) => o.short ?? o.label).join(' / ');
   }
 
@@ -135,7 +135,7 @@
         <div class="flex items-center gap-5 sm:flex-1">
           <Badge id={topD.id} color={topD.color} size={84} />
           <div class="min-w-0">
-            <p class="eyebrow" style="color:{topD.color}">{headline(top.percent)}</p>
+            <p class="eyebrow" style="color:color-mix(in oklab, {topD.color} 62%, var(--ink))">{headline(top.percent)}</p>
             <h1 class="mt-1.5 font-display text-[2rem] leading-tight font-semibold text-balance sm:text-5xl">{topD.name}</h1>
             <p class="mt-2 text-muted">{topD.tagline}</p>
           </div>

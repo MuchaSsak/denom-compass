@@ -6,4 +6,4 @@ export const denominations: Denomination[] = profiles.map((p) => ({ ...p, stance
 
 export const denominationById: Record<string, Denomination> = Object.fromEntries(denominations.map((d) => [d.id, d]));
 
-export const families = ['Catholic', 'Orthodox', 'Church of the East', 'Protestant', 'Restorationist', 'Nontrinitarian'] as const;
+export const families = ['Catholic', 'Orthodox', 'Church of the East', 'Anglican', 'Protestant', 'Historic peace churches', 'Restorationist', 'Nontrinitarian'] as const;

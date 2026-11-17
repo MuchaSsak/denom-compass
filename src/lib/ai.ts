@@ -77,7 +77,7 @@ ${user}
 ${general ? `THE PERSON'S OWN DESCRIPTION OF THEIR FAITH:\n"""${general}"""\n` : ''}
 ALGORITHMIC RANKING (weighted agreement on the clicked answers only): ${ranking.slice(0, 6).map((r) => `${r.id} ${r.percent}%`).join(', ')}
 
-${lang === 'pl' ? 'LANGUAGE: Write every string value in Polish (pl-PL), addressing the person informally ("ty"), using standard Polish theological terms (e.g. Trójca Święta, usprawiedliwienie, przeistoczenie, sukcesja apostolska). Keep JSON keys and ids in English.\n\n' : ''}Weigh their own words most heavily where given (their notes may also contain questions or uncertainty — answer those in "replies"); they may reveal nuance a click cannot. You may disagree with the algorithmic ranking if their words justify it. Return the JSON object now.`;
+${lang === 'pl' ? 'LANGUAGE: Write every string value in Polish (pl-PL), addressing the person informally ("ty"), using standard Polish theological terms (e.g. Trójca Święta, usprawiedliwienie, przeistoczenie, sukcesja apostolska). Keep JSON keys and ids in English.\n\n' : ''}Weigh their own words most heavily where given (their notes may also contain questions or uncertainty - answer those in "replies"); they may reveal nuance a click cannot. You may disagree with the algorithmic ranking if their words justify it. Return the JSON object now.`;
 
   return { system, prompt };
 }

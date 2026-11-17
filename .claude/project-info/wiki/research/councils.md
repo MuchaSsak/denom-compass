@@ -1,6 +1,6 @@
 # Councils
 
-Data: `src/data/councils.ts` (descriptions + schism timeline). Acceptance: `profiles.ts › councils` (see [[decisions]] D5). Evidence: [raw/research-matrix.md](../../raw/research-matrix.md) section (d) — New Advent, Britannica, OrthodoxWiki, Papal Encyclicals.
+Data: `src/data/councils.ts` (descriptions + schism timeline). Acceptance: `profiles.ts › councils` (see [[decisions]] D5). Evidence: [raw/research-matrix.md](../../raw/research-matrix.md) section (d) - New Advent, Britannica, OrthodoxWiki, Papal Encyclicals.
 
 ## Acceptance as encoded
 | Tradition | Councils | Note |

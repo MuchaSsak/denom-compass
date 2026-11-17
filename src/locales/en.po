@@ -73,6 +73,11 @@ msgid "AI can be wrong."
 msgstr "AI can be wrong."
 
 #. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "AI consent withdrawn."
+msgstr "AI consent withdrawn."
+
+#. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "AI is not set up on this server yet."
 msgstr "AI is not set up on this server yet."
@@ -91,6 +96,16 @@ msgstr "All councils"
 #: src/pages/[lang]/creeds/[id].astro
 msgid "All creeds"
 msgstr "All creeds"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "All data from this site was deleted from this device."
+msgstr "All data from this site was deleted from this device."
+
+#. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Anglican"
+msgstr "Anglican"
 
 #. js-lingui-explicit-id
 #: src/components/AiReading.svelte
@@ -131,6 +146,11 @@ msgstr "Catholic"
 #: src/i18n/labels.ts
 msgid "Church of the East"
 msgstr "Church of the East"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "Click again to delete everything"
+msgstr "Click again to delete everything"
 
 #. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
@@ -188,6 +208,11 @@ msgstr "Creeds & confessions"
 #: src/pages/[lang]/councils/[slug].astro
 msgid "Decided"
 msgstr "Decided"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "Delete all my data on this device"
+msgstr "Delete all my data on this device"
 
 #. js-lingui-explicit-id
 #: src/layouts/Base.astro
@@ -271,6 +296,11 @@ msgid "Governance"
 msgstr "Governance"
 
 #. js-lingui-explicit-id
+#: src/i18n/labels.ts
+msgid "Historic peace churches"
+msgstr "Historic peace churches"
+
+#. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "How the branches formed"
 msgstr "How the branches formed"
@@ -279,6 +309,11 @@ msgstr "How the branches formed"
 #: src/components/Results.svelte
 msgid "How you compare"
 msgstr "How you compare"
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "I agree that my answers and notes, which may reveal my religious beliefs, are sent to OpenRouter (USA) and an AI model provider, possibly outside the EEA, to generate this reading. Free models may store prompts. I am 16 or older."
+msgstr "I agree that my answers and notes, which may reveal my religious beliefs, are sent to OpenRouter (USA) and an AI model provider, possibly outside the EEA, to generate this reading. Free models may store prompts. I am 16 or older."
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
@@ -342,6 +377,11 @@ msgid "Link copied ✓"
 msgstr "Link copied ✓"
 
 #. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Made by"
+msgstr "Made by"
+
+#. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Main bodies"
 msgstr "Main bodies"
@@ -385,6 +425,11 @@ msgstr "Neck and neck with"
 #: src/components/Quiz.svelte
 msgid "Next question"
 msgstr "Next question"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "No AI consent was stored."
+msgstr "No AI consent was stored."
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
@@ -447,6 +492,11 @@ msgid "Out of date - update to include your latest answers and notes."
 msgstr "Out of date - update to include your latest answers and notes."
 
 #. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+msgid "Please confirm the consent above first."
+msgstr "Please confirm the consent above first."
+
+#. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Positions at a glance"
 msgstr "Positions at a glance"
@@ -470,6 +520,13 @@ msgstr "Previous question"
 #: src/layouts/Base.astro
 msgid "Privacy"
 msgstr "Privacy"
+
+#. js-lingui-explicit-id
+#: src/components/AiReading.svelte
+#: src/layouts/Base.astro
+#: src/pages/[lang]/terms.astro
+msgid "Privacy policy"
+msgstr "Privacy policy"
 
 #. js-lingui-explicit-id
 #: src/i18n/labels.ts
@@ -633,6 +690,12 @@ msgid "Terms"
 msgstr "Terms"
 
 #. js-lingui-explicit-id
+#: src/layouts/Base.astro
+#: src/pages/[lang]/privacy.astro
+msgid "Terms of use"
+msgstr "Terms of use"
+
+#. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "The 21 councils"
 msgstr "The 21 councils"
@@ -683,6 +746,11 @@ msgid "The model took too long. Try again."
 msgstr "The model took too long. Try again."
 
 #. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "The Polish version is the original and prevails."
+msgstr "The Polish version is the original and prevails."
+
+#. js-lingui-explicit-id
 #: src/pages/[lang]/councils/index.astro
 msgid "The undivided Church"
 msgstr "The undivided Church"
@@ -708,6 +776,11 @@ msgid "Tradition"
 msgstr "Tradition"
 
 #. js-lingui-explicit-id
+#: src/layouts/Base.astro
+msgid "Traditions"
+msgstr "Traditions"
+
+#. js-lingui-explicit-id
 #: src/components/AiReading.svelte
 msgid "Update AI reading"
 msgstr "Update AI reading"
@@ -716,6 +789,11 @@ msgstr "Update AI reading"
 #: src/components/AiReading.svelte
 msgid "Use “{label}”"
 msgstr "Use “{label}”"
+
+#. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "Version {v} · in force from {date}"
+msgstr "Version {v} · in force from {date}"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte
@@ -784,6 +862,11 @@ msgid "Why it matters today"
 msgstr "Why it matters today"
 
 #. js-lingui-explicit-id
+#: src/components/LegalPage.astro
+msgid "Withdraw AI consent"
+msgstr "Withdraw AI consent"
+
+#. js-lingui-explicit-id
 #: src/pages/[lang]/denominations/[id].astro
 msgid "Worship"
 msgstr "Worship"
@@ -805,8 +888,8 @@ msgstr "Your closest match"
 
 #. js-lingui-explicit-id
 #: src/components/Results.svelte
-msgid "Your closest match — loosely"
-msgstr "Your closest match — loosely"
+msgid "Your closest match - loosely"
+msgstr "Your closest match - loosely"
 
 #. js-lingui-explicit-id
 #: src/components/Quiz.svelte

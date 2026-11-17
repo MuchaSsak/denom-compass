@@ -2,10 +2,10 @@ import type { ProfilesOverlay } from '../localized';
 
 const data: ProfilesOverlay = {
   "catholic": {
-    "name": "Kościół rzymskokatolicki",
+    "name": "Kościół katolicki",
     "short": "Katolicyzm",
     "tagline": "Jeden, święty, powszechny i apostolski – w jedności z Rzymem.",
-    "summary": "Największa wspólnota chrześcijańska, kierowana przez papieża jako następcę św. Piotra. Pismo Święte i Święta Tradycja stanowią w niej jeden depozyt wiary, interpretowany przez Urząd Nauczycielski Kościoła; centrum jej życia jest siedem sakramentów, przede wszystkim Msza święta.",
+    "summary": "Największa wspólnota chrześcijańska, kierowana przez papieża, którego katolicy uważają za następcę św. Piotra. Pismo Święte i Święta Tradycja stanowią w niej jeden depozyt wiary, interpretowany przez Urząd Nauczycielski Kościoła; centrum jej życia jest siedem sakramentów, przede wszystkim Msza święta.",
     "origin": {
       "year": "33 n.e.",
       "event": "Wywodzi się od Chrystusa i apostołów, a pierwszym biskupem Rzymu był Piotr; od 1054 r. trwa rozłam ze Wschodem.",
@@ -94,7 +94,7 @@ const data: ProfilesOverlay = {
     ]
   },
   "oriental": {
-    "name": "Kościoły orientalne (przedchalcedońskie)",
+    "name": "Orientalne Kościoły prawosławne (przedchalcedońskie)",
     "short": "Kościoły orientalne",
     "tagline": "Starożytne Kościoły Egiptu, Etiopii, Armenii, Syrii i Indii.",
     "summary": "Sześć Kościołów, które nie przyjęły Soboru chalcedońskiego (451) i wyznają jedną, zjednoczoną bosko-ludzką naturę Chrystusa (miafizytyzm). Dziś one i prawosławni w dużej mierze uważają ten rozłam za spór o słowa.",
@@ -164,7 +164,7 @@ const data: ProfilesOverlay = {
     "worship": "Liturgia syryjska; świątynie bez ikon, skupione na krzyżu",
     "doctrines": [
       "Dwie natury i dwie qnome w jednej osobie (parsopa) Chrystusa",
-      "Maryja jako Chrystusorodzica, a nie Bogurodzica",
+      "Maryja czczona jako „Matka Chrystusa, naszego Boga i Zbawiciela”; tytuł Bogurodzica nieużywany w jej liturgii",
       "Rzeczywista obecność w Eucharystii (Qurbana)",
       "Sukcesja apostolska"
     ],
@@ -184,8 +184,8 @@ const data: ProfilesOverlay = {
     "tagline": "Katolicki i reformowany – via media.",
     "summary": "Zrodzona z reformacji angielskiej Wspólnota anglikańska zachowuje biskupów, liturgię i symbole wiary, przyjmując zarazem doktrynę reformacji. Obejmuje nurt anglokatolicki, szeroki i ewangelikalny, które łączy Book of Common Prayer.",
     "origin": {
-      "year": "1534",
-      "event": "Akt supremacji za Henryka VIII; elżbietańska ugoda religijna (1559).",
+      "year": "597 / 1534",
+      "event": "Wywodzi ciągłość od Kościoła w Anglii z czasów Augustyna z Canterbury (597); zerwanie z Rzymem za Henryka VIII (1534); elżbietańska ugoda religijna (1559).",
       "figures": [
         "Thomas Cranmer",
         "Richard Hooker",
@@ -248,7 +248,7 @@ const data: ProfilesOverlay = {
     ],
     "councilsNote": "Wczesne sobory i trzy ekumeniczne symbole wiary są uznawane za wierne Pismu; sobory mogą jednak błądzić.",
     "sacraments": "2 (chrzest, Wieczerza Pańska); spowiedź z rozgrzeszeniem bywa liczona jako trzeci",
-    "governance": "Różnie – biskupi w Skandynawii, synody w USA",
+    "governance": "Różnie - biskupi w Skandynawii i w ELCA; prezydenci synodów w LCMS",
     "worship": "Nabożeństwo liturgiczne, bogate w pieśni („Warownym grodem jest nasz Bóg”)",
     "doctrines": [
       "Usprawiedliwienie z samej wiary",
@@ -272,7 +272,7 @@ const data: ProfilesOverlay = {
   },
   "reformed": {
     "name": "Kościoły reformowane (kalwinizm, prezbiterianie)",
-    "short": "Kalwinizm",
+    "short": "Reformowani",
     "tagline": "Soli Deo gloria – suwerenność Boga nad całym życiem.",
     "summary": "Spadkobiercy Zwingliego i Kalwina; Kościoły reformowane akcentują suwerenność Boga, teologię przymierza i nabożeństwo uporządkowane według Pisma. Prezbiterianami kierują starsi zasiadający w gremiach różnych szczebli.",
     "origin": {
@@ -366,7 +366,7 @@ const data: ProfilesOverlay = {
     "name": "Baptyzm",
     "short": "Baptyzm",
     "tagline": "Tylko wierzący, przez zanurzenie – i każdy zbór wolny.",
-    "summary": "Baptyści praktykują chrzest wierzących przez zanurzenie i autonomię każdego zboru lokalnego. Obrzędy są aktami posłuszeństwa, a nie środkami łaski. Teologia waha się od kalwińskiej po arminiańską.",
+    "summary": "Baptyści praktykują chrzest wierzących przez zanurzenie i autonomię każdego zboru lokalnego. Większość baptystów widzi w obrzędach akty posłuszeństwa i świadectwa, a nie środki łaski, choć niektóre wyznania (1689) uczą o duchowej obecności Chrystusa w Wieczerzy. Teologia waha się od kalwińskiej po arminiańską.",
     "origin": {
       "year": "1609",
       "event": "John Smyth i Thomas Helwys chrzczą wierzących w Amsterdamie.",
@@ -391,7 +391,7 @@ const data: ProfilesOverlay = {
       "Chrzest wierzących przez zanurzenie",
       "Wieczerza Pańska jako pamiątka",
       "Kompetencja duszy i powszechne kapłaństwo wierzących",
-      "Wieczne bezpieczeństwo („raz zbawiony, zawsze zbawiony”)",
+      "Wieczne bezpieczeństwo u większości (poza baptystami wolnej woli)",
       "Wolność religijna i rozdział Kościoła od państwa"
     ],
     "distinctives": [
@@ -448,7 +448,7 @@ const data: ProfilesOverlay = {
       "Kościół Boży (Cleveland)",
       "Kościół Boży w Chrystusie",
       "Kościół Czworakiej Ewangelii (Foursquare)",
-      "Charyzmatycy w stylu Hillsong"
+      "Kościoły charyzmatyczne i neocharyzmatyczne"
     ]
   },
   "nondenom": {
@@ -541,8 +541,8 @@ const data: ProfilesOverlay = {
   "quaker": {
     "name": "Kwakrzy (Religijne Towarzystwo Przyjaciół)",
     "short": "Kwakrzy",
-    "tagline": "W każdym człowieku jest cząstka Boga.",
-    "summary": "Religijne Towarzystwo Przyjaciół oczekuje w ciszy na Wewnętrzne Światło Chrystusa. Bez duchownych i zewnętrznych sakramentów Przyjaciele słyną z dążenia do pokoju, równości, prostoty i prawości.",
+    "tagline": "W każdym człowieku jest coś z Boga.",
+    "summary": "Religijne Towarzystwo Przyjaciół szuka Wewnętrznego Światła Chrystusa - w cichym oczekiwaniu lub w nabożeństwie prowadzonym przez pastorów. Bez zewnętrznych sakramentów Przyjaciele słyną z dążenia do pokoju, równości, prostoty i prawości.",
     "origin": {
       "year": "1652",
       "event": "Wizja George’a Foxa na wzgórzu Pendle Hill w Anglii.",
@@ -566,14 +566,14 @@ const data: ProfilesOverlay = {
     "doctrines": [
       "Wewnętrzne Światło – Chrystus mówiący w każdym człowieku",
       "Brak zewnętrznych sakramentów",
-      "Kapłaństwo wszystkich – bez duchowieństwa",
+      "Kapłaństwo wszystkich - bez odrębnego duchowieństwa w zgromadzeniach bez programu",
       "Świadectwo pokoju",
       "Świadectwa prostoty, prawości i równości"
     ],
     "distinctives": [
       "Kobiety głoszące od lat 50. XVII w.",
       "Pionierzy abolicjonizmu",
-      "Najwięcej Przyjaciół żyje dziś w Kenii"
+      "Najwięcej Przyjaciół spośród wszystkich krajów żyje w Kenii"
     ],
     "branches": [
       "Liberalni (nabożeństwo bez programu)",
@@ -583,10 +583,10 @@ const data: ProfilesOverlay = {
     ]
   },
   "restorationist": {
-    "name": "Kościoły Chrystusowe (ruch Stone’a–Campbella)",
-    "short": "Kościoły Chrystusowe",
+    "name": "Kościoły Chrystusa (ruch Stone’a–Campbella)",
+    "short": "Kościoły Chrystusa",
     "tagline": "Mów tam, gdzie mówi Biblia; milcz tam, gdzie ona milczy.",
-    "summary": "Ruch dążący do przywrócenia chrześcijaństwa Nowego Testamentu bez symboli wiary i denominacji. Kościoły Chrystusowe chrzczą wierzących na odpuszczenie grzechów, co tydzień sprawują Wieczerzę Pańską i śpiewają a cappella.",
+    "summary": "Ruch dążący do przywrócenia chrześcijaństwa Nowego Testamentu bez symboli wiary i denominacji. Kościoły Chrystusa chrzczą wierzących na odpuszczenie grzechów, co tydzień sprawują Wieczerzę Pańską i śpiewają a cappella.",
     "origin": {
       "year": "1801–1832",
       "event": "Przebudzenie w Cane Ridge; połączenie ruchów Bartona Stone’a i Alexandra Campbella (1832).",
@@ -619,9 +619,9 @@ const data: ProfilesOverlay = {
       "Starsi i diakoni w każdym zborze"
     ],
     "branches": [
-      "Kościoły Chrystusowe (a cappella)",
+      "Kościoły Chrystusa (a cappella)",
       "Kościoły Chrześcijańskie (Christian Churches)",
-      "Uczniowie Chrystusa (liberalni)"
+      "Kościół Chrześcijański (Uczniowie Chrystusa), główny nurt"
     ]
   },
   "adventist": {
@@ -630,7 +630,7 @@ const data: ProfilesOverlay = {
     "tagline": "Zachowuj szabat, oczekuj rychłego powrotu Chrystusa.",
     "summary": "Wyrośli z ruchu millerystów adwentyści święcą sobotę jako szabat, oczekują bliskiego powrotu Chrystusa i nauczają, że zmarli śpią aż do zmartwychwstania. Znani z działalności na rzecz zdrowia, edukacji i pomocy humanitarnej.",
     "notice": {
-      "title": "Trynitarni, choć budzą spory",
+      "title": "Trynitarni; część doktryn budzi spory",
       "text": "Adwentyści wyznają wiarę w Trójcę Świętą i są zwykle zaliczani do chrześcijan protestanckich. Część ewangelikałów uznawała ich niegdyś za sektę z powodu proroczej roli Ellen G. White i „sądu badawczego”; dziś większość wspólnot chrześcijańskich uznaje ich za chrześcijan, choć nadal kwestionuje te doktryny."
     },
     "origin": {
@@ -653,9 +653,9 @@ const data: ProfilesOverlay = {
     "worship": "Nabożeństwa sobotnie ze Szkołą Sobotnią",
     "doctrines": [
       "Szabat w siódmym dniu tygodnia",
-      "Sen duszy i zmartwychwstanie",
+      "Warunkowa nieśmiertelność - zmarli spoczywają nieświadomi do zmartwychwstania",
       "Unicestwienie bezbożnych, a nie wieczna męka",
-      "Sąd badawczy od 1844 r.",
+      "Służba Chrystusa w niebiańskiej świątyni i sąd przed Jego przyjściem (sąd badawczy) od 1844 r.",
       "Dar proroctwa w Ellen G. White"
     ],
     "distinctives": [
@@ -665,16 +665,16 @@ const data: ProfilesOverlay = {
     ],
     "branches": [
       "Generalna Konferencja (światowa)",
-      "Ruch Reformacyjny Adwentystów Dnia Siódmego"
+      "Ruch Reformacyjny Adwentystów Dnia Siódmego (odrębna wspólnota)"
     ]
   },
   "lds": {
-    "name": "Kościół Jezusa Chrystusa Świętych w Dniach Ostatnich (mormoni)",
-    "short": "Mormoni",
+    "name": "Kościół Jezusa Chrystusa Świętych w Dniach Ostatnich",
+    "short": "Święci w Dniach Ostatnich",
     "tagline": "Przywrócone kapłaństwo, współcześni prorocy, wieczne rodziny.",
     "summary": "Kościół Jezusa Chrystusa Świętych w Dniach Ostatnich naucza, że pierwotny Kościół zaginął w wielkiej apostazji i został przywrócony przez Josepha Smitha. Obok Biblii uznaje Księgę Mormona i inne pisma święte, a kieruje nim żyjący prorok.",
     "notice": {
-      "title": "Poza historycznym chrześcijaństwem nicejskim",
+      "title": "Jak postrzegają to inne Kościoły",
       "text": "Kościół Jezusa Chrystusa Świętych w Dniach Ostatnich określa się jako chrześcijański, lecz odrzuca naukę o Trójcy Świętej w kształcie określonym w Nicei (325) i Konstantynopolu (381). Z tego powodu Kościół katolicki, Kościoły prawosławne i niemal wszystkie Kościoły protestanckie nie uznają go za chrześcijański ani nie uznają udzielanego w nim chrztu."
     },
     "origin": {
@@ -711,8 +711,7 @@ const data: ProfilesOverlay = {
     ],
     "branches": [
       "Kościół Jezusa Chrystusa Świętych w Dniach Ostatnich",
-      "Wspólnota Chrystusa",
-      "FLDS (odrębny)"
+      "Inne wspólnoty ruchu Świętych w Dniach Ostatnich (np. Wspólnota Chrystusa, dziś zasadniczo trynitarna)"
     ]
   },
   "jw": {
@@ -721,7 +720,7 @@ const data: ProfilesOverlay = {
     "tagline": "Królestwo Jehowy jedyną nadzieją ludzkości.",
     "summary": "Ruch milenarystyczny odrzucający Trójcę Świętą: jedynie Jehowa jest Bogiem Wszechmocnym, a Jezus – Jego pierwszym stworzeniem. Świadkowie są znani z głoszenia od domu do domu, neutralności politycznej i odmowy transfuzji krwi.",
     "notice": {
-      "title": "Poza historycznym chrześcijaństwem nicejskim",
+      "title": "Jak postrzegają to inne Kościoły",
       "text": "Świadkowie Jehowy określają się jako chrześcijanie, lecz odrzucają naukę o Trójcy Świętej w kształcie określonym w Nicei (325) i Konstantynopolu (381). Z tego powodu Kościół katolicki, Kościoły prawosławne i niemal wszystkie Kościoły protestanckie nie uznają tego ruchu za chrześcijański ani nie uznają udzielanego w nim chrztu."
     },
     "origin": {
@@ -760,13 +759,13 @@ const data: ProfilesOverlay = {
     ]
   },
   "oneness": {
-    "name": "Zielonoświątkowcy jedności (unicjanie)",
-    "short": "Unicjanie",
+    "name": "Zielonoświątkowcy jedności",
+    "short": "Zielonoświątkowcy jedności",
     "tagline": "Jeden Bóg objawiony w Jezusie – chrzest w Jego imię.",
     "summary": "Zielonoświątkowcy odrzucający Trójcę Świętą: nauczają, że Bóg jest jedną Osobą, która jest Ojcem, Synem i Duchem jako role lub przejawy. Zbawienie obejmuje pokutę, chrzest w imię Jezusa i przyjęcie Ducha z mówieniem językami.",
     "notice": {
-      "title": "Poza historycznym chrześcijaństwem nicejskim",
-      "text": "Ruch zielonoświątkowców jedności określa się jako chrześcijański, lecz odrzuca naukę o Trójcy Świętej w kształcie określonym w Nicei (325) i Konstantynopolu (381). Z tego powodu Kościół katolicki, Kościoły prawosławne i niemal wszystkie Kościoły protestanckie nie uznają go za chrześcijański ani nie uznają udzielanego w nim chrztu."
+      "title": "Jak postrzegają to inne Kościoły",
+      "text": "Ruch zielonoświątkowców jedności określa się jako chrześcijański, lecz odrzuca naukę o Trójcy Świętej w kształcie określonym w Nicei (325) i Konstantynopolu (381). Dlatego Kościół katolicki, Kościoły prawosławne i większość Kościołów protestanckich nie uznają jego nauki o Bogu za prawowierną i zasadniczo nie uznają chrztu udzielanego wyłącznie w imię Jezusa."
     },
     "origin": {
       "year": "1913–1916",
@@ -787,15 +786,15 @@ const data: ProfilesOverlay = {
     "governance": "Organizacje takie jak UPCI, z okręgami; miejscowi pastorzy",
     "worship": "Żywiołowe uwielbienie w stylu zielonoświątkowym",
     "doctrines": [
-      "Jedyność Boga (modalizm)",
+      "Jedyność Boga - jeden Bóg objawiony jako Ojciec, Syn i Duch",
       "Chrzest wyłącznie w imię Jezusa",
-      "Języki jako znak zbawienia",
+      "Chrzest Duchem z mówieniem językami jako część nowego narodzenia",
       "Zasady świętości w ubiorze i postępowaniu"
     ],
     "distinctives": [
       "Zbawienie według Dz 2,38",
-      "Surowe zasady świętości",
-      "Bywają nazywani „Jesus Only” („tylko Jezus”)"
+      "Zasady świętości",
+      "Sami nazywają się „apostolskimi”; z zewnątrz bywają nazywani „Jesus Only”"
     ],
     "branches": [
       "Zjednoczony Kościół Zielonoświątkowy (UPCI)",

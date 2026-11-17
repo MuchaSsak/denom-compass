@@ -22,6 +22,68 @@ const site = Astro.site ?? new URL(Astro.url.origin);
 const abs = (l: Lang) => new URL(href(l, rest === '/' ? '' : rest), site).href;
 const ogImage = new URL(`/og-${lang}.png`, site).href;
 
+/** Breadcrumb trail from the path: section page, then the current page. */
+const sectionNames: Record<string, string> = { quiz: t('Quiz'), results: t('Results'), doctrines: t('Doctrines'), councils: t('Councils'), creeds: t('Creeds'), denominations: t('Traditions'), privacy: t('Privacy policy'), terms: t('Terms of use') };
+const segs = rest.split('/').filter(Boolean);
+const crumbs = segs.length === 0 ? [] : segs.length === 1
+  ? [{ name: title ?? sectionNames[segs[0]] ?? segs[0], path: `/${segs[0]}` }]
+  : [
+      ...(segs[0] === 'denominations' ? [] : [{ name: sectionNames[segs[0]] ?? segs[0], path: `/${segs[0]}` }]),
+      { name: title ?? segs[1], path: rest },
+    ];
+
+/** Author profiles (rel=me + schema.org sameAs). */
+const SAME_AS: string[] = [
+  'https://github.com/MuchaSsak',
+  'https://www.linkedin.com/in/mateusz-muszarski-b1168a28a/',
+  'https://www.npmjs.com/~muchassakkk',
+  'https://www.instagram.com/mat.muszarski/',
+  'https://www.facebook.com/muszarski',
+  'https://t.me/MateuszMuszarski',
+  'https://play.google.com/store/apps/dev?id=7961731162261862815',
+  'https://apps.apple.com/developer/mateusz-muszarski/id1896558654',
+];
+const AUTHOR = { name: 'Mateusz Muszarski', alternateName: 'MuchaSsak', url: 'https://muszarski.com', jobTitle: 'Full-stack product engineer', sameAs: SAME_AS };
+const keywords = lang === 'pl'
+  ? 'quiz wyznań, test wyznania, kompas wyznań, chrześcijańskie wyznania, Kościoły chrześcijańskie, katolicyzm, prawosławie, protestantyzm, doktryny, sobory powszechne, wyznania wiary, teologia'
+  : 'denomination quiz, Christian denomination test, which church am I, denomination compass, Christian traditions, Catholic, Orthodox, Protestant, doctrines, ecumenical councils, creeds, theology quiz';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    ...(rest === '/' ? [{
+      '@type': 'WebSite',
+      '@id': new URL('/#website', site).href,
+      name: siteName,
+      alternateName: lang === 'pl' ? 'Denomination Compass' : 'Kompas wyznań',
+      url: new URL(href(lang), site).href,
+      inLanguage: lang,
+      description: t('A short theology quiz that maps your beliefs onto the major Christian traditions.'),
+      author: { '@id': 'https://muszarski.com/#person' },
+      publisher: { '@id': 'https://muszarski.com/#person' },
+    }] : []),
+    { '@type': 'Person', '@id': 'https://muszarski.com/#person', ...AUTHOR },
+    {
+      '@type': 'WebPage',
+      '@id': abs(lang),
+      url: abs(lang),
+      name: title ?? siteName,
+      description,
+      inLanguage: lang,
+      isPartOf: { '@id': new URL('/#website', site).href },
+      primaryImageOfPage: ogImage,
+      ...(rest !== '/' && {
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: siteName, item: new URL(href(lang), site).href },
+            ...crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 2, name: c.name, item: new URL(href(lang, c.path), site).href })),
+          ],
+        },
+      }),
+    },
+  ],
+};
+
 const nav = [
   { href: '/quiz', label: t('Quiz') },
   { href: '/results', label: t('Results') },
@@ -46,6 +108,10 @@ function flag(l: Lang) {
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={AUTHOR.name} />
+    <link rel="author" href={AUTHOR.url} />
+    {SAME_AS.slice(0, 2).map((u) => <link rel="me" href={u} />)}
     <link rel="canonical" href={abs(lang)} />
     {LANGS.map((l) => <link rel="alternate" hreflang={l} href={abs(l)} />)}
     <link rel="alternate" hreflang="x-default" href={abs('en')} />
@@ -70,6 +136,7 @@ function flag(l: Lang) {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <slot name="head" />
     <script is:inline define:vars={{ lang }}>
       try {
@@ -148,6 +215,13 @@ function flag(l: Lang) {
     <main class:list={['mx-auto w-full flex-1 px-4 pb-16 sm:px-6', wide ? 'max-w-6xl' : 'max-w-5xl']}>
       <slot />
     </main>
+
+    <footer class="border-t border-line/70">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-5 text-sm text-muted sm:px-6">
+        <p>{t('Made by')} <a href="https://muszarski.com" rel="author" class="font-medium text-ink underline decoration-muted/50 underline-offset-4 transition-colors hover:decoration-gold">Mateusz Muszarski</a></p>
+        <a href={href(lang, '/privacy')} class="py-2 transition-colors hover:text-ink">{t('Privacy policy')}</a>
+      </div>
+    </footer>
 
     <script is:inline>
       document.getElementById('theme-toggle')?.addEventListener('click', () => {

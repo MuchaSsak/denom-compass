@@ -92,5 +92,5 @@ export function dominantStance(d: Denomination, q: Question) {
   const st = d.stances[q.id] ?? {};
   const max = Math.max(0, ...Object.values(st));
   const opts = q.options.filter((o) => max > 0 && (st[o.id] ?? 0) === max);
-  return { options: opts, strength: max, label: opts.map((o) => o.short ?? o.label).join(' / ') || '—' };
+  return { options: opts, strength: max, label: opts.map((o) => o.short ?? o.label).join(' / ') || ' - ' };
 }

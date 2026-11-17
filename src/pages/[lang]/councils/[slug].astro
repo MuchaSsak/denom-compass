@@ -104,8 +104,9 @@ const fullName = lang === 'pl' ? `Sobór ${c.name.charAt(0).toLowerCase()}${c.na
             <h2 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">{t('Key figures')}</h2>
             <ul class="mt-2 grid gap-1.5 text-sm">
               {x.figures.map((f) => {
-                const [name, role] = f.split(' — ');
-                return <li><span class="font-semibold">{name}</span>{role && <span class="text-muted"> — {role}</span>}</li>;
+                const cut = f.indexOf(' - ');
+                const [name, role] = cut < 0 ? [f, ''] : [f.slice(0, cut), f.slice(cut + 3)];
+                return <li><span class="font-semibold">{name}</span>{role && <span class="text-muted"> - {role}</span>}</li>;
               })}
             </ul>
           </>
@@ -128,7 +129,7 @@ const fullName = lang === 'pl' ? `Sobór ${c.name.charAt(0).toLowerCase()}${c.na
           <>
             <h3 class="mt-5 text-[11px] font-bold tracking-widest text-muted uppercase">{t('Not received')}</h3>
             <ul class="mt-2 grid gap-2 text-sm">
-              {dissent.map((r) => <li><span class="font-semibold">{r.who}</span> <span class="text-muted">— <Annotated parts={r.why} /></span></li>)}
+              {dissent.map((r) => <li><span class="font-semibold">{r.who}</span> <span class="text-muted"> - <Annotated parts={r.why} /></span></li>)}
             </ul>
           </>
         )}

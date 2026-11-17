@@ -95,3 +95,69 @@ export const glyphs = {
   arrowLeft: '<path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
   arrowRight: '<path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
 };
+
+/* ------------------------------------------------------------------------
+ * Bold sticker-style symbols (bright disc, dark outline, outlined symbol),
+ * the visual language people already associate with these traditions.
+ * Drawn in a 48×48 box; Badge renders them larger than the line icons above.
+ * Shapes are painted twice: a thick dark pass (outline) then the fill, so
+ * overlapping parts merge into one clean silhouette.
+ * ---------------------------------------------------------------------- */
+const INK = '#1c1712';
+const two = (shapes: string, fill: string, w = 4.6) =>
+  `<g fill="${INK}" stroke="${INK}" stroke-width="${w}" stroke-linejoin="round">${shapes}</g><g fill="${fill}">${shapes}</g>`;
+/** Latin cross as two rects: bar width w, crossbar at armY reaching ±half. */
+const crossRects = (cx: number, top: number, bottom: number, armY: number, half: number, w: number) =>
+  `<rect x="${cx - w / 2}" y="${top}" width="${w}" height="${bottom - top}" rx="0.6"/><rect x="${cx - half}" y="${armY - w / 2}" width="${half * 2}" height="${w}" rx="0.6"/>`;
+const flame = 'M24 41c-7.6 0-12-5.4-12-11.2 0-5.4 3.8-8.6 5.4-13 1.2 3.2 2.8 4.8 4.4 5.4-.2-5.6 2.4-11 6.6-14.2-.2 5.4 3.2 7.8 5.4 11.4 2.2 3.6 2.4 6.4 2.4 8.2C36.2 35.6 31.6 41 24 41z';
+const flameInner = 'M24 38c-3.6 0-5.8-2.6-5.8-5.4 0-2.8 2-4.4 2.8-6.6.6 1.6 1.4 2.4 2.2 2.8 0-2.8 1.2-5.4 3.2-7 0 2.8 1.6 3.8 2.6 5.6 1 1.8 1.2 3.2 1.2 4.2 0 3.6-2.6 6.4-6.2 6.4z';
+
+export const boldIcons: Record<string, string> = {
+  catholic: two(crossRects(24, 6, 42, 17, 11, 6.2), '#fff'),
+
+  orthodox: two(
+    `<rect x="21.3" y="4.5" width="5.4" height="39" rx=".6"/><rect x="18" y="9" width="12" height="4.2" rx=".6"/><rect x="11.5" y="16.5" width="25" height="5.2" rx=".6"/><path d="M14.5 33.6l19-6.4 1.3 3.9-19 6.4z"/>`,
+    '#fff',
+  ),
+
+  oriental: two(
+    `<rect x="21" y="9" width="6" height="30"/><rect x="9" y="21" width="30" height="6"/>
+     <circle cx="24" cy="24" r="5"/>
+     <circle cx="20" cy="8.5" r="3"/><circle cx="24" cy="6" r="3"/><circle cx="28" cy="8.5" r="3"/>
+     <circle cx="20" cy="39.5" r="3"/><circle cx="24" cy="42" r="3"/><circle cx="28" cy="39.5" r="3"/>
+     <circle cx="8.5" cy="20" r="3"/><circle cx="6" cy="24" r="3"/><circle cx="8.5" cy="28" r="3"/>
+     <circle cx="39.5" cy="20" r="3"/><circle cx="42" cy="24" r="3"/><circle cx="39.5" cy="28" r="3"/>`,
+    '#fff', 4,
+  ),
+
+  assyrian: two(
+    `<path d="M20.5 7h7l-1.6 12.4L38 17.5v7l-12.1-1.9L27.5 37h-7l1.6-14.4L10 24.5v-7l12.1 1.9z" transform="translate(0 2)"/>
+     <circle cx="24" cy="5" r="2.6"/><circle cx="24" cy="43" r="2.6"/><circle cx="6" cy="23" r="2.6"/><circle cx="42" cy="23" r="2.6"/>
+     <circle cx="15" cy="11" r="1.9"/><circle cx="33" cy="11" r="1.9"/><circle cx="15" cy="35" r="1.9"/><circle cx="33" cy="35" r="1.9"/>`,
+    '#fff', 4,
+  ),
+
+  anglican: two(
+    [0, 90, 180, 270].map((r) => `<path d="M21.6 20.5h4.8L31 7.5Q24 4.6 17 7.5z" transform="rotate(${r} 24 24)"/>`).join('') +
+      '<circle cx="24" cy="24" r="5.2"/>',
+    '#fff', 4,
+  ) + `<rect x="21.9" y="21.9" width="4.2" height="4.2" fill="#f2a2c4"/>`,
+
+  lutheran: two(crossRects(24, 6, 42, 17, 11, 6.2), '#ffd43b') +
+    two('<path d="M24 24.6c-3.4-2.4-5.2-4.3-5.2-6.5 0-1.6 1.2-2.8 2.7-2.8 1.1 0 1.9.6 2.5 1.5.6-.9 1.4-1.5 2.5-1.5 1.5 0 2.7 1.2 2.7 2.8 0 2.2-1.8 4.1-5.2 6.5z"/>', '#e03131', 2.4),
+
+  reformed:
+    `<g fill="${INK}" stroke="${INK}" stroke-width="4.6" stroke-linejoin="round">${crossRects(24, 5, 43, 18, 13, 5.6)}</g>` +
+    `<circle cx="24" cy="18" r="8.6" fill="none" stroke="${INK}" stroke-width="7.4"/><circle cx="24" cy="18" r="8.6" fill="none" stroke="#ffd43b" stroke-width="3.2"/>` +
+    `<g fill="#ffd43b">${crossRects(24, 5, 43, 18, 13, 5.6)}</g>`,
+
+  methodist: two(crossRects(19, 6, 42, 16, 10, 5.6), '#fff') +
+    `<g transform="translate(9.5 7) scale(.62)">${two(`<path d="${flame}"/>`, '#e8392b', 6)}<path d="${flameInner}" fill="#ffb02e"/></g>`,
+
+  baptist: two(crossRects(24, 6, 42, 16, 10.5, 6.2), '#fff'),
+
+  pentecostal: two(`<path d="${flame}"/>`, '#e8392b', 4.2) + `<path d="${flameInner}" fill="#ffb02e"/>` +
+    two('<path d="M17 12.5c-2.2-1.8-2.4-4-.6-6 1.6 1.2 2.2 3.2.6 6zM31.6 12.5c1.6-2.8 1-4.8-.6-6-1.8 2-1.6 4.2.6 6z"/>', '#e8392b', 2.6),
+};
+
+/** Badge disc colour for the bold set lives in profiles.ts (`color`). */

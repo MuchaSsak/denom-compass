@@ -1,6 +1,6 @@
 # Doctrine matrix
 
-Source of truth for data: `src/data/stances.ts`. Evidence: [raw/research-matrix.md](../../raw/research-matrix.md) — section (a) JSON, (b) per-cell notes with URLs and HIGH/MED/LOW confidence.
+Source of truth for data: `src/data/stances.ts`. Evidence: [raw/research-matrix.md](../../raw/research-matrix.md) - section (a) JSON, (b) per-cell notes with URLs and HIGH/MED/LOW confidence.
 
 ## Scale
 | Score | Meaning |
@@ -40,16 +40,16 @@ Source of truth for data: `src/data/stances.ts`. Evidence: [raw/research-matrix.
 | instruments | instruments | practice |
 
 ## Contested / low-confidence cells (review first if users complain)
-- **Assyrian Church of the East** — weakest row (thin English sources). Uses "Mother of Christ"; 1994 Common Christological Declaration with Rome accepts both wordings → theotokos 0.5. Few/no icons → icons yes 0.25. A "sleep of souls" strand → sleep 0.25. Sacrament list (Mar Abdisho) includes Holy Leaven + sign of the cross, omits marriage. Instruments & saints cells LOW.
-- **Oriental Orthodox sabbath 0.25** — Ethiopian Tewahedo keeps Saturday as well as Sunday.
-- **LDS theotokos 0.25** — 1830 Book of Mormon said "mother of God", changed 1837.
-- **Oneness (UPCI)** — licenses women preachers (<4% of ministers) → women partial; 2012 softened combat ban → pacifism 0.25.
-- **Lutheran election** — Formula of Concord: election by grace not foreseen faith (yes 0.75) yet salvation can be lost (losable yes 1). Binary questions fit poorly.
-- **Anglican losable 0.75** — Art. XVI "may depart from grace".
-- **Baptist origsin 0.5** — BF&M 2000 (sinful nature) vs 1689 LBCF (guilt).
-- **Methodist perfection 1** — ordination question "Do you expect to be made perfect in love in this life?"
+- **Assyrian Church of the East** - weakest row (thin English sources). Uses "Mother of Christ"; 1994 Common Christological Declaration with Rome accepts both wordings → theotokos 0.5. Few/no icons → icons yes 0.25. A "sleep of souls" strand → sleep 0.25. Sacrament list (Mar Abdisho) includes Holy Leaven + sign of the cross, omits marriage. Instruments & saints cells LOW.
+- **Oriental Orthodox sabbath 0.25** - Ethiopian Tewahedo keeps Saturday as well as Sunday.
+- **LDS theotokos 0.25** - 1830 Book of Mormon said "mother of God", changed 1837.
+- **Oneness (UPCI)** - licenses women preachers (<4% of ministers) → women partial; 2012 softened combat ban → pacifism 0.25.
+- **Lutheran election** - Formula of Concord: election by grace not foreseen faith (yes 0.75) yet salvation can be lost (losable yes 1). Binary questions fit poorly.
+- **Anglican losable 0.75** - Art. XVI "may depart from grace".
+- **Baptist origsin 0.5** - BF&M 2000 (sinful nature) vs 1689 LBCF (guilt).
+- **Methodist perfection 1** - ordination question "Do you expect to be made perfect in love in this life?"
 - **Context (2025):** SBC women-pastor amendment got 60.74% (needed ⅔); Sarah Mullally first woman Archbishop of Canterbury (Oct 2025), GAFCON announced a rival "Global Anglican Communion"; SDA GC voted against women's ordination (2015) though some unions ordain.
 - Awkward fits flagged by research: Orthodox theosis vs "entire sanctification"; Quaker "ordination" (no clergy); LDS restored priesthood vs apostolic succession.
 
 ## Composite rows
-Anglican, Lutheran, Reformed, Baptist, Non-denom, Anabaptist, Quaker average internal splits — see [[decisions]] D1.
+Anglican, Lutheran, Reformed, Baptist, Non-denom, Anabaptist, Quaker average internal splits - see [[decisions]] D1.

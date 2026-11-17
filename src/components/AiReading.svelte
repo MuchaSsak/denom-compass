@@ -6,6 +6,9 @@
   import { loadNotes, saveNote, loadAi, saveAi, inputKey, NOTE_MAX, GENERAL_MAX } from '../lib/storage';
   import Badge from './Badge.svelte';
   import { useT, href, type Lang } from '../i18n';
+  import { LEGAL_VERSION } from '../data/legal';
+
+  const CONSENT_KEY = 'dc:ai-consent:v1';
 
   let { answers, questions, denominations, onApply, lang }: {
     answers: Answers;
@@ -22,6 +25,7 @@
     parse: t('The model returned an unreadable answer. Try again.'),
     upstream: t('The AI service is unavailable right now. Try again later.'),
     empty: t('Answer some questions or write a few words first.'),
+    consent_required: t('Please confirm the consent above first.'),
   };
 
   const byId = Object.fromEntries(denominations.map((d) => [d.id, d]));
@@ -37,6 +41,17 @@
   let elapsed = $state(0);
   let showNotes = $state(false);
   let timers: Record<string, ReturnType<typeof setTimeout>> = {};
+
+  // Explicit consent (GDPR Art. 9(2)(a) + 49(1)(a)): answers can reveal religious beliefs and go to a
+  // third-party AI provider outside the EEA. Stored with the policy version; a new version asks again.
+  let consented = $state(false);
+  let agree = $state(false);
+  onMount(() => {
+    try {
+      const c = JSON.parse(localStorage.getItem(CONSENT_KEY) ?? 'null');
+      consented = c?.v === LEGAL_VERSION;
+    } catch { consented = false; }
+  });
 
   onMount(() => {
     notes = loadNotes();
@@ -72,6 +87,11 @@
   }
 
   async function analyze() {
+    if (!consented) {
+      if (!agree) return;
+      try { localStorage.setItem(CONSENT_KEY, JSON.stringify({ v: LEGAL_VERSION, at: new Date().toISOString() })); } catch { /* storage off */ }
+      consented = true;
+    }
     status = 'loading';
     error = '';
     elapsed = 0;
@@ -81,7 +101,7 @@
       const res = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ answers, notes: snapshotNotes, lang }),
+        body: JSON.stringify({ answers, notes: snapshotNotes, lang, consent: LEGAL_VERSION }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(errors[data.error] ?? data.message ?? t('Something went wrong.'));
@@ -151,8 +171,17 @@
       </div>
     {/if}
 
+    {#if !consented}
+      <label class="mt-5 flex cursor-pointer gap-3 rounded-xl border border-line bg-surface p-4 text-sm leading-relaxed">
+        <input type="checkbox" bind:checked={agree} class="mt-1 size-4 flex-none accent-[var(--gold)]" />
+        <span>
+          {t('I agree that my answers and notes, which may reveal my religious beliefs, are sent to OpenRouter (USA) and an AI model provider, possibly outside the EEA, to generate this reading. Free models may store prompts. I am 16 or older.')}
+          <a href={href(lang, '/privacy')} class="font-medium underline underline-offset-4">{t('Privacy policy')}</a>
+        </span>
+      </label>
+    {/if}
     <div class="mt-5 flex flex-wrap items-center gap-3">
-      <button class="btn btn-primary" onclick={analyze} disabled={status === 'loading'}>
+      <button class="btn btn-primary" onclick={analyze} disabled={status === 'loading' || (!consented && !agree)}>
         {#if status === 'loading'}
           <span class="size-4 animate-spin rounded-full border-2 border-bg/30 border-t-bg"></span> {t('Reading…')} {elapsed}s
         {:else}

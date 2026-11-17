@@ -4,7 +4,7 @@ const data: QuestionsOverlay = {
   "trinity": {
     "text": "Kim jest Bóg?",
     "hint": "Nauka o Trójcy Świętej, określona w Nicei (325) i Konstantynopolu (381).",
-    "explain": "Nauka o Trójcy Świętej głosi, że jeden Bóg istnieje odwiecznie w trzech odrębnych Osobach, które mają jedną boską naturę – to nie trzech bogów ani jedna Osoba w trzech maskach. Wyznaje ją niemal każdy Kościół; nieliczne ruchy inaczej odczytują Biblię.",
+    "explain": "Nauka o Trójcy Świętej głosi, że jeden Bóg istnieje odwiecznie w trzech odrębnych Osobach, które mają jedną boską naturę – to nie trzech bogów ani jedna Osoba w trzech kolejnych przejawach. Wyznaje ją niemal każdy Kościół; nieliczne ruchy inaczej odczytują Biblię.",
     "options": {
       "yes": {
         "label": "Jeden Bóg w trzech równych sobie Osobach: Ojciec, Syn i Duch Święty",
@@ -12,14 +12,14 @@ const data: QuestionsOverlay = {
         "detail": "Klasyczna nauka nicejska: trzy Osoby, jedna boska istota."
       },
       "separate": {
-        "label": "Ojciec jest najwyższy; Syn i Duch są od Niego odrębni lub Mu podporządkowani",
+        "label": "Ojciec, Syn i Duch to odrębne istoty albo Syn jest stworzony lub podporządkowany",
         "short": "Odrębne istoty",
         "detail": "Np. Jezus jako pierwsze stworzenie Boga albo Ojciec i Syn jako odrębne istoty."
       },
       "modal": {
         "label": "Jedna boska Osoba objawiająca się jako Ojciec, Syn i Duch",
         "short": "Jedna Osoba",
-        "detail": "Ojciec, Syn i Duch jako role lub przejawy jednej Osoby (modalizm)."
+        "detail": "Ojciec, Syn i Duch jako przejawy jednej Osoby."
       }
     }
   },
@@ -97,7 +97,7 @@ const data: QuestionsOverlay = {
         "detail": "Szanowane jako wierne streszczenia wiary, ale nie nieomylne."
       },
       "none": {
-        "label": "Żaden nie ma rzeczywistego autorytetu",
+        "label": "Żaden sobór nie jest wiążący",
         "short": "Żaden"
       }
     }
@@ -181,7 +181,7 @@ const data: QuestionsOverlay = {
         "detail": "Dobre uczynki wynikają ze zbawienia, ale się do niego nie przyczyniają."
       },
       "no": {
-        "label": "Nie, wiara i uczynki razem",
+        "label": "Nie, z łaski przez wiarę działającą przez miłość",
         "short": "Nie",
         "detail": "Wiara, miłość i posłuszeństwo razem, uzdolnione przez łaskę."
       }
@@ -248,7 +248,7 @@ const data: QuestionsOverlay = {
   "succession": {
     "text": "Czy ważne święcenia kapłanów i biskupów wymagają nieprzerwanej ciągłości od apostołów?",
     "hint": "Sukcesja apostolska.",
-    "explain": "Kościół katolicki, prawosławie i anglikanie uważają, że biskupów wyświęcają biskupi w łańcuchu sięgającym apostołów i że jest to potrzebne do ważności sakramentów. Większość protestantów widzi ciągłość apostolską raczej w wiernym nauczaniu.",
+    "explain": "Kościół katolicki, prawosławie i inne starożytne Kościoły wschodnie uważają, że biskupów wyświęcają biskupi w łańcuchu sięgającym apostołów i że jest to potrzebne do ważności sakramentów. Anglikanie i część luteranów zachowują historyczny episkopat, różnie oceniając jego konieczność. Większość protestantów widzi ciągłość apostolską w wiernym nauczaniu.",
     "options": {
       "yes": {
         "label": "Tak, to konieczne",
@@ -275,7 +275,7 @@ const data: QuestionsOverlay = {
     }
   },
   "governance": {
-    "text": "Kto ma kierować Kościołem?",
+    "text": "Jaki ustrój Kościoła jest właściwy?",
     "explain": "Ustroje kościelne są różne: biskupi nadzorujący regiony, starsi w powiązanych ze sobą gremiach, zbór decydujący sam o sobie albo centralny prorok czy ciało kierownicze.",
     "options": {
       "bishops": {
@@ -302,7 +302,7 @@ const data: QuestionsOverlay = {
   "theotokos": {
     "text": "Czy to właściwe, by nazywać Maryję „Matką Bożą”?",
     "hint": "Bogurodzica (Theotokos) – tytuł potwierdzony w Efezie (431).",
-    "explain": "Ten tytuł chroni prawdę o Jezusie: dziecko urodzone przez Maryję jest prawdziwie Bogiem, a nie człowiekiem później złączonym z Bogiem. Niektórzy przyjmują tę logikę, ale unikają tego określenia, bo może sugerować, że Maryja jest źródłem Boga.",
+    "explain": "Tytuł wyraża, że dziecko urodzone przez Maryję jest prawdziwie Bogiem Synem. Kościół Wschodu woli „Matka Chrystusa”, by podkreślić rozróżnienie natur, wyznając zarazem Bóstwo Chrystusa; niektórzy protestanci unikają tego określenia, bo może sugerować, że Maryja jest źródłem Boga.",
     "options": {
       "yes": {
         "label": "Tak – urodziła Boga Syna w ciele",
@@ -335,7 +335,7 @@ const data: QuestionsOverlay = {
   },
   "saints": {
     "text": "Czy to właściwe, by prosić świętych w niebie o modlitwę za siebie?",
-    "explain": "Tak jak możesz poprosić przyjaciela o modlitwę, wielu chrześcijan prosi o wstawiennictwo zmarłych świętych, którzy żyją w Chrystusie. Inni uważają, że modlitwę kieruje się wyłącznie do Boga.",
+    "explain": "Wielu chrześcijan prosi zmarłych świętych o wstawiennictwo, tak jak prosi się przyjaciela o modlitwę, wierząc, że żyją w Chrystusie. Inni uważają, że Pismo tego nie uzasadnia i że modlitwę kieruje się tylko do Boga przez Chrystusa, jedynego pośrednika.",
     "options": {
       "yes": {
         "label": "Tak",
@@ -350,7 +350,7 @@ const data: QuestionsOverlay = {
   "icons": {
     "text": "Czy to właściwe, by oddawać cześć ikonom i świętym obrazom?",
     "hint": "Cześć ikon obronił Sobór nicejski II (787).",
-    "explain": "Cześć (pokłon, ucałowanie ikony) odróżnia się od uwielbienia, które należy się tylko Bogu; oddawana cześć przechodzi na osobę przedstawioną. Krytycy uważają to za sprzeczne z przykazaniem zakazującym wizerunków.",
+    "explain": "Zwolennicy odróżniają cześć (pokłon, ucałowanie ikony) od uwielbienia, które należy się tylko Bogu, i mówią, że cześć przechodzi na osobę przedstawioną. Krytycy uważają to za sprzeczne z przykazaniem zakazującym wizerunków.",
     "options": {
       "yes": {
         "label": "Tak",
@@ -380,7 +380,7 @@ const data: QuestionsOverlay = {
       },
       "sleep": {
         "label": "Pozostają nieświadomi aż do zmartwychwstania",
-        "short": "Sen duszy"
+        "short": "Sen do zmartwychwstania"
       }
     }
   },
@@ -441,7 +441,7 @@ const data: QuestionsOverlay = {
   },
   "instruments": {
     "text": "Czy w nabożeństwie można używać instrumentów muzycznych?",
-    "explain": "Kościoły Chrystusowe śpiewają a cappella, bo Nowy Testament wspomina tylko o śpiewie. Śpiew prawosławny również tradycyjnie jest bez akompaniamentu – ze zwyczaju, a nie z przepisu. Większość Kościołów chętnie korzysta z instrumentów.",
+    "explain": "Kościoły Chrystusa śpiewają a cappella, bo Nowy Testament wspomina tylko o śpiewie. Śpiew prawosławny również tradycyjnie jest bez akompaniamentu – ze zwyczaju, a nie z przepisu. Większość Kościołów chętnie korzysta z instrumentów.",
     "options": {
       "yes": {
         "label": "Tak, można",

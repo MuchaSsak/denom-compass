@@ -26,6 +26,11 @@ const relatives = rankAll(denominations, questions, idealAnswers(d, questions))
   .map((r) => ({ ...r, d: denominations.find((x) => x.id === r.id)! }));
 
 const accepted = new Set(d.councils);
+/** Dark text on light tradition colours (yellow, pink, lime), white on the rest. */
+const onColor = (hex: string) => {
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.55 ? '#1c1712' : '#fff';
+};
 
 // group positions by topic
 const byTopic = new Map<string, typeof questions>();
@@ -46,7 +51,7 @@ const firmness = (s: number) => (s >= 1 ? t('Firm') : s >= 0.75 ? t('Mostly') : 
     <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
       <Badge id={d.id} color={d.color} size={96} />
       <div class="min-w-0">
-        <p class="eyebrow" style={`color:${d.color}`}>{familyName(t, d.family)}</p>
+        <p class="eyebrow" style={`color:color-mix(in oklab, ${d.color} 62%, var(--ink))`}>{familyName(t, d.family)}</p>
         <h1 class="mt-1 font-display text-4xl leading-tight font-semibold text-balance sm:text-5xl">{d.name}</h1>
         <p class="mt-2 text-lg text-muted">{d.tagline}</p>
       </div>
@@ -81,7 +86,7 @@ const firmness = (s: number) => (s >= 1 ? t('Firm') : s >= 0.75 ? t('Mostly') : 
       <section class="card p-6">
         <div class="flex items-baseline justify-between gap-4">
           <h2 class="font-display text-2xl font-semibold">{t('Councils accepted')}</h2>
-          <span class="chip" style={`color:${d.color}`}>{t('{n} of 21', { n: d.councils.length })}</span>
+          <span class="chip" style={`color:color-mix(in oklab, ${d.color} 62%, var(--ink))`}>{t('{n} of 21', { n: d.councils.length })}</span>
         </div>
         <ol class="mt-5 flex flex-wrap gap-1.5">
           {councils.map((c) => {
@@ -91,8 +96,8 @@ const firmness = (s: number) => (s >= 1 ? t('Firm') : s >= 0.75 ? t('Mostly') : 
                 <a
                   href={href(lang, `/councils/${councilSlug(c)}`)}
                   class="grid size-8 place-items-center rounded-lg text-xs font-bold tabular-nums transition hover:scale-110"
-                  style={on ? `background:${d.color};color:#fff` : 'background:var(--surface-2);color:var(--muted);opacity:.55'}
-                  aria-label={`${c.name} (${c.year}) — ${on ? t('accepted') : t('not accepted')}`}
+                  style={on ? `background:${d.color};color:${onColor(d.color)}` : 'background:var(--surface-2);color:var(--muted);opacity:.55'}
+                  aria-label={`${c.name} (${c.year}) - ${on ? t('accepted') : t('not accepted')}`}
                 >{c.n}</a>
                 <span class="pointer-events-none absolute bottom-full left-1/2 z-10 mb-1.5 hidden -translate-x-1/2 rounded-md bg-ink px-2 py-1 text-[11px] font-semibold whitespace-nowrap text-bg group-hover:block">{c.name} · {c.year}</span>
               </li>

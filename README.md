@@ -2,7 +2,7 @@
 # Denomination Compass
 A short theology quiz that shows which Christian tradition shares your beliefs ⛪
 
-To view this application live, [click here](https://denomination-compass.vercel.app/) 🚀
+To view this application live, [click here](https://denoms.muszarski.com/) 🚀
 ## Acknowledgements
 
  - [Astro](https://astro.build/)

@@ -1,0 +1,81 @@
+---
+import Base from '../layouts/Base.astro';
+import type { LegalDoc } from '../data/legal';
+import { LEGAL_VERSION, LEGAL_DATE } from '../data/legal';
+import { useT, href, type Lang } from '../i18n';
+
+interface Props { doc: LegalDoc; lang: Lang; other: { path: string; label: string } }
+const { doc, lang, other } = Astro.props;
+const t = useT(lang);
+
+/** [text](url) → link; everything else escaped. */
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const inline = (s: string) =>
+  esc(s).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, txt, url) => {
+    const ext = /^https?:/.test(url);
+    return `<a href="${url}" class="font-medium underline underline-offset-4 hover:text-gold"${ext ? ' rel="noopener" target="_blank"' : ''}>${txt}</a>`;
+  });
+---
+<Base title={doc.title} description={doc.intro} wide={false}>
+  <article class="mx-auto max-w-3xl pt-12 sm:pt-16">
+    <p class="eyebrow">{t('Version {v} · in force from {date}', { v: LEGAL_VERSION, date: LEGAL_DATE[lang] })}</p>
+    <h1 class="mt-2 font-display text-4xl font-semibold sm:text-5xl">{doc.title}</h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted">{doc.intro}</p>
+    {lang !== 'pl' && <p class="mt-3 text-sm text-muted">{t('The Polish version is the original and prevails.')} <a class="underline underline-offset-4" href={href('pl', Astro.url.pathname.replace(/^\/en/, ''))}>Polski</a></p>}
+
+    <div class="mt-10 grid gap-9">
+      {doc.sections.map((s) => (
+        <section>
+          <h2 class="font-display text-2xl font-semibold">{s.h}</h2>
+          <div class="mt-3 grid gap-3 leading-relaxed">
+            {s.body.map((b) =>
+              Array.isArray(b) ? (
+                <ul class="grid gap-2.5 pl-5 [list-style:disc] marker:text-gold">{b.map((li) => <li set:html={inline(li)} />)}</ul>
+              ) : b === '[[controls]]' ? (
+                <div class="flex flex-wrap gap-2.5" id="data-controls">
+                  <button type="button" class="btn btn-ghost" data-action="consent">{t('Withdraw AI consent')}</button>
+                  <button type="button" class="btn btn-ghost" data-action="wipe">{t('Delete all my data on this device')}</button>
+                  <p class="w-full text-sm text-muted" role="status" aria-live="polite" data-status></p>
+                </div>
+              ) : (
+                <p set:html={inline(b)} />
+              ),
+            )}
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <p class="mt-12 border-t border-line pt-6 text-sm text-muted">
+      <a href={href(lang, other.path)} class="font-medium underline underline-offset-4 hover:text-ink">{other.label}</a>
+    </p>
+  </article>
+</Base>
+
+<script is:inline define:vars={{ msgs: { consent: t('AI consent withdrawn.'), noConsent: t('No AI consent was stored.'), confirm: t('Click again to delete everything'), wiped: t('All data from this site was deleted from this device.') } }}>
+  const box = document.getElementById('data-controls');
+  if (box) {
+    const status = box.querySelector('[data-status]');
+    let armed = false;
+    box.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-action]');
+      if (!btn) return;
+      try {
+        if (btn.dataset.action === 'consent') {
+          const had = localStorage.getItem('dc:ai-consent:v1');
+          localStorage.removeItem('dc:ai-consent:v1');
+          localStorage.removeItem('dc:ai:v1');
+          status.textContent = had ? msgs.consent : msgs.noConsent;
+        } else if (!armed) {
+          armed = true;
+          btn.textContent = msgs.confirm;
+          setTimeout(() => { armed = false; }, 5000);
+        } else {
+          Object.keys(localStorage).filter((k) => k.startsWith('dc:')).forEach((k) => localStorage.removeItem(k));
+          status.textContent = msgs.wiped;
+          btn.disabled = true;
+        }
+      } catch { /* storage unavailable */ }
+    });
+  }
+</script>
