@@ -7,7 +7,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { profiles } from '../src/data/profiles';
-import { icons, boldIcons } from '../src/data/icons';
+import { icons } from '../src/data/icons';
 
 const CHROME = process.env.CHROME_PATH ?? 'C:/Program Files/Google/Chrome/Application/chrome.exe';
 const font = (p: string) => pathToFileURL(resolve('node_modules/@fontsource-variable', p)).href;
@@ -17,11 +17,8 @@ const copy = {
   pl: { title: 'Która tradycja chrześcijańska podziela Twoje przekonania?', sub: '24 krótkie pytania · 18 tradycji · sobory, wyznania wiary i doktryny', brand: 'Kompas wyznań' },
 };
 
-const badge = (id: string, color: string, size: number) => {
-  const bold = boldIcons[id];
-  const inner = bold ? `<g transform="translate(3.84 3.84) scale(.84)">${bold}</g>` : `<g transform="translate(9.6 9.6) scale(.6)" style="color:#fff">${icons[id]}</g>`;
-  return `<svg viewBox="0 0 48 48" width="${size}" height="${size}" style="color:#fff;--icon-bg:${color}"><circle cx="24" cy="24" r="22.6" fill="${color}" stroke="#1c1712" stroke-width="2.6"/>${inner}</svg>`;
-};
+const badge = (id: string, color: string, size: number) =>
+  `<span style="display:inline-grid;place-items:center;width:${size}px;height:${size}px;border-radius:999px;background:${color};color:#fff;--icon-bg:${color};box-shadow:inset 0 0 0 3px rgb(255 255 255 / .18),0 8px 20px -8px ${color}"><svg viewBox="0 0 48 48" width="${size * 0.62}" height="${size * 0.62}">${icons[id]}</svg></span>`;
 
 function html(lang: 'en' | 'pl') {
   const c = copy[lang];
@@ -34,7 +31,7 @@ function html(lang: 'en' | 'pl') {
   h1 { margin-top: auto; font: 600 58px/1.05 'Fraunces Variable', serif; letter-spacing: -.01em; }
   p { margin-top: 22px; font-size: 22px; color: #6b6359; line-height: 1.4; }
   .g { display: grid; grid-template-columns: repeat(4, 92px); gap: 18px 22px; align-content: center; justify-content: center; transform: rotate(-6deg); margin-right: -40px; }
-  .g svg { filter: drop-shadow(0 6px 10px rgba(0,0,0,.18)); }
+  
   </style></head><body>
   <div class="l"><div class="brand"><svg viewBox="0 0 32 32" width="48" height="48"><circle cx="16" cy="16" r="15" fill="#1c1712"/><path d="M16 4.5l2.4 9.1L27.5 16l-9.1 2.4L16 27.5l-2.4-9.1L4.5 16l9.1-2.4z" fill="#f5efe4"/><circle cx="16" cy="16" r="2.2" fill="#c8963e"/></svg>${c.brand}</div>
   <h1>${c.title}</h1><p>${c.sub}</p></div>

@@ -1,14 +1,11 @@
 ---
-import { icons, boldIcons } from '../data/icons';
+import { icons } from '../data/icons';
 interface Props { id: string; color: string; fg?: string; size?: number; class?: string }
 const { id, color, fg = '#fff', size = 48, class: cls = '' } = Astro.props;
-const bold = boldIcons[id];
 ---
-<span class:list={['badge', cls]} style={`width:${size}px;height:${size}px;color:${fg};--icon-bg:${color};`}>
-  <svg viewBox="0 0 48 48" width={size} height={size} aria-hidden="true">
-    <circle cx="24" cy="24" r="22.6" fill={color} stroke="#1c1712" stroke-width="2.6" />
-    {bold
-      ? <g transform="translate(3.84 3.84) scale(.84)" set:html={bold} />
-      : <g transform="translate(9.6 9.6) scale(.6)" set:html={icons[id] ?? ''} />}
-  </svg>
+<span
+  class:list={['badge', cls]}
+  style={`width:${size}px;height:${size}px;background:${color};color:${fg};--icon-bg:${color};`}
+>
+  <svg viewBox="0 0 48 48" style={`width:${size * 0.62}px;height:${size * 0.62}px`} aria-hidden="true" set:html={icons[id] ?? ''} />
 </span>
